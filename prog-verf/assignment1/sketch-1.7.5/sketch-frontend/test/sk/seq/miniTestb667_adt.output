@@ -1,0 +1,31 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb667_adt.sk
+    [0;32m[1584382289.1730 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382289.3290 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+    [0;32m[1584382289.3610 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382289.3640 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382289.3641 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382289.3642 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382289.3650 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382289.3710 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+    [0;32m[1584382289.3860 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+WARNING: Your input file contains no sketches. Make sure all your sketches use the implements keyword properly.
+    [0;32m[1584382289.3910 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382289.4000 - NOTE] Wrote test harness to ./miniTestb667_adt_test.cpp[0m
+[SKETCH] DONE
+Total time = 285

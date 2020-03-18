@@ -1,0 +1,341 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb481.sk
+    [0;32m[1584382479.3310 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382479.5310 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584382479.5690 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382479.5710 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382479.5720 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382479.5721 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382479.5730 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382479.5790 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 8
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382479.6140 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -showDAG -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb481.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb481.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -showDAG -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb481.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb481.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -showDAG, -nativeints, --bnd-inbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb481.sk/solution0-0, --minvarHole, /home/akshat/.sketch/tmp/miniTestb481.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 5
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382479
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb481.sk/input0.tmp
+* before  EVERYTHING: main__WrapperNospec::SPEC nodes = 2	 main__Wrapper::SKETCH nodes = 4
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 2 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 96
+dagmain__WrapperNospec{
+0= (3)
+H__0
+2= H__0 == (3) 
+3= ASSERT 2 : Assert at miniTestb481.sk:21 (2)
+4= (1)
+i_2_2_0
+6= moo#0[(1)](i_2_2_0, H__0, )
+7= (0)
+8= (0) < H__0 
+9= 8 ! 
+10= 6[0]
+11= 10 % H__0 
+12= 11 == (0) 
+13= 12 | (!8) 
+14= H__0 == (0) 
+15= 14 & 8 
+16= 15 ! 
+17= 10 < i_2_2_0 
+18= 17 & 8 
+19= 18 ! 
+20= (10)
+21= (10) < 10 
+22= 21 | (!8) 
+23= 22 & (!18) 
+24= 23 & (!15) 
+25= 24 & 13 
+_p_out_foo_ANONYMOUS1_0
+27= [25]$_p_out_foo_ANONYMOUS1_0, 10, $
+28= (10) < 27 
+29= 28 | (!8) 
+30= HASSERT 29 : Assert at miniTestb481.sk:9 (0)
+31= 27 < i_2_2_0 
+32= 31 & 8 
+33= 32 ! 
+34= HASSERT (!32) : Assert at miniTestb481.sk:10 (0)
+35= HASSERT (!15) : miniTestb481.sk:11: Division by zero
+36= 27 % H__0 
+37= 36 == (0) 
+38= 37 | (!8) 
+39= HASSERT 38 : Assert at miniTestb481.sk:11 (0)
+j_3_3_0
+41= moo#0[(1)](j_3_3_0, H__0, )
+42= 41[0]
+43= 42 % H__0 
+44= 43 == (0) 
+45= 44 | (!8) 
+46= 42 < j_3_3_0 
+47= 46 & 8 
+48= 47 ! 
+49= (10) < 42 
+50= 49 | (!8) 
+51= 50 & (!47) 
+52= 51 & (!15) 
+53= 52 & 45 
+_p_out_foo_ANONYMOUS2_0
+55= [53]$_p_out_foo_ANONYMOUS2_0, 42, $
+56= (10) < 55 
+57= 56 | (!8) 
+58= HASSERT 57 : Assert at miniTestb481.sk:9 (0)
+59= 55 < j_3_3_0 
+60= 59 & 8 
+61= 60 ! 
+62= HASSERT (!60) : Assert at miniTestb481.sk:10 (0)
+63= 55 % H__0 
+64= 63 == (0) 
+65= 64 | (!8) 
+66= HASSERT 65 : Assert at miniTestb481.sk:11 (0)
+H__BND0
+H__1
+69= H__1 < H__BND0 
+70= ASSERT 69 : Assert at miniTestb481.sk:25 (1)
+71= i_2_2_0 == j_3_3_0 
+72= 71 ! 
+73= 27 == 55 
+74= 73 | (!71) 
+75= ASSERT 74 : Assert at miniTestb481.sk:27 (2)
+76= j_3_3_0 < i_2_2_0 
+77= 27 < j_3_3_0 
+78= 77 & 76 
+79= 78 ! 
+80= ASSERT (!78) : Assert at miniTestb481.sk:30 (2)
+81= H__1 - 
+82= (20)
+83= (20) + 81 
+84= 83 < 27 
+85= ASSERT 84 : Assert at miniTestb481.sk:33 (2)
+86= 83 < 55 
+87= ASSERT 86 : Assert at miniTestb481.sk:34 (2)
+H__2
+89= H__2 == (0) 
+90= 89 ! 
+91= ASSERT (!89) : miniTestb481.sk:35: Division by zero
+H__3
+93= 27 % H__2 
+94= 93 == H__3 
+95= ASSERT 94 : Assert at miniTestb481.sk:35 (2)
+}
+  # OF CONTROLS:    7
+ control_ints = 7 	 control_bits = 0
+inputSize = 8	ctrlSize = 25
+Random seeds = 1
+Number of minvar nodes = 1
+BEG CHECK
+ * After optims it became = 4 was 96
+Assert at miniTestb481.sk:21 (2)
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 67 was 96
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 0
+f# %assign: 17 clauses: 1761 learn: 1 restart: 1 decision: 139 propagated: 1087
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 7 clauses: 3 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 44 to 7
+After all optim
+Problem became UNSAT.5= HASSERT (0) : Assert at miniTestb481.sk:9 (0)
+c# %assign: 6 clauses: 3 learn: 0 restart: 0 decision: 0 propagated: 1
+c# %assign: 4 clauses: 3 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 44 to 7
+After all optim
+Problem became UNSAT.5= HASSERT (0) : Assert at miniTestb481.sk:9 (0)
+c# %assign: 3 clauses: 3 learn: 0 restart: 0 decision: 0 propagated: 1
+DECISIONS START = 0
+c# %assign: 46 clauses: 104 learn: 0 restart: 1 decision: 45 propagated: 147
+DECISIONS START = 0
+c# %assign: 38 clauses: 155 learn: 1 restart: 1 decision: 34 propagated: 145
+DECISIONS START = 0
+c# %assign: 44 clauses: 143 learn: 0 restart: 1 decision: 47 propagated: 147
+DECISIONS START = 0
+c# %assign: 45 clauses: 140 learn: 0 restart: 1 decision: 45 propagated: 148
+DECISIONS START = 0
+c# %assign: 72 clauses: 43 learn: 0 restart: 1 decision: 28 propagated: 148
+c# %assign: 45 clauses: 250 learn: 0 restart: 0 decision: 0 propagated: 67
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 99 clauses: 243 learn: 5 restart: 1 decision: 35 propagated: 348
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  1	ftime= 0.001	ctime= 0.008
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=31, 
+BEG FIND
+DECISIONS START = 139
+f# %assign: 17 clauses: 1761 learn: 2 restart: 2 decision: 231 propagated: 1892
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  2	ftime= 0	ctime= 0.004
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=27, 
+BEG FIND
+DECISIONS START = 231
+f# %assign: 17 clauses: 1761 learn: 2 restart: 3 decision: 261 propagated: 2621
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  3	ftime= 0	ctime= 0.002
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=26, 
+BEG FIND
+DECISIONS START = 261
+f# %assign: 17 clauses: 1761 learn: 2 restart: 4 decision: 300 propagated: 3350
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  4	ftime= 0	ctime= 0.003
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=24, 
+BEG FIND
+DECISIONS START = 300
+f# %assign: 17 clauses: 1761 learn: 3 restart: 5 decision: 343 propagated: 4090
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  5	ftime= 0	ctime= 0.002
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=21, 
+BEG FIND
+DECISIONS START = 343
+f# %assign: 17 clauses: 1761 learn: 3 restart: 6 decision: 401 propagated: 4819
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  6	ftime= 0	ctime= 0.003
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=19, 
+BEG FIND
+DECISIONS START = 401
+f# %assign: 17 clauses: 1761 learn: 4 restart: 7 decision: 451 propagated: 5744
+END FIND
+BEG CHECK
+ * After optims it became = 43 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 43 to 41
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  7	ftime= 0	ctime= 0.002
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=18, 
+BEG FIND
+DECISIONS START = 451
+f# %assign: 17 clauses: 1761 learn: 5 restart: 8 decision: 509 propagated: 6510
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+c# %assign: 51 clauses: 682 learn: 0 restart: 0 decision: 0 propagated: 175
+ reduced size from 44 to 42
+After all optim
+DECISIONS START = 0
+c# %assign: 89 clauses: 360 learn: 20 restart: 1 decision: 113 propagated: 3665
+END CHECK
+********  8	ftime= 0.001	ctime= 0.002
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=10, 
+BEG FIND
+DECISIONS START = 509
+f# %assign: 17 clauses: 1761 learn: 5 restart: 9 decision: 561 propagated: 7288
+END FIND
+BEG CHECK
+ * After optims it became = 44 was 96
+Assert at miniTestb481.sk:33 (2)
+END CHECK
+********  9	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 56 was 96
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 561
+f# %assign: 39 clauses: 1280 learn: 6 restart: 10 decision: 561 propagated: 7726
+END FIND
+Cannot find a solution with lower value, hence taking the previous solution
+ *GOT THE CORRECT ANSWER IN 10 iterations.
+ *FIND TIME 0.003 CHECK TIME 0.026 TOTAL TIME 0.029
+VALUES H__0: 3, H__1: 9, H__2: 1, H__3: 0, H__BND0: 10, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  0.03 ms 
+RNDDEG = -1
+return 0
+POST-SUMMRY 
+TRAIL: 
+NOTOK
+Adding constraints to minimize
+ALLRESET
+
+----- Statistics -----
+Total elapsed time (ms):  0.031
+Model building time (ms): 0.001
+Solution time (ms):       0.03
+Max virtual mem (bytes):  92762112
+Max resident mem (bytes): 1843200
+Max private mem (bytes):  91078656
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.069
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.0
+      max memory usage (MiB) ----------> 88.46484
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 4
+      number of nodes after opts ------> 96
+      number of controls --------------> -1
+      total number of control bits ----> -1
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382479.6860 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382479.6880 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382479.7030 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382479.7140 - NOTE] Wrote test harness to ./miniTestb481_test.cpp[0m
+[SKETCH] DONE
+Total time = 434

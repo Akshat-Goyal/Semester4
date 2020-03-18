@@ -1,0 +1,229 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb777.sk
+    [0;32m[1584382450.5890 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382450.7060 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584382450.7840 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382450.7860 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382450.7870 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382450.7900 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382450.7920 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382450.8340 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 8
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382450.9290 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb777.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb777.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb777.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb777.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb777.sk/solution0-0, /home/akshat/.sketch/tmp/miniTestb777.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 5
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382450
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb777.sk/input0.tmp
+* before  EVERYTHING: main2__WrapperNospec::SPEC nodes = 0	 main2__Wrapper::SKETCH nodes = 2
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 0 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 348
+  # OF CONTROLS:    111
+ control_ints = 74 	 control_bits = 37
+inputSize = 0	ctrlSize = 298
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 2 was 348
+Type length constraint
+END CHECK
+********  0	ftime= 0	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 348 was 348
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 0
+f# %assign: 46 clauses: 948 learn: 0 restart: 1 decision: 674 propagated: 1969
+END FIND
+BEG CHECK
+ * After optims it became = 0 was 348
+END CHECK
+********  1	ftime= 0.001	ctime= 0
+ *GOT THE CORRECT ANSWER IN 2 iterations.
+ *FIND TIME 0.001 CHECK TIME 0.001 TOTAL TIME 0.002
+VALUES H__100: 0, H__101: 0, H__102: 0, H__103: 1, H__130: 0, H__133: 1, H__139: 0, H__143: 0, H__145: 0, H__151: 0, H__155: 0, H__158: 0, H__161: 0, H__167: 0, H__171: 0, H__173: 0, H__179: 0, H__183: 0, H__186: 0, H__189: 0, H__195: 0, H__199: 0, H__201: 0, H__207: 0, H__211: 0, H__214: 0, H__215: 0, H__217: 0, H__218: 0, H__219: 0, H__220: 0, H__221: 0, H__222: 0, H__223: 0, H__224: 0, H__225: 0, H__226: 0, H__227: 0, H__228: 0, H__229: 1, H__230: 0, H__231: 0, H__232: 0, H__233: 0, H__234: 0, H__235: 0, H__236: 0, H__237: 0, H__238: 0, H__239: 0, H__240: 0, H__241: 1, H__242: 0, H__245: 0, H__251: 0, H__255: 0, H__257: 0, H__263: 0, H__267: 0, H__270: 0, H__271: 0, H__272: 0, H__273: 0, H__274: 0, H__275: 0, H__276: 0, H__277: 0, H__278: 0, H__279: 0, H__280: 0, H__281: 0, H__282: 0, H__283: 0, H__284: 0, H__285: 0, H__286: 0, H__287: 0, H__288: 0, H__289: 0, H__290: 0, H__291: 0, H__292: 0, H__293: 2, H__294: 0, H__295: 0, H__296: 0, H__297: 0, H__298: 0, H__299: 0, H__78: 0, H__79: 0, H__80: 0, H__81: 0, H__82: 0, H__83: 0, H__84: 0, H__85: 0, H__86: 0, H__87: 0, H__88: 0, H__89: 0, H__90: 0, H__91: 0, H__92: 0, H__93: 0, H__94: 0, H__95: 0, H__96: 0, H__97: 0, H__98: 0, H__99: 0, 
+RESULT = 2  
+* before  EVERYTHING: main1__WrapperNospec::SPEC nodes = 0	 main1__Wrapper::SKETCH nodes = 2
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 0 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 348
+  # OF CONTROLS:    111
+ control_ints = 74 	 control_bits = 37
+inputSize = 0	ctrlSize = 376
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 2 was 348
+Type length constraint
+END CHECK
+********  0	ftime= 0	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 348 was 348
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 674
+f# %assign: 36 clauses: 1811 learn: 0 restart: 2 decision: 1800 propagated: 3625
+END FIND
+BEG CHECK
+ * After optims it became = 0 was 348
+ * After optims it became = 0 was 348
+END CHECK
+********  1	ftime= 0.001	ctime= 0
+ *GOT THE CORRECT ANSWER IN 2 iterations.
+ *FIND TIME 0.001 CHECK TIME 0.001 TOTAL TIME 0.002
+VALUES H__100: 0, H__101: 0, H__102: 0, H__103: 1, H__104: 0, H__105: 0, H__106: 0, H__107: 0, H__108: 0, H__109: 0, H__110: 0, H__111: 0, H__112: 0, H__113: 0, H__114: 0, H__115: 0, H__116: 0, H__117: 0, H__118: 0, H__119: 0, H__120: 0, H__121: 0, H__122: 0, H__123: 0, H__124: 0, H__125: 0, H__126: 0, H__127: 0, H__128: 0, H__129: 0, H__130: 0, H__133: 1, H__139: 0, H__143: 0, H__145: 0, H__151: 0, H__155: 0, H__158: 0, H__161: 0, H__167: 0, H__171: 0, H__173: 0, H__179: 0, H__183: 0, H__186: 0, H__189: 0, H__195: 0, H__199: 0, H__201: 0, H__207: 0, H__211: 0, H__214: 0, H__215: 0, H__217: 0, H__218: 0, H__219: 0, H__220: 0, H__221: 0, H__222: 0, H__223: 0, H__224: 0, H__225: 0, H__226: 0, H__227: 0, H__228: 0, H__229: 1, H__230: 0, H__231: 0, H__232: 0, H__233: 0, H__234: 0, H__235: 0, H__236: 0, H__237: 0, H__238: 0, H__239: 0, H__240: 0, H__241: 1, H__242: 0, H__243: 0, H__245: 0, H__246: 0, H__247: 0, H__248: 0, H__249: 0, H__250: 0, H__251: 0, H__252: 0, H__253: 0, H__254: 0, H__255: 0, H__256: 0, H__257: 0, H__258: 0, H__259: 0, H__260: 0, H__261: 0, H__262: 0, H__263: 0, H__264: 0, H__265: 0, H__266: 0, H__267: 0, H__268: 0, H__269: 0, H__270: 0, H__271: 0, H__272: 0, H__273: 0, H__274: 0, H__275: 0, H__276: 0, H__277: 0, H__278: 0, H__279: 0, H__280: 0, H__281: 0, H__282: 0, H__283: 0, H__284: 0, H__285: 0, H__286: 0, H__287: 0, H__288: 0, H__289: 0, H__290: 0, H__291: 0, H__292: 0, H__293: 2, H__294: 0, H__295: 0, H__296: 0, H__297: 0, H__298: 0, H__299: 2, H__78: 0, H__79: 0, H__80: 0, H__81: 0, H__82: 0, H__83: 0, H__84: 0, H__85: 0, H__86: 0, H__87: 0, H__88: 0, H__89: 0, H__90: 0, H__91: 0, H__92: 0, H__93: 0, H__94: 0, H__95: 0, H__96: 0, H__97: 0, H__98: 0, H__99: 0, 
+RESULT = 2  
+* before  EVERYTHING: main4__WrapperNospec::SPEC nodes = 2	 main4__Wrapper::SKETCH nodes = 4
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 2 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 657
+  # OF CONTROLS:    159
+ control_ints = 85 	 control_bits = 74
+inputSize = 4	ctrlSize = 542
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 4 was 657
+Type length constraint
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 570 was 657
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 1800
+f# %assign: 31 clauses: 4715 learn: 4 restart: 3 decision: 3787 propagated: 6905
+END FIND
+BEG CHECK
+ * After optims it became = 11 was 657
+Assert at miniTestb777.sk:65 (0)
+END CHECK
+********  1	ftime= 0.002	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 655 was 657
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 3787
+f# %assign: 34 clauses: 8479 learn: 9 restart: 4 decision: 5752 propagated: 11200
+END FIND
+BEG CHECK
+ * After optims it became = 12 was 657
+Assert at miniTestb777.sk:65 (0)
+END CHECK
+********  2	ftime= 0.002	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 655 was 657
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 5752
+f# %assign: 34 clauses: 8923 learn: 9 restart: 5 decision: 7380 propagated: 15166
+END FIND
+BEG CHECK
+ * After optims it became = 2 was 657
+ * After optims it became = 0 was 348
+ * After optims it became = 0 was 348
+END CHECK
+********  3	ftime= 0.002	ctime= 0.001
+ *GOT THE CORRECT ANSWER IN 4 iterations.
+ *FIND TIME 0.006 CHECK TIME 0.003 TOTAL TIME 0.009
+VALUES H__0: 0, H__1: 1, H__10: 0, H__100: 0, H__101: 0, H__102: 0, H__103: 1, H__104: 0, H__105: 0, H__106: 0, H__107: 0, H__108: 0, H__109: 0, H__11: 2, H__110: 0, H__111: 0, H__112: 0, H__113: 0, H__114: 0, H__115: 0, H__116: 0, H__117: 0, H__118: 0, H__119: 0, H__12: 0, H__120: 0, H__121: 0, H__122: 0, H__123: 0, H__124: 0, H__125: 0, H__126: 0, H__127: 0, H__128: 0, H__129: 0, H__13: 0, H__130: 0, H__131: 0, H__133: 1, H__134: 0, H__135: 0, H__136: 1, H__137: 0, H__138: 0, H__139: 0, H__14: 1, H__140: 1, H__141: 0, H__142: 0, H__143: 0, H__144: 0, H__145: 0, H__146: 1, H__147: 0, H__148: 1, H__149: 0, H__15: 0, H__150: 0, H__151: 0, H__152: 1, H__153: 0, H__154: 0, H__155: 0, H__156: 0, H__157: 0, H__158: 1, H__159: 0, H__16: 0, H__161: 1, H__162: 0, H__163: 0, H__164: 0, H__165: 0, H__166: 0, H__167: 2, H__168: 0, H__169: 0, H__17: 1, H__170: 0, H__171: 2, H__172: 0, H__173: 0, H__174: 0, H__175: 0, H__176: 0, H__177: 0, H__178: 0, H__179: 2, H__18: 0, H__180: 0, H__181: 0, H__182: 0, H__183: 2, H__184: 0, H__185: 0, H__186: 0, H__189: 0, H__19: 4, H__195: 0, H__199: 0, H__2: 0, H__20: 0, H__201: 0, H__207: 0, H__21: 0, H__211: 0, H__214: 0, H__215: 0, H__217: 0, H__218: 0, H__219: 0, H__22: 4, H__220: 0, H__221: 0, H__222: 0, H__223: 0, H__224: 0, H__225: 0, H__226: 0, H__227: 0, H__228: 0, H__229: 1, H__23: 0, H__230: 0, H__231: 0, H__232: 0, H__233: 0, H__234: 0, H__235: 0, H__236: 0, H__237: 0, H__238: 0, H__239: 0, H__24: 0, H__240: 0, H__241: 1, H__242: 0, H__243: 0, H__245: 0, H__246: 0, H__247: 0, H__248: 0, H__249: 0, H__25: 0, H__250: 0, H__251: 0, H__252: 0, H__253: 0, H__254: 0, H__255: 0, H__256: 0, H__257: 0, H__258: 0, H__259: 0, H__26: 0, H__260: 0, H__261: 0, H__262: 0, H__263: 0, H__264: 0, H__265: 0, H__266: 0, H__267: 0, H__268: 0, H__269: 0, H__27: 0, H__270: 0, H__271: 0, H__272: 0, H__273: 0, H__274: 0, H__275: 0, H__276: 0, H__277: 0, H__278: 0, H__279: 0, H__28: 0, H__280: 0, H__281: 1, H__282: 0, H__283: 0, H__284: 0, H__285: 0, H__286: 0, H__287: 0, H__288: 0, H__289: 0, H__29: 0, H__290: 0, H__291: 0, H__292: 0, H__293: 2, H__294: 0, H__295: 0, H__296: 0, H__297: 0, H__298: 0, H__299: 2, H__3: 1, H__30: 0, H__300: 1, H__301: 0, H__31: 0, H__32: 1, H__33: 1, H__34: 0, H__35: 0, H__36: 1, H__37: 0, H__38: 0, H__39: 0, H__4: 0, H__40: 1, H__41: 1, H__42: 0, H__43: 1, H__44: 1, H__45: 0, H__46: 0, H__47: 1, H__48: 0, H__49: 0, H__5: 0, H__50: 0, H__51: 0, H__6: 1, H__7: 0, H__78: 0, H__79: 0, H__8: 2, H__80: 0, H__81: 0, H__82: 0, H__83: 0, H__84: 0, H__85: 0, H__86: 0, H__87: 0, H__88: 0, H__89: 0, H__9: 0, H__90: 0, H__91: 0, H__92: 0, H__93: 0, H__94: 0, H__95: 0, H__96: 0, H__97: 0, H__98: 0, H__99: 0, 
+RESULT = 2  
+* before  EVERYTHING: main3__WrapperNospec::SPEC nodes = 2	 main3__Wrapper::SKETCH nodes = 4
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 2 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 659
+  # OF CONTROLS:    159
+ control_ints = 85 	 control_bits = 74
+inputSize = 14	ctrlSize = 630
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 4 was 659
+Type length constraint
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 572 was 659
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 7380
+f# %assign: 34 clauses: 11046 learn: 13 restart: 6 decision: 9327 propagated: 19821
+END FIND
+BEG CHECK
+ * After optims it became = 14 was 659
+Assert at miniTestb777.sk:59 (0)
+END CHECK
+********  1	ftime= 0.003	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 657 was 659
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 9327
+f# %assign: 37 clauses: 9463 learn: 15 restart: 7 decision: 11155 propagated: 25246
+END FIND
+BEG CHECK
+ * After optims it became = 2 was 659
+ * After optims it became = 0 was 348
+ * After optims it became = 0 was 348
+ * After optims it became = 2 was 657
+END CHECK
+********  2	ftime= 0.003	ctime= 0.002
+ *GOT THE CORRECT ANSWER IN 3 iterations.
+ *FIND TIME 0.006 CHECK TIME 0.002 TOTAL TIME 0.008
+VALUES H__0: 0, H__1: 1, H__10: 0, H__100: 0, H__101: 0, H__102: 0, H__103: 1, H__104: 0, H__105: 0, H__106: 0, H__107: 0, H__108: 0, H__109: 0, H__11: 16, H__110: 0, H__111: 0, H__112: 0, H__113: 0, H__114: 0, H__115: 0, H__116: 0, H__117: 0, H__118: 0, H__119: 0, H__12: 0, H__120: 0, H__121: 0, H__122: 0, H__123: 0, H__124: 0, H__125: 0, H__126: 0, H__127: 0, H__128: 0, H__129: 0, H__13: 0, H__130: 0, H__131: 0, H__133: 1, H__134: 0, H__135: 0, H__136: 1, H__137: 0, H__138: 0, H__139: 0, H__14: 1, H__140: 1, H__141: 0, H__142: 0, H__143: 0, H__144: 0, H__145: 0, H__146: 1, H__147: 0, H__148: 1, H__149: 0, H__15: 0, H__150: 0, H__151: 0, H__152: 1, H__153: 0, H__154: 0, H__155: 0, H__156: 0, H__157: 0, H__158: 1, H__159: 0, H__16: 0, H__161: 1, H__162: 0, H__163: 0, H__164: 0, H__165: 0, H__166: 0, H__167: 2, H__168: 0, H__169: 0, H__17: 1, H__170: 0, H__171: 2, H__172: 0, H__173: 0, H__174: 0, H__175: 0, H__176: 0, H__177: 0, H__178: 0, H__179: 2, H__18: 0, H__180: 0, H__181: 0, H__182: 0, H__183: 2, H__184: 0, H__185: 0, H__186: 3, H__187: 0, H__189: 1, H__19: 4, H__190: 0, H__191: 0, H__192: 0, H__193: 0, H__194: 0, H__195: 2, H__196: 0, H__197: 0, H__198: 0, H__199: 2, H__2: 0, H__20: 0, H__200: 0, H__201: 0, H__202: 0, H__203: 0, H__204: 0, H__205: 0, H__206: 0, H__207: 2, H__208: 0, H__209: 0, H__21: 0, H__210: 0, H__211: 2, H__212: 0, H__213: 0, H__214: 0, H__215: 0, H__217: 0, H__218: 0, H__219: 0, H__22: 4, H__220: 0, H__221: 0, H__222: 0, H__223: 0, H__224: 0, H__225: 0, H__226: 0, H__227: 0, H__228: 0, H__229: 1, H__23: 0, H__230: 0, H__231: 0, H__232: 0, H__233: 0, H__234: 0, H__235: 0, H__236: 0, H__237: 0, H__238: 0, H__239: 0, H__24: 0, H__240: 0, H__241: 1, H__242: 0, H__243: 0, H__245: 0, H__246: 0, H__247: 0, H__248: 0, H__249: 0, H__25: 0, H__250: 0, H__251: 0, H__252: 0, H__253: 0, H__254: 0, H__255: 0, H__256: 0, H__257: 0, H__258: 0, H__259: 0, H__26: 0, H__260: 0, H__261: 0, H__262: 0, H__263: 0, H__264: 0, H__265: 0, H__266: 0, H__267: 0, H__268: 0, H__269: 0, H__27: 0, H__270: 0, H__271: 0, H__272: 0, H__273: 0, H__274: 0, H__275: 0, H__276: 0, H__277: 0, H__278: 0, H__279: 0, H__28: 0, H__280: 0, H__281: 1, H__282: 1, H__283: 0, H__284: 0, H__285: 0, H__286: 0, H__287: 1, H__288: 0, H__289: 0, H__29: 0, H__290: 0, H__291: 0, H__292: 0, H__293: 2, H__294: 0, H__295: 0, H__296: 0, H__297: 0, H__298: 0, H__299: 2, H__3: 1, H__30: 0, H__300: 1, H__301: 0, H__302: 1, H__303: 0, H__31: 0, H__32: 1, H__33: 1, H__34: 0, H__35: 0, H__36: 1, H__37: 0, H__38: 0, H__39: 0, H__4: 0, H__40: 1, H__41: 1, H__42: 0, H__43: 1, H__44: 1, H__45: 0, H__46: 0, H__47: 1, H__48: 0, H__49: 0, H__5: 0, H__50: 0, H__51: 0, H__52: 0, H__53: 0, H__54: 0, H__55: 0, H__56: 0, H__57: 0, H__58: 0, H__59: 0, H__6: 1, H__60: 0, H__61: 0, H__62: 0, H__63: 0, H__64: 0, H__65: 0, H__66: 0, H__67: 0, H__68: 0, H__69: 0, H__7: 0, H__70: 0, H__71: 0, H__72: 0, H__73: 0, H__74: 0, H__75: 0, H__76: 0, H__77: 0, H__78: 0, H__79: 0, H__8: 2, H__80: 0, H__81: 0, H__82: 0, H__83: 0, H__84: 0, H__85: 0, H__86: 0, H__87: 0, H__88: 0, H__89: 0, H__9: 0, H__90: 0, H__91: 0, H__92: 0, H__93: 0, H__94: 0, H__95: 0, H__96: 0, H__97: 0, H__98: 0, H__99: 0, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  999.039 ms 
+RNDDEG = -1
+return 0
+
+----- Statistics -----
+Total elapsed time (ms):  999.046
+Model building time (ms): 0.006
+Solution time (ms):       999.039
+Max virtual mem (bytes):  92758016
+Max resident mem (bytes): 1744896
+Max private mem (bytes):  91164672
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.082
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.999
+      max memory usage (MiB) ----------> 88.46094
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 2
+      number of nodes after opts ------> 348
+      number of controls --------------> 111
+      total number of control bits ----> 298
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382451.0160 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382451.0190 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382451.0480 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382451.0620 - NOTE] Wrote test harness to ./miniTestb777_test.cpp[0m
+[SKETCH] DONE
+Total time = 524

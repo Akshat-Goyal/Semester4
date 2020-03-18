@@ -1,0 +1,103 @@
+/*
+Problem Number: 2
+=================
+
+Task 1 : Implement the append(List lst, Node n) function which takes a
+linked list, and a Node and appends the given node to the linked list.
+
+Task 2 : Implement the insertAt(List lst, int pos) function which
+takes a linked list, a node and the position where the node should be
+inserted in the list, and returns the list with the node inserted at
+that position.
+*/
+struct Node{
+	Node next;
+	int val;
+}
+
+struct List{
+	Node head;
+}
+
+List append(List lst, Node n) {
+	if(lst.head == null){
+		lst.head = n;
+		return lst;
+	}
+	Node tmp;
+	for(tmp = lst.head; tmp.next != null; tmp = {| (tmp)(.next)? |});
+
+	// tmp or tmp.next equals n
+	{| (tmp)(.next)? |} = n;
+
+	return lst;
+}
+
+List insertAt(List lst, Node n, int pos) {
+	assert ( n != null && pos >= 0);
+	Node tmp = lst.head;
+	if(pos == 0){
+		lst.head = n;
+		n.next = tmp;
+		return lst;
+	}
+	assert tmp != null;
+	int i;
+
+	// i < pos or i < pos - 1
+	for(i = 0; tmp.next != null && i < (pos - ??); i++){
+		tmp = tmp.next;
+	}
+	assert (i == (pos - 1));
+
+	// n.next = tmp or tmp.next
+	n.next = {| tmp(.next)? |};
+
+	// tmp.next = n or n.next
+	tmp.next = {| n(.next)? |};
+	return lst;
+}
+
+
+
+List populate(List l) {
+	// this function adds a few nodes to an empty list.  This is used
+	// for providing input-output examples.
+	// returns: 5 -> 60
+	Node n2 = new Node(next = null, val = 60);
+	Node n1 = new Node(next = n2, val = 5);
+	l.head = n1;
+	return l;
+}
+
+
+harness void testAppend(){
+	List l = new List();
+	l = populate(l);
+	
+	// assert for append
+	Node n1 = new Node(next = null, val = 40);
+	List l1 = append(l, n1);
+	assert l1.head.next.next.val == 40;
+	assert l1.head.next.next.next == null;
+}
+
+
+harness void testInsert(){
+	List l = new List();
+	l = populate(l);
+
+	Node n1 = new Node(next = null, val = 70);
+	Node n2 = new Node(next = null, val = 40);
+  	Node n3 = new Node(next = null, val = 34);
+
+	// assert for insertAt
+	List l2 = insertAt(l, n1, 1);
+	assert l2.head.next.val == 70;
+	assert l2.head.next.next.val == 60;
+	List l3 = insertAt(l, n2, 0);
+  	assert l3.head.val==40;
+  	assert l3.head.next.val==5;
+  	List l4 = insertAt(l,n3, 4);
+  	assert l4.head.next.next.next.next.val == 34;  
+}

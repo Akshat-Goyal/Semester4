@@ -1,0 +1,6 @@
+libcegis_a-SolveFromInput.o: InputParser/SolveFromInput.cpp \
+ /usr/include/stdc-predef.h InputParser/SolveFromInput.h
+
+/usr/include/stdc-predef.h:
+
+InputParser/SolveFromInput.h:

@@ -1,0 +1,2222 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb869.sk
+    [0;32m[1584382381.2130 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+NOTE -- multiple values provided for command line option 'debug-verbosity'; using '5'
+    [0;32m[1584382381.4310 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584382381.5200 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382381.5220 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382381.5240 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382381.5270 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382381.5290 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382381.5460 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 3
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382381.6280 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb869.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb869.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb869.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb869.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -showDAG, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb869.sk/solution0-0, --minvarHole, /home/akshat/.sketch/tmp/miniTestb869.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 5
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382381
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb869.sk/input0.tmp
+* before  EVERYTHING: main__WrapperNospec::SPEC nodes = 6	 main__Wrapper::SKETCH nodes = 8
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 6 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 1097
+dagmain__WrapperNospec{
+al_6_6_0
+a_a_a_0
+2= a_a_a_0 < al_6_6_0 
+3= 2 ! 
+4= Assume (!2) : Assume at miniTestb869.sk:18
+ah_7_7_0
+6= ah_7_7_0 < a_a_a_0 
+7= 6 ! 
+8= Assume (!6) : Assume at miniTestb869.sk:19
+bl_8_8_0
+b_b_b_0
+11= b_b_b_0 < bl_8_8_0 
+12= 11 ! 
+13= Assume (!11) : Assume at miniTestb869.sk:20
+bh_9_9_0
+15= bh_9_9_0 < b_b_b_0 
+16= 15 ! 
+17= Assume (!15) : Assume at miniTestb869.sk:21
+18= (0)
+19= (-10)
+20= bh_9_9_0 + (-10) 
+21= 20 == (0) 
+22= 21 ! 
+23= Assume (!21) : Assume at miniTestb869.sk:22
+24= bl_8_8_0 + (-10) 
+25= 24 == (0) 
+26= 25 ! 
+27= Assume (!25) : Assume at miniTestb869.sk:23
+28= (10)
+29= (10) < bl_8_8_0 
+30= (10) < al_6_6_0 
+31= 30 & 29 
+32= 31 ! 
+33= 21 | (!31) 
+34= (!21) | 33 
+35= ASSERT 34 : miniTestb869.sk:5: Division by zero
+36= 25 | (!31) 
+37= (!25) | 36 
+38= ASSERT 37 : miniTestb869.sk:5: Division by zero
+39= (4)
+H__3_6
+41= H__3_6 < (4) 
+42= ASSERT 41 : regen H__3
+43= (12)
+H__5_6
+45= H__5_6 < (12) 
+46= ASSERT 45 : regen H__5
+47= 20 < (0) 
+48= (10) < ah_7_7_0 
+49= 48 ! 
+50= (!48) & 47 
+51= 50 ! 
+52= (!50) | 31 
+H__0_6
+54= H__0_6 ! 
+55= (!H__0_6) | 52 
+H__4_6
+57= [H__4_6]$24, 20, $
+58= 57 == (0) 
+59= 58 | 55 
+60= 58 ! 
+61= (!58) | 59 
+62= ASSERT 61 : miniTestb869.sk:5: Division by zero
+H__3_7
+64= H__3_7 < (4) 
+65= ASSERT 64 : regen H__3
+H__5_7
+67= H__5_7 < (12) 
+68= ASSERT 67 : regen H__5
+H__0_7
+70= H__0_7 ! 
+71= (!H__0_7) | 52 
+H__4_7
+73= [H__4_7]$24, 20, $
+74= 73 == (0) 
+75= 74 | 71 
+76= 74 ! 
+77= (!74) | 75 
+78= ASSERT 77 : miniTestb869.sk:5: Division by zero
+H__3_8
+80= H__3_8 < (4) 
+81= ASSERT 80 : regen H__3
+H__5_8
+83= H__5_8 < (12) 
+84= ASSERT 83 : regen H__5
+85= 50 | 31 
+86= (!48) & 29 
+87= 86 ! 
+88= (!86) | 85 
+H__0_8
+90= H__0_8 ! 
+91= (!H__0_8) | 88 
+H__4_8
+93= [H__4_8]$24, 20, $
+94= 93 == (0) 
+95= 94 | 91 
+96= 94 ! 
+97= (!94) | 95 
+98= ASSERT 97 : miniTestb869.sk:5: Division by zero
+H__3_9
+100= H__3_9 < (4) 
+101= ASSERT 100 : regen H__3
+H__5_9
+103= H__5_9 < (12) 
+104= ASSERT 103 : regen H__5
+H__0_9
+106= H__0_9 ! 
+107= (!H__0_9) | 88 
+H__4_9
+109= [H__4_9]$24, 20, $
+110= 109 == (0) 
+111= 110 | 107 
+112= 110 ! 
+113= (!110) | 111 
+114= ASSERT 113 : miniTestb869.sk:5: Division by zero
+H__3_10
+116= H__3_10 < (4) 
+117= ASSERT 116 : regen H__3
+H__5_10
+119= H__5_10 < (12) 
+120= ASSERT 119 : regen H__5
+121= 86 | 50 
+122= 121 | 31 
+123= 30 & 47 
+124= 123 ! 
+125= (!123) | 122 
+H__0_10
+127= H__0_10 ! 
+128= (!H__0_10) | 125 
+H__4_10
+130= [H__4_10]$24, 20, $
+131= 130 == (0) 
+132= 131 | 128 
+133= 131 ! 
+134= (!131) | 132 
+135= ASSERT 134 : miniTestb869.sk:5: Division by zero
+H__3_11
+137= H__3_11 < (4) 
+138= ASSERT 137 : regen H__3
+H__5_11
+140= H__5_11 < (12) 
+141= ASSERT 140 : regen H__5
+H__0_11
+143= H__0_11 ! 
+144= (!H__0_11) | 125 
+H__4_11
+146= [H__4_11]$24, 20, $
+147= 146 == (0) 
+148= 147 | 144 
+149= 147 ! 
+150= (!147) | 148 
+151= ASSERT 150 : miniTestb869.sk:5: Division by zero
+152= 123 | 121 
+153= 152 | 31 
+H__BND0
+H__2
+156= H__2 < H__BND0 
+157= 156 | 153 
+158= ASSERT 157 : Assert at miniTestb869.sk:70 (1)
+159= (3)
+160= (3) < H__2 
+161= 160 ! 
+162= ASSERT (!160) : Assert at miniTestb869.sk:70 (1)
+163= (0) < H__2 
+164= 163 ! 
+165= (!163) | 153 
+H__BND1
+H__1_23
+168= H__1_23 < H__BND1 
+169= 168 | 165 
+170= ASSERT 169 : Assert at miniTestb869.sk:63 (1)
+171= (3) < H__1_23 
+172= 171 ! 
+173= ASSERT (!171) : Assert at miniTestb869.sk:63 (1)
+H__7_23
+175= H__7_23 < (3) 
+176= ASSERT 175 : regen H__6
+H__3_23_26
+178= H__3_23_26 < (4) 
+179= ASSERT 178 : regen H__3
+H__5_23_26
+181= H__5_23_26 < (12) 
+182= ASSERT 181 : regen H__5
+183= (0) < H__1_23 
+184= 183 ! 
+185= (!183) | 165 
+H__0_23_26
+187= H__0_23_26 ! 
+188= (!H__0_23_26) | 185 
+H__4_23_26
+190= [H__4_23_26]$24, 20, $
+191= 190 == (0) 
+192= 191 | 188 
+193= 191 ! 
+194= (!191) | 192 
+195= ASSERT 194 : miniTestb869.sk:5: Division by zero
+H__3_23_27
+197= H__3_23_27 < (4) 
+198= ASSERT 197 : regen H__3
+H__5_23_27
+200= H__5_23_27 < (12) 
+201= ASSERT 200 : regen H__5
+H__0_23_27
+203= H__0_23_27 ! 
+204= (!H__0_23_27) | 185 
+H__4_23_27
+206= [H__4_23_27]$24, 20, $
+207= 206 == (0) 
+208= 207 | 204 
+209= 207 ! 
+210= (!207) | 208 
+211= ASSERT 210 : miniTestb869.sk:5: Division by zero
+H__8_23
+213= H__8_23 < (3) 
+214= ASSERT 213 : regen H__6
+H__3_23_28
+216= H__3_23_28 < (4) 
+217= ASSERT 216 : regen H__3
+H__5_23_28
+219= H__5_23_28 < (12) 
+220= ASSERT 219 : regen H__5
+221= (1)
+222= (1) < H__1_23 
+223= 222 ! 
+224= (!222) | 185 
+H__0_23_28
+226= H__0_23_28 ! 
+227= (!H__0_23_28) | 224 
+H__4_23_28
+229= [H__4_23_28]$24, 20, $
+230= 229 == (0) 
+231= 230 | 227 
+232= 230 ! 
+233= (!230) | 231 
+234= ASSERT 233 : miniTestb869.sk:5: Division by zero
+H__3_23_29
+236= H__3_23_29 < (4) 
+237= ASSERT 236 : regen H__3
+H__5_23_29
+239= H__5_23_29 < (12) 
+240= ASSERT 239 : regen H__5
+H__0_23_29
+242= H__0_23_29 ! 
+243= (!H__0_23_29) | 224 
+H__4_23_29
+245= [H__4_23_29]$24, 20, $
+246= 245 == (0) 
+247= 246 | 243 
+248= 246 ! 
+249= (!246) | 247 
+250= ASSERT 249 : miniTestb869.sk:5: Division by zero
+H__9_23
+252= H__9_23 < (3) 
+253= ASSERT 252 : regen H__6
+H__3_23_30
+255= H__3_23_30 < (4) 
+256= ASSERT 255 : regen H__3
+H__5_23_30
+258= H__5_23_30 < (12) 
+259= ASSERT 258 : regen H__5
+260= (2)
+261= (2) < H__1_23 
+262= 261 ! 
+263= (!261) | 224 
+H__0_23_30
+265= H__0_23_30 ! 
+266= (!H__0_23_30) | 263 
+H__4_23_30
+268= [H__4_23_30]$24, 20, $
+269= 268 == (0) 
+270= 269 | 266 
+271= 269 ! 
+272= (!269) | 270 
+273= ASSERT 272 : miniTestb869.sk:5: Division by zero
+H__3_23_31
+275= H__3_23_31 < (4) 
+276= ASSERT 275 : regen H__3
+H__5_23_31
+278= H__5_23_31 < (12) 
+279= ASSERT 278 : regen H__5
+H__0_23_31
+281= H__0_23_31 ! 
+282= (!H__0_23_31) | 263 
+H__4_23_31
+284= [H__4_23_31]$24, 20, $
+285= 284 == (0) 
+286= 285 | 282 
+287= 285 ! 
+288= (!285) | 286 
+289= ASSERT 288 : miniTestb869.sk:5: Division by zero
+H__3_24
+291= H__3_24 < (4) 
+292= ASSERT 291 : regen H__3
+H__5_24
+294= H__5_24 < (12) 
+295= ASSERT 294 : regen H__5
+296= (-1)
+297= al_6_6_0 + (-10) 
+298= 297 - 
+299= ah_7_7_0 + (-10) 
+300= 299 - 
+301= 24 - 
+302= 20 - 
+303= [H__5_23_27]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+304= [200]$(-1), 303, $
+305= [H__3_23_27]$297, 298, 299, 300, $
+306= [197]$300, 305, $
+307= 306 / 206 
+308= 204 ! 
+309= 207 & (!204) 
+310= [309]$(0), 306, $
+311= [208]$307, 310, $
+312= [H__0_23_27]$304, 311, $
+313= [H__5_23_26]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+314= [181]$(-1), 313, $
+315= [H__3_23_26]$297, 298, 299, 300, $
+316= [178]$300, 315, $
+317= 316 / 190 
+318= 188 ! 
+319= 191 & (!188) 
+320= [319]$(0), 316, $
+321= [192]$317, 320, $
+322= [H__0_23_26]$314, 321, $
+323= 322 < 312 
+324= 323 ! 
+325= 312 < 322 
+326= H__7_23==1 ? 325:(!323)
+327= 322 == 312 
+328= H__7_23==0 ? 327:326
+329= [H__5_23_29]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+330= [239]$(-1), 329, $
+331= [H__3_23_29]$297, 298, 299, 300, $
+332= [236]$300, 331, $
+333= 332 / 245 
+334= 243 ! 
+335= 246 & (!243) 
+336= [335]$(0), 332, $
+337= [247]$333, 336, $
+338= [H__0_23_29]$330, 337, $
+339= [H__5_23_28]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+340= [219]$(-1), 339, $
+341= [H__3_23_28]$297, 298, 299, 300, $
+342= [216]$300, 341, $
+343= 342 / 229 
+344= 227 ! 
+345= 230 & (!227) 
+346= [345]$(0), 342, $
+347= [231]$343, 346, $
+348= [H__0_23_28]$340, 347, $
+349= 348 < 338 
+350= 349 ! 
+351= 338 < 348 
+352= H__8_23==1 ? 351:(!349)
+353= 348 == 338 
+354= H__8_23==0 ? 353:352
+355= 328 & 354 
+356= [H__5_23_31]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+357= [278]$(-1), 356, $
+358= [H__3_23_31]$297, 298, 299, 300, $
+359= [275]$300, 358, $
+360= 359 / 284 
+361= 282 ! 
+362= 285 & (!282) 
+363= [362]$(0), 359, $
+364= [286]$360, 363, $
+365= [H__0_23_31]$357, 364, $
+366= [H__5_23_30]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+367= [258]$(-1), 366, $
+368= [H__3_23_30]$297, 298, 299, 300, $
+369= [255]$300, 368, $
+370= 369 / 268 
+371= 266 ! 
+372= 269 & (!266) 
+373= [372]$(0), 369, $
+374= [270]$370, 373, $
+375= [H__0_23_30]$367, 374, $
+376= 375 < 365 
+377= 376 ! 
+378= 365 < 375 
+379= H__9_23==1 ? 378:(!376)
+380= 375 == 365 
+381= H__9_23==0 ? 380:379
+382= 355 & 381 
+383= [261]$355, 382, $
+384= [222]$328, 383, $
+385= [183]$(1), 384, $
+386= 385 ! 
+387= (!385) | 165 
+H__0_24
+389= H__0_24 ! 
+390= (!H__0_24) | 387 
+H__4_24
+392= [H__4_24]$24, 20, $
+393= 392 == (0) 
+394= 393 | 390 
+395= 393 ! 
+396= (!393) | 394 
+397= ASSERT 396 : miniTestb869.sk:5: Division by zero
+H__3_25
+399= H__3_25 < (4) 
+400= ASSERT 399 : regen H__3
+H__5_25
+402= H__5_25 < (12) 
+403= ASSERT 402 : regen H__5
+H__0_25
+405= H__0_25 ! 
+406= (!H__0_25) | 387 
+H__4_25
+408= [H__4_25]$24, 20, $
+409= 408 == (0) 
+410= 409 | 406 
+411= 409 ! 
+412= (!409) | 410 
+413= ASSERT 412 : miniTestb869.sk:5: Division by zero
+414= 385 | 153 
+415= (!163) | 414 
+416= (1) < H__2 
+417= 416 ! 
+418= (!416) | 415 
+H__BND2
+H__1_32
+421= H__1_32 < H__BND2 
+422= 421 | 418 
+423= ASSERT 422 : Assert at miniTestb869.sk:63 (1)
+424= (3) < H__1_32 
+425= 424 ! 
+426= ASSERT (!424) : Assert at miniTestb869.sk:63 (1)
+H__10_32
+428= H__10_32 < (3) 
+429= ASSERT 428 : regen H__6
+H__3_32_35
+431= H__3_32_35 < (4) 
+432= ASSERT 431 : regen H__3
+H__5_32_35
+434= H__5_32_35 < (12) 
+435= ASSERT 434 : regen H__5
+436= (0) < H__1_32 
+437= 436 ! 
+438= (!436) | 418 
+H__0_32_35
+440= H__0_32_35 ! 
+441= (!H__0_32_35) | 438 
+H__4_32_35
+443= [H__4_32_35]$24, 20, $
+444= 443 == (0) 
+445= 444 | 441 
+446= 444 ! 
+447= (!444) | 445 
+448= ASSERT 447 : miniTestb869.sk:5: Division by zero
+H__3_32_36
+450= H__3_32_36 < (4) 
+451= ASSERT 450 : regen H__3
+H__5_32_36
+453= H__5_32_36 < (12) 
+454= ASSERT 453 : regen H__5
+H__0_32_36
+456= H__0_32_36 ! 
+457= (!H__0_32_36) | 438 
+H__4_32_36
+459= [H__4_32_36]$24, 20, $
+460= 459 == (0) 
+461= 460 | 457 
+462= 460 ! 
+463= (!460) | 461 
+464= ASSERT 463 : miniTestb869.sk:5: Division by zero
+H__11_32
+466= H__11_32 < (3) 
+467= ASSERT 466 : regen H__6
+H__3_32_37
+469= H__3_32_37 < (4) 
+470= ASSERT 469 : regen H__3
+H__5_32_37
+472= H__5_32_37 < (12) 
+473= ASSERT 472 : regen H__5
+474= (1) < H__1_32 
+475= 474 ! 
+476= (!474) | 438 
+H__0_32_37
+478= H__0_32_37 ! 
+479= (!H__0_32_37) | 476 
+H__4_32_37
+481= [H__4_32_37]$24, 20, $
+482= 481 == (0) 
+483= 482 | 479 
+484= 482 ! 
+485= (!482) | 483 
+486= ASSERT 485 : miniTestb869.sk:5: Division by zero
+H__3_32_38
+488= H__3_32_38 < (4) 
+489= ASSERT 488 : regen H__3
+H__5_32_38
+491= H__5_32_38 < (12) 
+492= ASSERT 491 : regen H__5
+H__0_32_38
+494= H__0_32_38 ! 
+495= (!H__0_32_38) | 476 
+H__4_32_38
+497= [H__4_32_38]$24, 20, $
+498= 497 == (0) 
+499= 498 | 495 
+500= 498 ! 
+501= (!498) | 499 
+502= ASSERT 501 : miniTestb869.sk:5: Division by zero
+H__12_32
+504= H__12_32 < (3) 
+505= ASSERT 504 : regen H__6
+H__3_32_39
+507= H__3_32_39 < (4) 
+508= ASSERT 507 : regen H__3
+H__5_32_39
+510= H__5_32_39 < (12) 
+511= ASSERT 510 : regen H__5
+512= (2) < H__1_32 
+513= 512 ! 
+514= (!512) | 476 
+H__0_32_39
+516= H__0_32_39 ! 
+517= (!H__0_32_39) | 514 
+H__4_32_39
+519= [H__4_32_39]$24, 20, $
+520= 519 == (0) 
+521= 520 | 517 
+522= 520 ! 
+523= (!520) | 521 
+524= ASSERT 523 : miniTestb869.sk:5: Division by zero
+H__3_32_40
+526= H__3_32_40 < (4) 
+527= ASSERT 526 : regen H__3
+H__5_32_40
+529= H__5_32_40 < (12) 
+530= ASSERT 529 : regen H__5
+H__0_32_40
+532= H__0_32_40 ! 
+533= (!H__0_32_40) | 514 
+H__4_32_40
+535= [H__4_32_40]$24, 20, $
+536= 535 == (0) 
+537= 536 | 533 
+538= 536 ! 
+539= (!536) | 537 
+540= ASSERT 539 : miniTestb869.sk:5: Division by zero
+H__3_33
+542= H__3_33 < (4) 
+543= ASSERT 542 : regen H__3
+H__5_33
+545= H__5_33 < (12) 
+546= ASSERT 545 : regen H__5
+547= [H__5_32_36]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+548= [453]$(-1), 547, $
+549= [H__3_32_36]$297, 298, 299, 300, $
+550= [450]$300, 549, $
+551= 550 / 459 
+552= 457 ! 
+553= 460 & (!457) 
+554= [553]$(0), 550, $
+555= [461]$551, 554, $
+556= [H__0_32_36]$548, 555, $
+557= [H__5_32_35]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+558= [434]$(-1), 557, $
+559= [H__3_32_35]$297, 298, 299, 300, $
+560= [431]$300, 559, $
+561= 560 / 443 
+562= 441 ! 
+563= 444 & (!441) 
+564= [563]$(0), 560, $
+565= [445]$561, 564, $
+566= [H__0_32_35]$558, 565, $
+567= 566 < 556 
+568= 567 ! 
+569= 556 < 566 
+570= H__10_32==1 ? 569:(!567)
+571= 566 == 556 
+572= H__10_32==0 ? 571:570
+573= [H__5_32_38]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+574= [491]$(-1), 573, $
+575= [H__3_32_38]$297, 298, 299, 300, $
+576= [488]$300, 575, $
+577= 576 / 497 
+578= 495 ! 
+579= 498 & (!495) 
+580= [579]$(0), 576, $
+581= [499]$577, 580, $
+582= [H__0_32_38]$574, 581, $
+583= [H__5_32_37]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+584= [472]$(-1), 583, $
+585= [H__3_32_37]$297, 298, 299, 300, $
+586= [469]$300, 585, $
+587= 586 / 481 
+588= 479 ! 
+589= 482 & (!479) 
+590= [589]$(0), 586, $
+591= [483]$587, 590, $
+592= [H__0_32_37]$584, 591, $
+593= 592 < 582 
+594= 593 ! 
+595= 582 < 592 
+596= H__11_32==1 ? 595:(!593)
+597= 592 == 582 
+598= H__11_32==0 ? 597:596
+599= 572 & 598 
+600= [H__5_32_40]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+601= [529]$(-1), 600, $
+602= [H__3_32_40]$297, 298, 299, 300, $
+603= [526]$300, 602, $
+604= 603 / 535 
+605= 533 ! 
+606= 536 & (!533) 
+607= [606]$(0), 603, $
+608= [537]$604, 607, $
+609= [H__0_32_40]$601, 608, $
+610= [H__5_32_39]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+611= [510]$(-1), 610, $
+612= [H__3_32_39]$297, 298, 299, 300, $
+613= [507]$300, 612, $
+614= 613 / 519 
+615= 517 ! 
+616= 520 & (!517) 
+617= [616]$(0), 613, $
+618= [521]$614, 617, $
+619= [H__0_32_39]$611, 618, $
+620= 619 < 609 
+621= 620 ! 
+622= 609 < 619 
+623= H__12_32==1 ? 622:(!620)
+624= 619 == 609 
+625= H__12_32==0 ? 624:623
+626= 599 & 625 
+627= [512]$599, 626, $
+628= [474]$572, 627, $
+629= [436]$(1), 628, $
+630= 629 ! 
+631= (!629) | 418 
+H__0_33
+633= H__0_33 ! 
+634= (!H__0_33) | 631 
+H__4_33
+636= [H__4_33]$24, 20, $
+637= 636 == (0) 
+638= 637 | 634 
+639= 637 ! 
+640= (!637) | 638 
+641= ASSERT 640 : miniTestb869.sk:5: Division by zero
+H__3_34
+643= H__3_34 < (4) 
+644= ASSERT 643 : regen H__3
+H__5_34
+646= H__5_34 < (12) 
+647= ASSERT 646 : regen H__5
+H__0_34
+649= H__0_34 ! 
+650= (!H__0_34) | 631 
+H__4_34
+652= [H__4_34]$24, 20, $
+653= 652 == (0) 
+654= 653 | 650 
+655= 653 ! 
+656= (!653) | 654 
+657= ASSERT 656 : miniTestb869.sk:5: Division by zero
+658= 629 | 385 
+659= 658 | 153 
+660= (!163) | 659 
+661= (!416) | 660 
+662= (2) < H__2 
+663= 662 ! 
+664= (!662) | 661 
+H__BND3
+H__1_41
+667= H__1_41 < H__BND3 
+668= 667 | 664 
+669= ASSERT 668 : Assert at miniTestb869.sk:63 (1)
+670= (3) < H__1_41 
+671= 670 ! 
+672= ASSERT (!670) : Assert at miniTestb869.sk:63 (1)
+H__13_41
+674= H__13_41 < (3) 
+675= ASSERT 674 : regen H__6
+H__3_41_44
+677= H__3_41_44 < (4) 
+678= ASSERT 677 : regen H__3
+H__5_41_44
+680= H__5_41_44 < (12) 
+681= ASSERT 680 : regen H__5
+682= (0) < H__1_41 
+683= 682 ! 
+684= (!682) | 664 
+H__0_41_44
+686= H__0_41_44 ! 
+687= (!H__0_41_44) | 684 
+H__4_41_44
+689= [H__4_41_44]$24, 20, $
+690= 689 == (0) 
+691= 690 | 687 
+692= 690 ! 
+693= (!690) | 691 
+694= ASSERT 693 : miniTestb869.sk:5: Division by zero
+H__3_41_45
+696= H__3_41_45 < (4) 
+697= ASSERT 696 : regen H__3
+H__5_41_45
+699= H__5_41_45 < (12) 
+700= ASSERT 699 : regen H__5
+H__0_41_45
+702= H__0_41_45 ! 
+703= (!H__0_41_45) | 684 
+H__4_41_45
+705= [H__4_41_45]$24, 20, $
+706= 705 == (0) 
+707= 706 | 703 
+708= 706 ! 
+709= (!706) | 707 
+710= ASSERT 709 : miniTestb869.sk:5: Division by zero
+H__14_41
+712= H__14_41 < (3) 
+713= ASSERT 712 : regen H__6
+H__3_41_46
+715= H__3_41_46 < (4) 
+716= ASSERT 715 : regen H__3
+H__5_41_46
+718= H__5_41_46 < (12) 
+719= ASSERT 718 : regen H__5
+720= (1) < H__1_41 
+721= 720 ! 
+722= (!720) | 684 
+H__0_41_46
+724= H__0_41_46 ! 
+725= (!H__0_41_46) | 722 
+H__4_41_46
+727= [H__4_41_46]$24, 20, $
+728= 727 == (0) 
+729= 728 | 725 
+730= 728 ! 
+731= (!728) | 729 
+732= ASSERT 731 : miniTestb869.sk:5: Division by zero
+H__3_41_47
+734= H__3_41_47 < (4) 
+735= ASSERT 734 : regen H__3
+H__5_41_47
+737= H__5_41_47 < (12) 
+738= ASSERT 737 : regen H__5
+H__0_41_47
+740= H__0_41_47 ! 
+741= (!H__0_41_47) | 722 
+H__4_41_47
+743= [H__4_41_47]$24, 20, $
+744= 743 == (0) 
+745= 744 | 741 
+746= 744 ! 
+747= (!744) | 745 
+748= ASSERT 747 : miniTestb869.sk:5: Division by zero
+H__15_41
+750= H__15_41 < (3) 
+751= ASSERT 750 : regen H__6
+H__3_41_48
+753= H__3_41_48 < (4) 
+754= ASSERT 753 : regen H__3
+H__5_41_48
+756= H__5_41_48 < (12) 
+757= ASSERT 756 : regen H__5
+758= (2) < H__1_41 
+759= 758 ! 
+760= (!758) | 722 
+H__0_41_48
+762= H__0_41_48 ! 
+763= (!H__0_41_48) | 760 
+H__4_41_48
+765= [H__4_41_48]$24, 20, $
+766= 765 == (0) 
+767= 766 | 763 
+768= 766 ! 
+769= (!766) | 767 
+770= ASSERT 769 : miniTestb869.sk:5: Division by zero
+H__3_41_49
+772= H__3_41_49 < (4) 
+773= ASSERT 772 : regen H__3
+H__5_41_49
+775= H__5_41_49 < (12) 
+776= ASSERT 775 : regen H__5
+H__0_41_49
+778= H__0_41_49 ! 
+779= (!H__0_41_49) | 760 
+H__4_41_49
+781= [H__4_41_49]$24, 20, $
+782= 781 == (0) 
+783= 782 | 779 
+784= 782 ! 
+785= (!782) | 783 
+786= ASSERT 785 : miniTestb869.sk:5: Division by zero
+H__3_42
+788= H__3_42 < (4) 
+789= ASSERT 788 : regen H__3
+H__5_42
+791= H__5_42 < (12) 
+792= ASSERT 791 : regen H__5
+793= [H__5_41_45]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+794= [699]$(-1), 793, $
+795= [H__3_41_45]$297, 298, 299, 300, $
+796= [696]$300, 795, $
+797= 796 / 705 
+798= 703 ! 
+799= 706 & (!703) 
+800= [799]$(0), 796, $
+801= [707]$797, 800, $
+802= [H__0_41_45]$794, 801, $
+803= [H__5_41_44]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+804= [680]$(-1), 803, $
+805= [H__3_41_44]$297, 298, 299, 300, $
+806= [677]$300, 805, $
+807= 806 / 689 
+808= 687 ! 
+809= 690 & (!687) 
+810= [809]$(0), 806, $
+811= [691]$807, 810, $
+812= [H__0_41_44]$804, 811, $
+813= 812 < 802 
+814= 813 ! 
+815= 802 < 812 
+816= H__13_41==1 ? 815:(!813)
+817= 812 == 802 
+818= H__13_41==0 ? 817:816
+819= [H__5_41_47]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+820= [737]$(-1), 819, $
+821= [H__3_41_47]$297, 298, 299, 300, $
+822= [734]$300, 821, $
+823= 822 / 743 
+824= 741 ! 
+825= 744 & (!741) 
+826= [825]$(0), 822, $
+827= [745]$823, 826, $
+828= [H__0_41_47]$820, 827, $
+829= [H__5_41_46]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+830= [718]$(-1), 829, $
+831= [H__3_41_46]$297, 298, 299, 300, $
+832= [715]$300, 831, $
+833= 832 / 727 
+834= 725 ! 
+835= 728 & (!725) 
+836= [835]$(0), 832, $
+837= [729]$833, 836, $
+838= [H__0_41_46]$830, 837, $
+839= 838 < 828 
+840= 839 ! 
+841= 828 < 838 
+842= H__14_41==1 ? 841:(!839)
+843= 838 == 828 
+844= H__14_41==0 ? 843:842
+845= 818 & 844 
+846= [H__5_41_49]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+847= [775]$(-1), 846, $
+848= [H__3_41_49]$297, 298, 299, 300, $
+849= [772]$300, 848, $
+850= 849 / 781 
+851= 779 ! 
+852= 782 & (!779) 
+853= [852]$(0), 849, $
+854= [783]$850, 853, $
+855= [H__0_41_49]$847, 854, $
+856= [H__5_41_48]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+857= [756]$(-1), 856, $
+858= [H__3_41_48]$297, 298, 299, 300, $
+859= [753]$300, 858, $
+860= 859 / 765 
+861= 763 ! 
+862= 766 & (!763) 
+863= [862]$(0), 859, $
+864= [767]$860, 863, $
+865= [H__0_41_48]$857, 864, $
+866= 865 < 855 
+867= 866 ! 
+868= 855 < 865 
+869= H__15_41==1 ? 868:(!866)
+870= 865 == 855 
+871= H__15_41==0 ? 870:869
+872= 845 & 871 
+873= [758]$845, 872, $
+874= [720]$818, 873, $
+875= [682]$(1), 874, $
+876= 875 ! 
+877= (!875) | 664 
+H__0_42
+879= H__0_42 ! 
+880= (!H__0_42) | 877 
+H__4_42
+882= [H__4_42]$24, 20, $
+883= 882 == (0) 
+884= 883 | 880 
+885= 883 ! 
+886= (!883) | 884 
+887= ASSERT 886 : miniTestb869.sk:5: Division by zero
+H__3_43
+889= H__3_43 < (4) 
+890= ASSERT 889 : regen H__3
+H__5_43
+892= H__5_43 < (12) 
+893= ASSERT 892 : regen H__5
+H__0_43
+895= H__0_43 ! 
+896= (!H__0_43) | 877 
+H__4_43
+898= [H__4_43]$24, 20, $
+899= 898 == (0) 
+900= 899 | 896 
+901= 899 ! 
+902= (!899) | 900 
+903= ASSERT 902 : miniTestb869.sk:5: Division by zero
+904= 385 & 163 
+905= 629 & 416 
+906= 875 & 662 
+907= [H__5_42]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+908= [791]$(-1), 907, $
+909= [H__3_42]$297, 298, 299, 300, $
+910= [788]$300, 909, $
+911= 910 / 882 
+912= 880 ! 
+913= 883 & (!880) 
+914= [913]$(0), 910, $
+915= [884]$911, 914, $
+916= [H__0_42]$908, 915, $
+917= [906]$(0), 916, $
+918= [H__5_33]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+919= [545]$(-1), 918, $
+920= [H__3_33]$297, 298, 299, 300, $
+921= [542]$300, 920, $
+922= 921 / 636 
+923= 634 ! 
+924= 637 & (!634) 
+925= [924]$(0), 921, $
+926= [638]$922, 925, $
+927= [H__0_33]$919, 926, $
+928= [905]$917, 927, $
+929= [H__5_24]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+930= [294]$(-1), 929, $
+931= [H__3_24]$297, 298, 299, 300, $
+932= [291]$300, 931, $
+933= 932 / 392 
+934= 390 ! 
+935= 393 & (!390) 
+936= [935]$(0), 932, $
+937= [394]$933, 936, $
+938= [H__0_24]$930, 937, $
+939= [904]$928, 938, $
+940= [H__5_10]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+941= [119]$(-1), 940, $
+942= [H__3_10]$297, 298, 299, 300, $
+943= [116]$300, 942, $
+944= 943 / 130 
+945= 128 ! 
+946= 131 & (!128) 
+947= [946]$(0), 943, $
+948= [132]$944, 947, $
+949= [H__0_10]$941, 948, $
+950= [123]$939, 949, $
+951= [H__5_8]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+952= [83]$(-1), 951, $
+953= [H__3_8]$297, 298, 299, 300, $
+954= [80]$300, 953, $
+955= 954 / 93 
+956= 91 ! 
+957= 94 & (!91) 
+958= [957]$(0), 954, $
+959= [95]$955, 958, $
+960= [H__0_8]$952, 959, $
+961= [86]$950, 960, $
+962= [H__5_6]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+963= [45]$(-1), 962, $
+964= [H__3_6]$297, 298, 299, 300, $
+965= [41]$300, 964, $
+966= 965 / 57 
+967= 55 ! 
+968= 58 & (!55) 
+969= [968]$(0), 965, $
+970= [59]$966, 969, $
+971= [H__0_6]$963, 970, $
+972= [50]$961, 971, $
+973= 297 / 20 
+974= 21 & 31 
+975= [974]$(0), 297, $
+976= [33]$973, 975, $
+977= [31]$972, 976, $
+978= b_b_b_0 + (-10) 
+979= a_a_a_0 + (-10) 
+980= 979 / 978 
+981= b_b_b_0==10 ? 979:(0)
+982= b_b_b_0==10 ? 981:980
+983= 982 < 977 
+984= 983 ! 
+985= ASSERT (!983) : Assert at miniTestb869.sk:26 (0)
+986= [H__5_43]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+987= [892]$(-1), 986, $
+988= [H__3_43]$297, 298, 299, 300, $
+989= [889]$300, 988, $
+990= 989 / 898 
+991= 896 ! 
+992= 899 & (!896) 
+993= [992]$(0), 989, $
+994= [900]$990, 993, $
+995= [H__0_43]$987, 994, $
+996= [906]$(0), 995, $
+997= [H__5_34]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+998= [646]$(-1), 997, $
+999= [H__3_34]$297, 298, 299, 300, $
+1000= [643]$300, 999, $
+1001= 1000 / 652 
+1002= 650 ! 
+1003= 653 & (!650) 
+1004= [1003]$(0), 1000, $
+1005= [654]$1001, 1004, $
+1006= [H__0_34]$998, 1005, $
+1007= [905]$996, 1006, $
+1008= [H__5_25]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+1009= [402]$(-1), 1008, $
+1010= [H__3_25]$297, 298, 299, 300, $
+1011= [399]$300, 1010, $
+1012= 1011 / 408 
+1013= 406 ! 
+1014= 409 & (!406) 
+1015= [1014]$(0), 1011, $
+1016= [410]$1012, 1015, $
+1017= [H__0_25]$1009, 1016, $
+1018= [904]$1007, 1017, $
+1019= [H__5_11]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+1020= [140]$(-1), 1019, $
+1021= [H__3_11]$297, 298, 299, 300, $
+1022= [137]$300, 1021, $
+1023= 1022 / 146 
+1024= 144 ! 
+1025= 147 & (!144) 
+1026= [1025]$(0), 1022, $
+1027= [148]$1023, 1026, $
+1028= [H__0_11]$1020, 1027, $
+1029= [123]$1018, 1028, $
+1030= [H__5_9]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+1031= [103]$(-1), 1030, $
+1032= [H__3_9]$297, 298, 299, 300, $
+1033= [100]$300, 1032, $
+1034= 1033 / 109 
+1035= 107 ! 
+1036= 110 & (!107) 
+1037= [1036]$(0), 1033, $
+1038= [111]$1034, 1037, $
+1039= [H__0_9]$1031, 1038, $
+1040= [86]$1029, 1039, $
+1041= [H__5_7]$297, 298, 299, 300, 24, 301, 20, 302, (0), (0), (1), (-1), $
+1042= [67]$(-1), 1041, $
+1043= [H__3_7]$297, 298, 299, 300, $
+1044= [64]$300, 1043, $
+1045= 1044 / 73 
+1046= 71 ! 
+1047= 74 & (!71) 
+1048= [1047]$(0), 1044, $
+1049= [75]$1045, 1048, $
+1050= [H__0_7]$1042, 1049, $
+1051= [50]$1040, 1050, $
+1052= 299 / 24 
+1053= 25 & 31 
+1054= [1053]$(0), 299, $
+1055= [36]$1052, 1054, $
+1056= [31]$1051, 1055, $
+1057= 1056 < 982 
+1058= 1057 ! 
+1059= ASSERT (!1057) : Assert at miniTestb869.sk:27 (0)
+1060= 20 == (4) 
+1061= 24 == (2) 
+1062= 299 == (10) 
+1063= (5)
+1064= 297 == (5) 
+1065= 1064 & 1062 
+1066= 1065 & 1061 
+1067= 1066 & 1060 
+1068= 1067 ! 
+1069= 977 - 
+1070= 1056 + 1069 
+1071= 1070 < (5) 
+1072= 1071 | (!1067) 
+1073= ASSERT 1072 : Assert at miniTestb869.sk:29 (1)
+1074= (-2)
+1075= 20 == (-2) 
+1076= (-4)
+1077= 24 == (-4) 
+1078= (-5)
+1079= 299 == (-5) 
+1080= al_6_6_0 == (0) 
+1081= 1080 & 1079 
+1082= 1081 & 1077 
+1083= 1082 & 1075 
+1084= 1083 ! 
+1085= 1071 | (!1083) 
+1086= ASSERT 1085 : Assert at miniTestb869.sk:32 (1)
+1087= 1081 & 1061 
+1088= 1087 & 1060 
+1089= 1088 ! 
+1090= 1071 | (!1088) 
+1091= ASSERT 1090 : Assert at miniTestb869.sk:35 (1)
+1092= 1065 & 1077 
+1093= 1092 & 1075 
+1094= 1093 ! 
+1095= 1071 | (!1093) 
+1096= ASSERT 1095 : Assert at miniTestb869.sk:38 (1)
+}
+  # OF CONTROLS:    137
+ control_ints = 77 	 control_bits = 60
+inputSize = 12	ctrlSize = 294
+Random seeds = 1
+Number of minvar nodes = 4
+BEG CHECK
+ * After optims it became = 56 was 1097
+Assert at miniTestb869.sk:70 (1)
+END CHECK
+********  0	ftime= 0	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 253 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 0
+f# %assign: 17 clauses: 1123 learn: 4 restart: 1 decision: 844 propagated: 1563
+END FIND
+BEG CHECK
+ * After optims it became = 119 was 1097
+c# %assign: 33 clauses: 80 learn: 0 restart: 0 decision: 0 propagated: 21
+ reduced size from 119 to 100
+After all optim
+c# %assign: 22 clauses: 174 learn: 0 restart: 0 decision: 0 propagated: 21
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  1	ftime= 0.002	ctime= 0.001
+BEG FIND
+Level 1  intsize = 3
+ * After optims it became = 259 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 844
+f# %assign: 17 clauses: 1326 learn: 4 restart: 2 decision: 1600 propagated: 2861
+END FIND
+BEG CHECK
+ * After optims it became = 119 was 1097
+c# %assign: 37 clauses: 224 learn: 0 restart: 0 decision: 0 propagated: 53
+ reduced size from 119 to 94
+After all optim
+c# %assign: 18 clauses: 826 learn: 0 restart: 0 decision: 0 propagated: 53
+Assert at miniTestb869.sk:70 (1)
+END CHECK
+********  2	ftime= 0.001	ctime= 0.002
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 1600
+f# %assign: 10 clauses: 5910 learn: 103 restart: 4 decision: 2699 propagated: 14508
+END FIND
+BEG CHECK
+ * After optims it became = 143 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  3	ftime= 0.004	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 2699
+f# %assign: 7 clauses: 10428 learn: 106 restart: 5 decision: 3035 propagated: 18474
+END FIND
+BEG CHECK
+ * After optims it became = 161 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  4	ftime= 0.003	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 3035
+f# %assign: 6 clauses: 13821 learn: 109 restart: 6 decision: 3508 propagated: 25269
+END FIND
+BEG CHECK
+ * After optims it became = 165 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  5	ftime= 0.004	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 656 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 3508
+f# %assign: 5 clauses: 18618 learn: 112 restart: 7 decision: 3915 propagated: 32958
+END FIND
+BEG CHECK
+ * After optims it became = 143 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  6	ftime= 0.003	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 256 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 3915
+f# %assign: 5 clauses: 18753 learn: 112 restart: 8 decision: 4240 propagated: 39008
+END FIND
+BEG CHECK
+ * After optims it became = 142 was 1097
+DECISIONS START = 0
+c# %assign: 62 clauses: 129 learn: 0 restart: 1 decision: 38 propagated: 290
+DECISIONS START = 0
+c# %assign: 58 clauses: 140 learn: 0 restart: 1 decision: 37 propagated: 290
+DECISIONS START = 0
+c# %assign: 59 clauses: 138 learn: 0 restart: 1 decision: 36 propagated: 290
+END CHECK
+********  7	ftime= 0.001	ctime= 0.002
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 251 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 4240
+f# %assign: 5 clauses: 18661 learn: 112 restart: 9 decision: 4581 propagated: 45128
+END FIND
+BEG CHECK
+ * After optims it became = 152 was 1097
+DECISIONS START = 0
+c# %assign: 59 clauses: 138 learn: 0 restart: 1 decision: 36 propagated: 290
+DECISIONS START = 0
+c# %assign: 76 clauses: 56 learn: 0 restart: 1 decision: 16 propagated: 291
+DECISIONS START = 0
+c# %assign: 63 clauses: 122 learn: 0 restart: 1 decision: 35 propagated: 290
+END CHECK
+********  8	ftime= 0.002	ctime= 0.002
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 254 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 4581
+f# %assign: 5 clauses: 18762 learn: 113 restart: 10 decision: 4921 propagated: 51431
+END FIND
+BEG CHECK
+ * After optims it became = 161 was 1097
+DECISIONS START = 0
+c# %assign: 63 clauses: 122 learn: 0 restart: 1 decision: 35 propagated: 290
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 161 to 148
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10261 learn: 1 restart: 1 decision: 268 propagated: 7028
+END CHECK
+********  9	ftime= 0.002	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 651 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 4921
+f# %assign: 5 clauses: 21465 learn: 113 restart: 11 decision: 5248 propagated: 58245
+END FIND
+BEG CHECK
+ * After optims it became = 161 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 161 to 148
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10291 learn: 173 restart: 2 decision: 881 propagated: 90878
+END CHECK
+********  10	ftime= 0.003	ctime= 0.01
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 5248
+f# %assign: 4 clauses: 24447 learn: 122 restart: 12 decision: 5891 propagated: 73072
+END FIND
+BEG CHECK
+ * After optims it became = 163 was 1097
+DECISIONS START = 0
+c# %assign: 57 clauses: 145 learn: 0 restart: 1 decision: 46 propagated: 290
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 163 to 150
+After all optim
+DECISIONS START = 0
+c# %assign: 4 clauses: 9004 learn: 168 restart: 2 decision: 583 propagated: 35783
+END CHECK
+********  11	ftime= 0.004	ctime= 0.008
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 5891
+f# %assign: 4 clauses: 27807 learn: 124 restart: 13 decision: 6197 propagated: 82090
+END FIND
+BEG CHECK
+ * After optims it became = 170 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  12	ftime= 0.004	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 6197
+f# %assign: 4 clauses: 31197 learn: 125 restart: 14 decision: 6530 propagated: 91775
+END FIND
+BEG CHECK
+ * After optims it became = 161 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 161 to 148
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10334 learn: 103 restart: 2 decision: 492 propagated: 50049
+END CHECK
+********  13	ftime= 0.003	ctime= 0.008
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 656 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 6530
+f# %assign: 3 clauses: 35055 learn: 126 restart: 15 decision: 6822 propagated: 102149
+END FIND
+BEG CHECK
+ * After optims it became = 160 was 1097
+DECISIONS START = 0
+c# %assign: 47 clauses: 206 learn: 0 restart: 1 decision: 83 propagated: 290
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 160 to 147
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10346 learn: 81 restart: 1 decision: 372 propagated: 28201
+END CHECK
+********  14	ftime= 0.004	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 264 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 6822
+f# %assign: 4 clauses: 35110 learn: 127 restart: 16 decision: 7684 propagated: 138726
+END FIND
+BEG CHECK
+ * After optims it became = 162 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 162 to 149
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10409 learn: 6 restart: 1 decision: 153 propagated: 8374
+END CHECK
+********  15	ftime= 0.006	ctime= 0.004
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 655 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 7684
+f# %assign: 3 clauses: 39406 learn: 291 restart: 18 decision: 8934 propagated: 218787
+END FIND
+BEG CHECK
+ * After optims it became = 186 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  16	ftime= 0.011	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 8934
+f# %assign: 3 clauses: 42485 learn: 291 restart: 19 decision: 9192 propagated: 231018
+END FIND
+BEG CHECK
+ * After optims it became = 185 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 185 to 172
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11159 learn: 8 restart: 1 decision: 199 propagated: 9610
+END CHECK
+********  17	ftime= 0.005	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 253 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 9192
+f# %assign: 3 clauses: 42611 learn: 291 restart: 20 decision: 9477 propagated: 243279
+END FIND
+BEG CHECK
+ * After optims it became = 194 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  18	ftime= 0.003	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 259 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 9477
+f# %assign: 3 clauses: 42766 learn: 291 restart: 21 decision: 9743 propagated: 255717
+END FIND
+BEG CHECK
+ * After optims it became = 200 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 200 to 187
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11357 learn: 543 restart: 4 decision: 1376 propagated: 221299
+END CHECK
+********  19	ftime= 0.003	ctime= 0.023
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 655 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 9743
+f# %assign: 3 clauses: 47083 learn: 294 restart: 22 decision: 10044 propagated: 271379
+END FIND
+BEG CHECK
+ * After optims it became = 201 was 1097
+DECISIONS START = 0
+c# %assign: 48 clauses: 195 learn: 0 restart: 1 decision: 82 propagated: 290
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 201 to 188
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11372 learn: 41 restart: 1 decision: 278 propagated: 19328
+END CHECK
+********  20	ftime= 0.005	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 604 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 10044
+f# %assign: 3 clauses: 50242 learn: 374 restart: 23 decision: 10653 propagated: 320072
+END FIND
+BEG CHECK
+ * After optims it became = 197 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 197 to 184
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11267 learn: 2 restart: 1 decision: 141 propagated: 4850
+END CHECK
+********  21	ftime= 0.008	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 10653
+f# %assign: 3 clauses: 53737 learn: 439 restart: 24 decision: 11299 propagated: 384931
+END FIND
+BEG CHECK
+ * After optims it became = 193 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 193 to 180
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11072 learn: 54 restart: 1 decision: 333 propagated: 23617
+END CHECK
+********  22	ftime= 0.009	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 606 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 11299
+f# %assign: 3 clauses: 57092 learn: 464 restart: 25 decision: 11678 propagated: 412076
+END FIND
+BEG CHECK
+ * After optims it became = 189 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 189 to 176
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11276 learn: 25 restart: 1 decision: 233 propagated: 21969
+END CHECK
+********  23	ftime= 0.007	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 656 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 11678
+f# %assign: 3 clauses: 60824 learn: 464 restart: 26 decision: 11926 propagated: 429085
+END FIND
+BEG CHECK
+ * After optims it became = 189 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 189 to 176
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11198 learn: 151 restart: 2 decision: 592 propagated: 54532
+END CHECK
+********  24	ftime= 0.006	ctime= 0.009
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 11926
+f# %assign: 3 clauses: 64562 learn: 464 restart: 27 decision: 12167 propagated: 447033
+END FIND
+BEG CHECK
+ * After optims it became = 186 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 186 to 173
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11084 learn: 26 restart: 1 decision: 252 propagated: 11663
+END CHECK
+********  25	ftime= 0.006	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 12167
+f# %assign: 3 clauses: 68153 learn: 564 restart: 29 decision: 12695 propagated: 510694
+END FIND
+BEG CHECK
+ * After optims it became = 181 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 181 to 168
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11009 learn: 29 restart: 1 decision: 256 propagated: 12481
+END CHECK
+********  26	ftime= 0.011	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 12695
+f# %assign: 3 clauses: 71987 learn: 565 restart: 30 decision: 12951 propagated: 531021
+END FIND
+BEG CHECK
+ * After optims it became = 184 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 184 to 171
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11015 learn: 122 restart: 2 decision: 504 propagated: 46447
+END CHECK
+********  27	ftime= 0.006	ctime= 0.008
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 656 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 12951
+f# %assign: 3 clauses: 75464 learn: 566 restart: 31 decision: 13268 propagated: 559043
+END FIND
+BEG CHECK
+ * After optims it became = 185 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 185 to 172
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10985 learn: 93 restart: 2 decision: 502 propagated: 34405
+END CHECK
+********  28	ftime= 0.007	ctime= 0.007
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 13268
+f# %assign: 3 clauses: 77566 learn: 662 restart: 33 decision: 14011 propagated: 659564
+END FIND
+BEG CHECK
+ * After optims it became = 196 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 196 to 183
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11297 learn: 309 restart: 3 decision: 998 propagated: 149249
+END CHECK
+********  29	ftime= 0.015	ctime= 0.017
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 14011
+f# %assign: 3 clauses: 81616 learn: 785 restart: 35 decision: 14752 propagated: 776800
+END FIND
+BEG CHECK
+ * After optims it became = 201 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  30	ftime= 999.016	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 14752
+f# %assign: 2 clauses: 85495 learn: 785 restart: 36 decision: 15029 propagated: 800146
+END FIND
+BEG CHECK
+ * After optims it became = 202 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  31	ftime= 0.008	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 15029
+f# %assign: 2 clauses: 89038 learn: 787 restart: 37 decision: 15306 propagated: 829843
+END FIND
+BEG CHECK
+ * After optims it became = 199 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 199 to 186
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11147 learn: 87 restart: 2 decision: 534 propagated: 41156
+END CHECK
+********  32	ftime= 0.007	ctime= 0.008
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 15306
+f# %assign: 2 clauses: 91342 learn: 788 restart: 38 decision: 15556 propagated: 855536
+END FIND
+BEG CHECK
+ * After optims it became = 198 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 198 to 185
+After all optim
+DECISIONS START = 0
+c# %assign: 4 clauses: 9805 learn: 44 restart: 1 decision: 364 propagated: 30553
+END CHECK
+********  33	ftime= 0.006	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 15556
+f# %assign: 2 clauses: 95131 learn: 822 restart: 39 decision: 15940 propagated: 898773
+END FIND
+BEG CHECK
+ * After optims it became = 205 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 205 to 192
+After all optim
+DECISIONS START = 0
+c# %assign: 4 clauses: 10111 learn: 17 restart: 1 decision: 184 propagated: 10080
+END CHECK
+********  34	ftime= 0.009	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 605 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 15940
+f# %assign: 2 clauses: 97918 learn: 822 restart: 40 decision: 16213 propagated: 925361
+END FIND
+BEG CHECK
+ * After optims it became = 197 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 197 to 184
+After all optim
+DECISIONS START = 0
+c# %assign: 4 clauses: 9693 learn: 195 restart: 2 decision: 704 propagated: 65054
+END CHECK
+********  35	ftime= 0.008	ctime= 0.01
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 260 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 16213
+f# %assign: 2 clauses: 98111 learn: 822 restart: 41 decision: 16493 propagated: 951993
+END FIND
+BEG CHECK
+ * After optims it became = 205 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 205 to 192
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11044 learn: 169 restart: 2 decision: 768 propagated: 73554
+END CHECK
+********  36	ftime= 0.007	ctime= 0.012
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 16493
+f# %assign: 2 clauses: 100864 learn: 1052 restart: 43 decision: 17330 propagated: 1161749
+END FIND
+BEG CHECK
+ * After optims it became = 199 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 199 to 186
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10999 learn: 2 restart: 1 decision: 146 propagated: 8500
+END CHECK
+********  37	ftime= 0.028	ctime= 0.005
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 17330
+f# %assign: 2 clauses: 103951 learn: 1222 restart: 45 decision: 18339 propagated: 1362148
+END FIND
+BEG CHECK
+ * After optims it became = 188 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  38	ftime= 0.025	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 18339
+f# %assign: 2 clauses: 107193 learn: 1222 restart: 46 decision: 18621 propagated: 1391109
+END FIND
+BEG CHECK
+ * After optims it became = 188 was 1097
+Assert at miniTestb869.sk:27 (0)
+END CHECK
+********  39	ftime= 0.01	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 656 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 18621
+f# %assign: 2 clauses: 110439 learn: 1364 restart: 48 decision: 19344 propagated: 1568435
+END FIND
+BEG CHECK
+ * After optims it became = 183 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 183 to 170
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10787 learn: 51 restart: 1 decision: 245 propagated: 20054
+END CHECK
+********  40	ftime= 0.022	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 19344
+f# %assign: 2 clauses: 113699 learn: 1459 restart: 50 decision: 19896 propagated: 1710284
+END FIND
+BEG CHECK
+ * After optims it became = 193 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 193 to 180
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10886 learn: 171 restart: 2 decision: 640 propagated: 83117
+END CHECK
+********  41	ftime= 0.021	ctime= 0.01
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 19896
+f# %assign: 2 clauses: 117533 learn: 1465 restart: 51 decision: 20207 propagated: 1762444
+END FIND
+BEG CHECK
+ * After optims it became = 203 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 203 to 190
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11081 learn: 75 restart: 1 decision: 258 propagated: 25748
+END CHECK
+********  42	ftime= 0.011	ctime= 0.007
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 264 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 20207
+f# %assign: 2 clauses: 117870 learn: 1465 restart: 52 decision: 20482 propagated: 1793998
+END FIND
+BEG CHECK
+ * After optims it became = 202 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 202 to 189
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11033 learn: 111 restart: 2 decision: 675 propagated: 60023
+END CHECK
+********  43	ftime= 0.006	ctime= 0.008
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 653 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 20482
+f# %assign: 2 clauses: 120348 learn: 1572 restart: 54 decision: 21075 propagated: 1931633
+END FIND
+BEG CHECK
+ * After optims it became = 192 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 192 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 10 clauses: 10130 learn: 595 restart: 4 decision: 2343 propagated: 362881
+END CHECK
+********  44	ftime= 0.02	ctime= 0.033
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 257 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 21075
+f# %assign: 2 clauses: 120458 learn: 1572 restart: 55 decision: 21352 propagated: 1963822
+END FIND
+BEG CHECK
+ * After optims it became = 194 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 194 to 181
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10916 learn: 87 restart: 2 decision: 428 propagated: 58998
+END CHECK
+********  45	ftime= 0.007	ctime= 0.009
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 256 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 21352
+f# %assign: 2 clauses: 120589 learn: 1573 restart: 56 decision: 21637 propagated: 1996251
+END FIND
+BEG CHECK
+ * After optims it became = 192 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 192 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10924 learn: 479 restart: 4 decision: 1627 propagated: 244727
+END CHECK
+********  46	ftime= 0.007	ctime= 0.023
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 21637
+f# %assign: 2 clauses: 123481 learn: 1573 restart: 57 decision: 21910 propagated: 2029180
+END FIND
+BEG CHECK
+ * After optims it became = 192 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 192 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10940 learn: 240 restart: 3 decision: 720 propagated: 122094
+END CHECK
+********  47	ftime= 0.008	ctime= 0.013
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 651 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 21910
+f# %assign: 2 clauses: 125850 learn: 1574 restart: 58 decision: 22176 propagated: 2064918
+END FIND
+BEG CHECK
+ * After optims it became = 193 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 193 to 180
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10946 learn: 77 restart: 1 decision: 462 propagated: 32581
+END CHECK
+********  48	ftime= 0.011	ctime= 0.007
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 22176
+f# %assign: 2 clauses: 129459 learn: 1602 restart: 59 decision: 22499 propagated: 2131501
+END FIND
+BEG CHECK
+ * After optims it became = 195 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 195 to 182
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10937 learn: 272 restart: 3 decision: 815 propagated: 91196
+END CHECK
+********  49	ftime= 0.012	ctime= 0.013
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 655 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 22499
+f# %assign: 2 clauses: 132387 learn: 1602 restart: 60 decision: 22797 propagated: 2166769
+END FIND
+BEG CHECK
+ * After optims it became = 195 was 1097
+Assert at miniTestb869.sk:26 (0)
+END CHECK
+********  50	ftime= 0.009	ctime= 0.001
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 256 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 22797
+f# %assign: 2 clauses: 132482 learn: 1602 restart: 61 decision: 23342 propagated: 2239765
+END FIND
+BEG CHECK
+ * After optims it became = 202 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 202 to 189
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11060 learn: 109 restart: 2 decision: 463 propagated: 50642
+END CHECK
+********  51	ftime= 0.012	ctime= 0.009
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 23342
+f# %assign: 2 clauses: 135686 learn: 1773 restart: 63 decision: 24191 propagated: 2553528
+END FIND
+BEG CHECK
+ * After optims it became = 194 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 194 to 181
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11066 learn: 28 restart: 1 decision: 281 propagated: 22824
+END CHECK
+********  52	ftime= 0.038	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 24191
+f# %assign: 2 clauses: 138797 learn: 1885 restart: 65 decision: 24857 propagated: 2683843
+END FIND
+BEG CHECK
+ * After optims it became = 199 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 199 to 186
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 11195 learn: 64 restart: 1 decision: 355 propagated: 26044
+END CHECK
+********  53	ftime= 0.022	ctime= 0.006
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 655 was 1097
+* TIME TO ADD INPUT :  0.003 ms 
+DECISIONS START = 24857
+f# %assign: 2 clauses: 141737 learn: 1885 restart: 66 decision: 25146 propagated: 2721633
+END FIND
+BEG CHECK
+ * After optims it became = 188 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 188 to 175
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10833 learn: 946 restart: 5 decision: 2651 propagated: 371904
+END CHECK
+********  54	ftime= 0.01	ctime= 0.038
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 25146
+f# %assign: 2 clauses: 144725 learn: 1885 restart: 67 decision: 25423 propagated: 2760169
+END FIND
+BEG CHECK
+ * After optims it became = 184 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 184 to 171
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10775 learn: 535 restart: 4 decision: 1360 propagated: 206433
+END CHECK
+********  55	ftime= 0.009	ctime= 0.023
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 25423
+f# %assign: 2 clauses: 147653 learn: 1885 restart: 68 decision: 25696 propagated: 2799435
+END FIND
+BEG CHECK
+ * After optims it became = 183 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 183 to 170
+After all optim
+DECISIONS START = 0
+c# %assign: 3 clauses: 10856 learn: 380 restart: 3 decision: 1088 propagated: 137115
+END CHECK
+********  56	ftime= 0.009	ctime= 0.016
+BEG FIND
+Level 1  intsize = 4
+ * After optims it became = 652 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 25696
+f# %assign: 2 clauses: 147653 learn: 1885 restart: 69 decision: 25965 propagated: 2838687
+END FIND
+BEG CHECK
+ * After optims it became = 182 was 1097
+c# %assign: 41 clauses: 514 learn: 0 restart: 0 decision: 0 propagated: 119
+ reduced size from 182 to 169
+After all optim
+DECISIONS START = 0
+c# %assign: 57 clauses: 7887 learn: 665 restart: 5 decision: 2361 propagated: 396137
+DECISIONS START = 0
+c# %assign: 66 clauses: 255 learn: 0 restart: 1 decision: 66 propagated: 585
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 182 to 180
+After all optim
+DECISIONS START = 0
+c# %assign: 2 clauses: 40056 learn: 1899 restart: 6 decision: 6589 propagated: 2386734
+END CHECK
+********  57	ftime= 0.009	ctime= 0.244
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 264 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 25965
+f# %assign: 2 clauses: 147973 learn: 1886 restart: 70 decision: 26240 propagated: 2878014
+END FIND
+BEG CHECK
+ * After optims it became = 177 was 1097
+DECISIONS START = 0
+c# %assign: 64 clauses: 253 learn: 0 restart: 1 decision: 96 propagated: 585
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 177 to 175
+After all optim
+DECISIONS START = 0
+c# %assign: 2 clauses: 39920 learn: 1545 restart: 7 decision: 8658 propagated: 3720697
+END CHECK
+********  58	ftime= 0.01	ctime= 999.278
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 259 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 26240
+f# %assign: 2 clauses: 148083 learn: 1888 restart: 71 decision: 26697 propagated: 2945027
+END FIND
+BEG CHECK
+ * After optims it became = 165 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 165 to 163
+After all optim
+DECISIONS START = 0
+c# %assign: 2 clauses: 39624 learn: 885 restart: 5 decision: 3314 propagated: 1272654
+END CHECK
+********  59	ftime= 0.013	ctime= 0.092
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 258 was 1097
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 26697
+f# %assign: 3 clauses: 148119 learn: 1888 restart: 72 decision: 26978 propagated: 2985668
+END FIND
+BEG CHECK
+ * After optims it became = 181 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 181 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 83 clauses: 39766 learn: 7548 restart: 10 decision: 21550 propagated: 8570326
+END CHECK
+********  60	ftime= 0.009	ctime= 999.942
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=4, H__BND1=3, H__BND2=2, H__BND3=3, 
+BEG FIND
+DECISIONS START = 26978
+f# %assign: 3 clauses: 147526 learn: 1887 restart: 73 decision: 27236 propagated: 3024975
+END FIND
+BEG CHECK
+ * After optims it became = 181 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 181 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 83 clauses: 39766 learn: 7548 restart: 10 decision: 21550 propagated: 8570326
+END CHECK
+********  61	ftime= 0.01	ctime= 999.961
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=4, H__BND1=3, H__BND2=2, H__BND3=2, 
+BEG FIND
+DECISIONS START = 27236
+f# %assign: 3 clauses: 147538 learn: 1888 restart: 74 decision: 27510 propagated: 3064405
+END FIND
+BEG CHECK
+ * After optims it became = 181 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 181 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 83 clauses: 39766 learn: 7548 restart: 10 decision: 21550 propagated: 8570326
+END CHECK
+********  62	ftime= 0.007	ctime= 1000.04
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=4, H__BND1=3, H__BND2=2, H__BND3=1, 
+BEG FIND
+DECISIONS START = 27510
+f# %assign: 3 clauses: 147549 learn: 1888 restart: 75 decision: 27839 propagated: 3117547
+END FIND
+BEG CHECK
+ * After optims it became = 181 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 181 to 179
+After all optim
+DECISIONS START = 0
+c# %assign: 83 clauses: 39766 learn: 7548 restart: 10 decision: 21550 propagated: 8570326
+END CHECK
+********  63	ftime= 0.01	ctime= 999.951
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=4, H__BND1=2, H__BND2=2, H__BND3=1, 
+BEG FIND
+DECISIONS START = 27839
+f# %assign: 3 clauses: 147559 learn: 1892 restart: 76 decision: 28160 propagated: 3171607
+END FIND
+BEG CHECK
+ * After optims it became = 184 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 184 to 182
+After all optim
+DECISIONS START = 0
+c# %assign: 2 clauses: 39586 learn: 27 restart: 1 decision: 366 propagated: 60779
+END CHECK
+********  64	ftime= 0.009	ctime= 0.016
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 654 was 1097
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 28160
+f# %assign: 3 clauses: 151666 learn: 1986 restart: 77 decision: 28780 propagated: 3343642
+END FIND
+BEG CHECK
+ * After optims it became = 184 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 184 to 182
+After all optim
+DECISIONS START = 0
+c# %assign: 86 clauses: 17462 learn: 2386 restart: 9 decision: 15933 propagated: 5360695
+END CHECK
+********  65	ftime= 0.023	ctime= 0.537
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=4, H__BND1=2, H__BND2=2, H__BND3=0, 
+BEG FIND
+DECISIONS START = 28780
+f# %assign: 3 clauses: 151675 learn: 1992 restart: 78 decision: 29148 propagated: 3399301
+END FIND
+BEG CHECK
+ * After optims it became = 182 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 182 to 180
+After all optim
+DECISIONS START = 0
+c# %assign: 33 clauses: 39754 learn: 5177 restart: 9 decision: 12631 propagated: 4745389
+END CHECK
+********  66	ftime= 0.009	ctime= 999.568
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=3, H__BND1=2, H__BND2=2, H__BND3=0, 
+BEG FIND
+DECISIONS START = 29148
+f# %assign: 3 clauses: 151349 learn: 1992 restart: 79 decision: 29440 propagated: 3451953
+END FIND
+BEG CHECK
+ * After optims it became = 168 was 1097
+c# %assign: 42 clauses: 1091 learn: 0 restart: 0 decision: 0 propagated: 247
+ reduced size from 168 to 166
+After all optim
+DECISIONS START = 0
+c# %assign: 52 clauses: 17453 learn: 2019 restart: 9 decision: 16370 propagated: 7333995
+END CHECK
+********  67	ftime= 0.012	ctime= 999.768
+*********INSIDE minimizeHoleValue, mhsize=4 current value of H__BND0=3, H__BND1=2, H__BND2=1, H__BND3=0, 
+BEG FIND
+DECISIONS START = 29440
+f# %assign: 3 clauses: 151354 learn: 1995 restart: 80 decision: 29446 propagated: 3478449
+END FIND
+ *GOT THE CORRECT ANSWER IN 68 iterations.
+ *FIND TIME 999.629 CHECK TIME 6999.83 TOTAL TIME 7999.46
+VALUES H__0_10: 1, H__0_11: 1, H__0_23_26: 0, H__0_23_27: 0, H__0_23_28: 0, H__0_23_29: 1, H__0_23_30: 0, H__0_23_31: 0, H__0_24: 0, H__0_25: 0, H__0_32_35: 0, H__0_32_36: 1, H__0_32_37: 0, H__0_32_38: 0, H__0_32_39: 0, H__0_32_40: 0, H__0_33: 0, H__0_34: 0, H__0_41_44: 0, H__0_41_45: 0, H__0_41_46: 0, H__0_41_47: 0, H__0_41_48: 0, H__0_41_49: 0, H__0_42: 0, H__0_43: 0, H__0_6: 1, H__0_7: 1, H__0_8: 1, H__0_9: 1, H__10_32: 2, H__11_32: 0, H__12_32: 0, H__13_41: 2, H__14_41: 2, H__15_41: 0, H__1_23: 1, H__1_32: 0, H__1_41: 0, H__2: 2, H__3_10: 2, H__3_11: 0, H__3_23_26: 1, H__3_23_27: 3, H__3_23_28: 3, H__3_23_29: 3, H__3_23_30: 0, H__3_23_31: 2, H__3_24: 0, H__3_25: 0, H__3_32_35: 0, H__3_32_36: 1, H__3_32_37: 0, H__3_32_38: 0, H__3_32_39: 0, H__3_32_40: 0, H__3_33: 0, H__3_34: 0, H__3_41_44: 0, H__3_41_45: 0, H__3_41_46: 2, H__3_41_47: 0, H__3_41_48: 2, H__3_41_49: 0, H__3_42: 1, H__3_43: 2, H__3_6: 2, H__3_7: 0, H__3_8: 0, H__3_9: 2, H__4_10: 1, H__4_11: 0, H__4_23_26: 1, H__4_23_27: 0, H__4_23_28: 1, H__4_23_29: 0, H__4_23_30: 0, H__4_23_31: 0, H__4_24: 0, H__4_25: 0, H__4_32_35: 1, H__4_32_36: 0, H__4_32_37: 0, H__4_32_38: 0, H__4_32_39: 0, H__4_32_40: 0, H__4_33: 0, H__4_34: 1, H__4_41_44: 0, H__4_41_45: 0, H__4_41_46: 0, H__4_41_47: 0, H__4_41_48: 0, H__4_41_49: 0, H__4_42: 1, H__4_43: 1, H__4_6: 0, H__4_7: 1, H__4_8: 0, H__4_9: 1, H__5_10: 4, H__5_11: 8, H__5_23_26: 3, H__5_23_27: 0, H__5_23_28: 3, H__5_23_29: 2, H__5_23_30: 0, H__5_23_31: 4, H__5_24: 0, H__5_25: 1, H__5_32_35: 2, H__5_32_36: 3, H__5_32_37: 4, H__5_32_38: 11, H__5_32_39: 0, H__5_32_40: 4, H__5_33: 3, H__5_34: 2, H__5_41_44: 10, H__5_41_45: 7, H__5_41_46: 4, H__5_41_47: 0, H__5_41_48: 0, H__5_41_49: 4, H__5_42: 3, H__5_43: 2, H__5_6: 8, H__5_7: 3, H__5_8: 1, H__5_9: 8, H__7_23: 1, H__8_23: 0, H__9_23: 0, H__BND0: 3, H__BND1: 2, H__BND2: 1, H__BND3: 0, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  7999.47 ms 
+RNDDEG = -1
+return 0
+POST-SUMMRY 
+TRAIL: 
+NOTOK
+Adding constraints to minimize
+ALLRESET
+
+----- Statistics -----
+Total elapsed time (ms):  7999.49
+Model building time (ms): 0.006
+Solution time (ms):       7999.48
+Max virtual mem (bytes):  118497280
+Max resident mem (bytes): 29245440
+Max private mem (bytes):  113856512
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 7.533
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 7.999
+      max memory usage (MiB) ----------> 113.00781
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 8
+      number of nodes after opts ------> 1097
+      number of controls --------------> -1
+      total number of control bits ----> -1
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382389.1650 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382389.1670 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382389.1880 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382389.1980 - NOTE] Wrote test harness to ./miniTestb869_test.cpp[0m
+[SKETCH] DONE
+Total time = 8037

@@ -1,0 +1,235 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb568.sk
+    [0;32m[1584382484.7470 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382484.9450 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584382484.9830 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382484.9850 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382484.9851 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382484.9852 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382484.9860 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382484.9920 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 8
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382485.0290 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis --olevel 7 -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb568.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb568.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis --olevel 7 -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb568.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb568.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, --olevel, 7, -nativeints, --bnd-inbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -showDAG, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb568.sk/solution0-0, /home/akshat/.sketch/tmp/miniTestb568.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 5
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382485
+ optimization level = 7
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb568.sk/input0.tmp
+* before  EVERYTHING: main__WrapperNospec::SPEC nodes = 1	 main__Wrapper::SKETCH nodes = 4
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 1 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+BEFORE OptimizeCommutAssoc38
+prepass:  0 ms 
+ccs:  0 ms 
+replacement:  0 ms 
+AFTER OptimizeCommutAssoc 38
+* Final Problem size: Problem nodes = 38
+dagmain__WrapperNospec{
+0= (-1)
+H__2
+i_1_5_0
+3= i_1_5_0 == H__2 
+H__1
+5= i_1_5_0 == H__1 
+6= (0)
+7= [5]$(0), (-1), $
+8= (1)
+9= [3]$7, (1), $
+10= 9 == (-1) 
+11= 10 ! 
+H__0
+13= i_1_5_0 == H__0 
+14= 13 | (!10) 
+15= ASSERT 14 : Assert at miniTestb568.sk:26 (1)
+H__3
+17= i_1_5_0 == H__3 
+18= [17]$(1), (-1), $
+19= 18 == (-1) 
+20= 19 ! 
+21= 13 | (!19) 
+22= ASSERT 21 : Assert at miniTestb568.sk:26 (1)
+23= i_1_5_0 + (1) 
+24= [17]$23, (0), $
+25= (0){(0)->i_1_5_0}
+26= 25{(1)->23}
+27= 26[9]
+28= 27 == 24 
+29= 13 | 28 
+30= (!10) | 29 
+31= ASSERT 30 : Assert at miniTestb568.sk:30 (1)
+32= (!19) | 29 
+33= ASSERT 32 : Assert at miniTestb568.sk:30 (1)
+34= 27 + (1) 
+35= 34 == 24 
+36= 35 | 29 
+37= ASSERT 36 : ASSERTION CAN NOT BE SATISFIED: miniTestb568.sk:31 Assert at miniTestb568.sk:31 (1)
+}
+  # OF CONTROLS:    4
+ control_ints = 4 	 control_bits = 0
+inputSize = 2	ctrlSize = 20
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 32 was 38
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 32 to 27
+After all optim
+DECISIONS START = 0
+c# %assign: 75 clauses: 37 learn: 1 restart: 1 decision: 7 propagated: 32
+Assert at miniTestb568.sk:26 (1)
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 3
+ * After optims it became = 34 was 38
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 0
+f# %assign: 3 clauses: 29 learn: 1 restart: 1 decision: 65 propagated: 189
+END FIND
+BEG CHECK
+ * After optims it became = 32 was 38
+Assert at miniTestb568.sk:26 (1)
+END CHECK
+********  1	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 3
+ * After optims it became = 33 was 38
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 65
+f# %assign: 6 clauses: 63 learn: 1 restart: 2 decision: 78 propagated: 354
+END FIND
+BEG CHECK
+ * After optims it became = 31 was 38
+c# %assign: 7 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 31 to 24
+After all optim
+DECISIONS START = 0
+c# %assign: 93 clauses: 143 learn: 5 restart: 1 decision: 14 propagated: 117
+c# %assign: 4 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 31 to 24
+After all optim
+DECISIONS START = 0
+c# %assign: 96 clauses: 263 learn: 13 restart: 1 decision: 63 propagated: 335
+Assert at miniTestb568.sk:26 (1)
+END CHECK
+********  2	ftime= 0.001	ctime= 0.001
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 34 was 38
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 78
+f# %assign: 8 clauses: 98 learn: 1 restart: 3 decision: 93 propagated: 524
+END FIND
+BEG CHECK
+ * After optims it became = 32 was 38
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+END CHECK
+********  3	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 34 was 38
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 93
+f# %assign: 10 clauses: 133 learn: 2 restart: 4 decision: 112 propagated: 702
+END FIND
+BEG CHECK
+ * After optims it became = 32 was 38
+Assert at miniTestb568.sk:26 (1)
+END CHECK
+********  4	ftime= 0	ctime= 0.001
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 34 was 38
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 112
+f# %assign: 12 clauses: 168 learn: 2 restart: 5 decision: 124 propagated: 882
+END FIND
+BEG CHECK
+ * After optims it became = 32 was 38
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 41
+END CHECK
+********  5	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 34 was 38
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 124
+f# %assign: 14 clauses: 203 learn: 3 restart: 6 decision: 173 propagated: 1069
+END FIND
+BEG CHECK
+ * After optims it became = 32 was 38
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+END CHECK
+********  6	ftime= 0	ctime= 0.001
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 34 was 38
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 173
+f# %assign: 16 clauses: 238 learn: 3 restart: 7 decision: 179 propagated: 1259
+END FIND
+BEG CHECK
+ * After optims it became = 32 was 38
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+c# %assign: 2 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 32 to 26
+After all optim
+DECISIONS START = 0
+c# %assign: 98 clauses: 575 learn: 3 restart: 1 decision: 222 propagated: 1131
+END CHECK
+********  7	ftime= 0	ctime= 0.001
+ *GOT THE CORRECT ANSWER IN 8 iterations.
+ *FIND TIME 0.001 CHECK TIME 0.004 TOTAL TIME 0.005
+VALUES H__0: 6, H__1: 15, H__2: 15, H__3: 6, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  0.006 ms 
+RNDDEG = -1
+return 0
+
+----- Statistics -----
+Total elapsed time (ms):  0.007
+Model building time (ms): 0.001
+Solution time (ms):       0.006
+Max virtual mem (bytes):  92762112
+Max resident mem (bytes): 1785856
+Max private mem (bytes):  91127808
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.056
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.0
+      max memory usage (MiB) ----------> 88.46484
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 4
+      number of nodes after opts ------> 38
+      number of controls --------------> 4
+      total number of control bits ----> 20
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382485.0880 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382485.0890 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382485.1000 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382485.1100 - NOTE] Wrote test harness to ./miniTestb568_test.cpp[0m
+[SKETCH] DONE
+Total time = 415

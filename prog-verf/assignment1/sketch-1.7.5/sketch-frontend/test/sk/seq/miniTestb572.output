@@ -1,0 +1,1019 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb572.sk
+    [0;32m[1584382562.7450 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382562.9550 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+miniTestb572.sk:10: Making final x
+    [0;32m[1584382563.0020 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382563.0040 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382563.0050 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382563.0060 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382563.0070 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382563.0150 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 6
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382563.0750 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 2 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb572.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb572.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 2 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb572.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb572.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 2, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -showDAG, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb572.sk/solution0-0, /home/akshat/.sketch/tmp/miniTestb572.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 2
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382563
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb572.sk/input0.tmp
+* before  EVERYTHING: main__WrapperNospec::SPEC nodes = 2	 main__Wrapper::SKETCH nodes = 6
+ INBITS = 2
+ CBITS  = 5
+ input_ints = 2 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 908
+dagmain__WrapperNospec{
+x_2_a_0
+1= (0)
+2= (0) < x_2_a_0 
+3= Assume 2 : Assume at miniTestb572.sk:11
+4= x_2_a_0 < (0) 
+5= 4 ! 
+6= ASSERT (!4) : Negative array lengths not allowed x_4  miniTestb572.sk:12
+7= (6)
+8= (6) < x_2_a_0 
+9= 8 ! 
+10= ASSERT (!8) : miniTestb572.sk:13: This loop was unrolled 6 times, but apparently that was not enough. Use the --bnd-unroll-amnt flag for better results.
+11= 2 ! 
+y_3_b_0
+13= y_3_b_0[(0)]
+14= 13 < x_2_a_0 
+15= 14 | (!2) 
+16= Assume 15 : Assume at miniTestb572.sk:17
+17= 13 < (0) 
+18= 17 ! 
+19= (!17) & 14 
+20= 19 | (!2) 
+21= ASSERT 20 : miniTestb572.sk:18: Array out of bounds
+22= (-1)
+23= [2]$(-1), (0), $
+24= 23 == (-1) 
+25= 24 & 2 
+26= 25 ! 
+27= ASSERT (!25) : Assert at miniTestb572.sk:18 (0)
+28= (1)
+29= (1) < x_2_a_0 
+30= 29 ! 
+31= y_3_b_0[(1)]
+32= 31 < x_2_a_0 
+33= 32 | (!29) 
+34= Assume 33 : Assume at miniTestb572.sk:17
+35= 31 < (0) 
+36= 35 ! 
+37= (!35) & 32 
+38= 37 | (!29) 
+39= ASSERT 38 : miniTestb572.sk:18: Array out of bounds
+40= [29]$(-1), (1), $
+41= 40 == (-1) 
+42= 41 & 29 
+43= 42 ! 
+44= ASSERT (!42) : Assert at miniTestb572.sk:18 (0)
+45= (2)
+46= (2) < x_2_a_0 
+47= 46 ! 
+48= y_3_b_0[(2)]
+49= 48 < x_2_a_0 
+50= 49 | (!46) 
+51= Assume 50 : Assume at miniTestb572.sk:17
+52= 48 < (0) 
+53= 52 ! 
+54= (!52) & 49 
+55= 54 | (!46) 
+56= ASSERT 55 : miniTestb572.sk:18: Array out of bounds
+57= [46]$(-1), (2), $
+58= 57 == (-1) 
+59= 58 & 46 
+60= 59 ! 
+61= ASSERT (!59) : Assert at miniTestb572.sk:18 (0)
+62= (3)
+63= (3) < x_2_a_0 
+64= 63 ! 
+65= y_3_b_0[(3)]
+66= 65 < x_2_a_0 
+67= 66 | (!63) 
+68= Assume 67 : Assume at miniTestb572.sk:17
+69= 65 < (0) 
+70= 69 ! 
+71= (!69) & 66 
+72= 71 | (!63) 
+73= ASSERT 72 : miniTestb572.sk:18: Array out of bounds
+74= [63]$(-1), (3), $
+75= 74 == (-1) 
+76= 75 & 63 
+77= 76 ! 
+78= ASSERT (!76) : Assert at miniTestb572.sk:18 (0)
+79= (4)
+80= (4) < x_2_a_0 
+81= 80 ! 
+82= y_3_b_0[(4)]
+83= 82 < x_2_a_0 
+84= 83 | (!80) 
+85= Assume 84 : Assume at miniTestb572.sk:17
+86= 82 < (0) 
+87= 86 ! 
+88= (!86) & 83 
+89= 88 | (!80) 
+90= ASSERT 89 : miniTestb572.sk:18: Array out of bounds
+91= [80]$(-1), (4), $
+92= 91 == (-1) 
+93= 92 & 80 
+94= 93 ! 
+95= ASSERT (!93) : Assert at miniTestb572.sk:18 (0)
+96= (5)
+97= (5) < x_2_a_0 
+98= 97 ! 
+99= y_3_b_0[(5)]
+100= 99 < x_2_a_0 
+101= 100 | (!97) 
+102= Assume 101 : Assume at miniTestb572.sk:17
+103= 99 < (0) 
+104= 103 ! 
+105= (!103) & 100 
+106= 105 | (!97) 
+107= ASSERT 106 : miniTestb572.sk:18: Array out of bounds
+108= [97]$(-1), (5), $
+109= 108 == (-1) 
+110= 109 & 97 
+111= 110 ! 
+112= ASSERT (!110) : Assert at miniTestb572.sk:18 (0)
+113= 24 ! 
+114= ASSERT (!24) : Assert at miniTestb572.sk:22 (1)
+H__0
+116= H__0 < x_2_a_0 
+117= 116 ! 
+H__25
+119= H__25 | (!116) 
+120= (!24) | 119 
+121= ASSERT 120 : Assert at miniTestb572.sk:25 (1)
+122= H__25 & 116 
+123= 24 & 122 
+124= 123 ! 
+125= ASSERT (!123) : Assert at miniTestb572.sk:25 (1)
+126= (-1){(0)->23}
+127= 126{(1)->40}
+128= 127{(2)->57}
+129= 128{(3)->74}
+130= 129{(4)->91}
+131= 130{(5)->108}
+132= 131[13]
+133= [2]$(-1), 132, $
+134= (-1){23->133}
+135= 134[40]
+136= 131[31]
+137= [29]$135, 136, $
+138= 134{40->137}
+139= 138[57]
+140= 131[48]
+141= [46]$139, 140, $
+142= 138{57->141}
+143= 142[74]
+144= 131[65]
+145= [63]$143, 144, $
+146= 142{74->145}
+147= 146[91]
+148= 131[82]
+149= [80]$147, 148, $
+150= 146{91->149}
+151= 150[108]
+152= 131[99]
+153= [97]$151, 152, $
+154= 150{108->153}
+155= 154[23]
+156= 155 == (-1) 
+157= 156 & 122 
+158= 157 ! 
+159= ASSERT (!157) : Assert at miniTestb572.sk:25 (0)
+H__27
+H__1
+162= H__1 ^ H__27 
+163= 162 ! 
+H__34
+165= (0){23->H__1}
+166= 165[155]
+167= 166 ^ H__34 
+168= 167 ! 
+169= [H__25]$(!162), (!167), $
+170= 169 & 116 
+H__28
+172= H__28 & 170 
+173= 24 & 172 
+174= 173 ! 
+175= ASSERT (!173) : Assert at miniTestb572.sk:26 (1)
+H__30
+177= H__30 & 170 
+178= 24 & 177 
+179= 178 ! 
+180= ASSERT (!178) : Assert at miniTestb572.sk:27 (1)
+H__31
+182= H__31 & 170 
+183= x_2_a_0 == (0) 
+184= 183 & 182 
+185= 184 ! 
+186= ASSERT (!184) : miniTestb572.sk:28: Division by zero
+187= [H__30]$23, 155, $
+188= 187 == (-1) 
+189= 188 & 182 
+190= 189 ! 
+191= ASSERT (!189) : Assert at miniTestb572.sk:28 (1)
+192= 182 ! 
+193= (0){(1)->29}
+194= [46]$(0), (2), $
+195= 193{(2)->194}
+196= [63]$(0), (3), $
+197= 195{(3)->196}
+198= [80]$(0), (4), $
+199= 197{(4)->198}
+200= [97]$(0), (5), $
+201= 199{(5)->200}
+202= 201[187]
+203= 202 + (1) 
+204= 203 % x_2_a_0 
+205= 204 < x_2_a_0 
+206= 204 < (0) 
+207= 206 ! 
+208= (!206) & 205 
+209= 208 | (!182) 
+210= ASSERT 209 : miniTestb572.sk:28: Array out of bounds
+H__33
+212= H__33 | (!116) 
+213= 131[204]
+214= [H__31]$187, 213, $
+215= [169]$23, 214, $
+216= 215 == (-1) 
+217= 216 ! 
+218= (!216) | 212 
+219= ASSERT 218 : Assert at miniTestb572.sk:25 (1)
+220= H__33 & 116 
+221= 216 & 220 
+222= 221 ! 
+223= ASSERT (!221) : Assert at miniTestb572.sk:25 (1)
+224= 154[215]
+225= 224 == (-1) 
+226= 225 & 220 
+227= 226 ! 
+228= ASSERT (!226) : Assert at miniTestb572.sk:25 (0)
+H__35
+230= 169 & H__28 
+H__29
+232= [230]$H__1, H__29, $
+233= (0){23->232}
+234= 233[215]
+235= 234 ^ H__35 
+236= 235 ! 
+H__42
+238= 233[224]
+239= 238 ^ H__42 
+240= 239 ! 
+241= [H__33]$(!235), (!239), $
+242= 241 & 116 
+H__36
+244= H__36 & 242 
+245= 216 & 244 
+246= 245 ! 
+247= ASSERT (!245) : Assert at miniTestb572.sk:26 (1)
+H__38
+249= H__38 & 242 
+250= 216 & 249 
+251= 250 ! 
+252= ASSERT (!250) : Assert at miniTestb572.sk:27 (1)
+H__39
+254= H__39 & 242 
+255= 183 & 254 
+256= 255 ! 
+257= ASSERT (!255) : miniTestb572.sk:28: Division by zero
+258= [H__38]$215, 224, $
+259= 258 == (-1) 
+260= 259 & 254 
+261= 260 ! 
+262= ASSERT (!260) : Assert at miniTestb572.sk:28 (1)
+263= 254 ! 
+264= 201[258]
+265= 264 + (1) 
+266= 265 % x_2_a_0 
+267= 266 < x_2_a_0 
+268= 266 < (0) 
+269= 268 ! 
+270= (!268) & 267 
+271= 270 | (!254) 
+272= ASSERT 271 : miniTestb572.sk:28: Array out of bounds
+H__40
+274= 241 & H__40 
+H__32
+276= 169 & H__32 
+277= H__0 + (1) 
+278= [276]$H__0, 277, $
+279= 278 + (1) 
+280= [274]$278, 279, $
+281= 280 < x_2_a_0 
+282= 281 & 116 
+283= 282 ! 
+284= H__25 | (!282) 
+285= 131[266]
+286= [H__39]$258, 285, $
+287= [241]$215, 286, $
+288= 287 == (-1) 
+289= 288 ! 
+290= (!288) | 284 
+291= ASSERT 290 : Assert at miniTestb572.sk:25 (3)
+292= H__25 & 282 
+293= 288 & 292 
+294= 293 ! 
+295= ASSERT (!293) : Assert at miniTestb572.sk:25 (3)
+296= 154[287]
+297= 296 == (-1) 
+298= 297 & 292 
+299= 298 ! 
+300= ASSERT (!298) : Assert at miniTestb572.sk:25 (0)
+301= 241 & H__36 
+H__37
+303= [301]$234, H__37, $
+304= 233{215->303}
+305= 304[287]
+306= 305 ^ H__27 
+307= 306 ! 
+308= 304[296]
+309= 308 ^ H__34 
+310= 309 ! 
+311= [H__25]$(!306), (!309), $
+312= 311 & 282 
+313= H__28 & 312 
+314= 288 & 313 
+315= 314 ! 
+316= ASSERT (!314) : Assert at miniTestb572.sk:26 (3)
+317= H__30 & 312 
+318= 288 & 317 
+319= 318 ! 
+320= ASSERT (!318) : Assert at miniTestb572.sk:27 (3)
+321= H__31 & 312 
+322= 183 & 321 
+323= 322 ! 
+324= ASSERT (!322) : miniTestb572.sk:28: Division by zero
+325= [H__30]$287, 296, $
+326= 325 == (-1) 
+327= 326 & 321 
+328= 327 ! 
+329= ASSERT (!327) : Assert at miniTestb572.sk:28 (3)
+330= 321 ! 
+331= 201[325]
+332= 331 + (1) 
+333= 332 % x_2_a_0 
+334= 333 < x_2_a_0 
+335= 333 < (0) 
+336= 335 ! 
+337= (!335) & 334 
+338= 337 | (!321) 
+339= ASSERT 338 : miniTestb572.sk:28: Array out of bounds
+340= H__33 | (!282) 
+341= 131[333]
+342= [H__31]$325, 341, $
+343= [311]$287, 342, $
+344= 343 == (-1) 
+345= 344 ! 
+346= (!344) | 340 
+347= ASSERT 346 : Assert at miniTestb572.sk:25 (3)
+348= H__33 & 282 
+349= 344 & 348 
+350= 349 ! 
+351= ASSERT (!349) : Assert at miniTestb572.sk:25 (3)
+352= 154[343]
+353= 352 == (-1) 
+354= 353 & 348 
+355= 354 ! 
+356= ASSERT (!354) : Assert at miniTestb572.sk:25 (0)
+357= 311 & H__28 
+358= [357]$305, H__29, $
+359= 304{287->358}
+360= 359[343]
+361= 360 ^ H__35 
+362= 361 ! 
+363= 359[352]
+364= 363 ^ H__42 
+365= 364 ! 
+366= [H__33]$(!361), (!364), $
+367= 366 & 282 
+368= H__36 & 367 
+369= 344 & 368 
+370= 369 ! 
+371= ASSERT (!369) : Assert at miniTestb572.sk:26 (3)
+372= H__38 & 367 
+373= 344 & 372 
+374= 373 ! 
+375= ASSERT (!373) : Assert at miniTestb572.sk:27 (3)
+376= H__39 & 367 
+377= 183 & 376 
+378= 377 ! 
+379= ASSERT (!377) : miniTestb572.sk:28: Division by zero
+380= [H__38]$343, 352, $
+381= 380 == (-1) 
+382= 381 & 376 
+383= 382 ! 
+384= ASSERT (!382) : Assert at miniTestb572.sk:28 (3)
+385= 376 ! 
+386= 201[380]
+387= 386 + (1) 
+388= 387 % x_2_a_0 
+389= 388 < x_2_a_0 
+390= 388 < (0) 
+391= 390 ! 
+392= (!390) & 389 
+393= 392 | (!376) 
+394= ASSERT 393 : miniTestb572.sk:28: Array out of bounds
+395= 366 & H__40 
+396= 311 & H__32 
+397= 280 + (1) 
+398= [396]$280, 397, $
+399= 398 + (1) 
+400= [395]$398, 399, $
+401= 400 < x_2_a_0 
+402= 401 & 282 
+403= 402 ! 
+404= H__25 | (!402) 
+405= 131[388]
+406= [H__39]$380, 405, $
+407= [366]$343, 406, $
+408= 407 == (-1) 
+409= 408 ! 
+410= (!408) | 404 
+411= ASSERT 410 : Assert at miniTestb572.sk:25 (5)
+412= H__25 & 402 
+413= 408 & 412 
+414= 413 ! 
+415= ASSERT (!413) : Assert at miniTestb572.sk:25 (5)
+416= 154[407]
+417= 416 == (-1) 
+418= 417 & 412 
+419= 418 ! 
+420= ASSERT (!418) : Assert at miniTestb572.sk:25 (0)
+421= 366 & H__36 
+422= [421]$360, H__37, $
+423= 359{343->422}
+424= 423[407]
+425= 424 ^ H__27 
+426= 425 ! 
+427= 423[416]
+428= 427 ^ H__34 
+429= 428 ! 
+430= [H__25]$(!425), (!428), $
+431= 430 & 402 
+432= H__28 & 431 
+433= 408 & 432 
+434= 433 ! 
+435= ASSERT (!433) : Assert at miniTestb572.sk:26 (5)
+436= H__30 & 431 
+437= 408 & 436 
+438= 437 ! 
+439= ASSERT (!437) : Assert at miniTestb572.sk:27 (5)
+440= H__31 & 431 
+441= 183 & 440 
+442= 441 ! 
+443= ASSERT (!441) : miniTestb572.sk:28: Division by zero
+444= [H__30]$407, 416, $
+445= 444 == (-1) 
+446= 445 & 440 
+447= 446 ! 
+448= ASSERT (!446) : Assert at miniTestb572.sk:28 (5)
+449= 440 ! 
+450= 201[444]
+451= 450 + (1) 
+452= 451 % x_2_a_0 
+453= 452 < x_2_a_0 
+454= 452 < (0) 
+455= 454 ! 
+456= (!454) & 453 
+457= 456 | (!440) 
+458= ASSERT 457 : miniTestb572.sk:28: Array out of bounds
+459= H__33 | (!402) 
+460= 131[452]
+461= [H__31]$444, 460, $
+462= [430]$407, 461, $
+463= 462 == (-1) 
+464= 463 ! 
+465= (!463) | 459 
+466= ASSERT 465 : Assert at miniTestb572.sk:25 (5)
+467= H__33 & 402 
+468= 463 & 467 
+469= 468 ! 
+470= ASSERT (!468) : Assert at miniTestb572.sk:25 (5)
+471= 154[462]
+472= 471 == (-1) 
+473= 472 & 467 
+474= 473 ! 
+475= ASSERT (!473) : Assert at miniTestb572.sk:25 (0)
+476= 430 & H__28 
+477= [476]$424, H__29, $
+478= 423{407->477}
+479= 478[462]
+480= 479 ^ H__35 
+481= 480 ! 
+482= 478[471]
+483= 482 ^ H__42 
+484= 483 ! 
+485= [H__33]$(!480), (!483), $
+486= 485 & 402 
+487= H__36 & 486 
+488= 463 & 487 
+489= 488 ! 
+490= ASSERT (!488) : Assert at miniTestb572.sk:26 (5)
+491= H__38 & 486 
+492= 463 & 491 
+493= 492 ! 
+494= ASSERT (!492) : Assert at miniTestb572.sk:27 (5)
+495= H__39 & 486 
+496= 183 & 495 
+497= 496 ! 
+498= ASSERT (!496) : miniTestb572.sk:28: Division by zero
+499= [H__38]$462, 471, $
+500= 499 == (-1) 
+501= 500 & 495 
+502= 501 ! 
+503= ASSERT (!501) : Assert at miniTestb572.sk:28 (5)
+504= 495 ! 
+505= 201[499]
+506= 505 + (1) 
+507= 506 % x_2_a_0 
+508= 507 < x_2_a_0 
+509= 507 < (0) 
+510= 509 ! 
+511= (!509) & 508 
+512= 511 | (!495) 
+513= ASSERT 512 : miniTestb572.sk:28: Array out of bounds
+514= 485 & H__40 
+515= 430 & H__32 
+516= 400 + (1) 
+517= [515]$400, 516, $
+518= 517 + (1) 
+519= [514]$517, 518, $
+520= 519 < x_2_a_0 
+521= 520 & 402 
+522= 521 ! 
+523= H__25 | (!521) 
+524= 131[507]
+525= [H__39]$499, 524, $
+526= [485]$462, 525, $
+527= 526 == (-1) 
+528= 527 ! 
+529= (!527) | 523 
+530= ASSERT 529 : Assert at miniTestb572.sk:25 (7)
+531= H__25 & 521 
+532= 527 & 531 
+533= 532 ! 
+534= ASSERT (!532) : Assert at miniTestb572.sk:25 (7)
+535= 154[526]
+536= 535 == (-1) 
+537= 536 & 531 
+538= 537 ! 
+539= ASSERT (!537) : Assert at miniTestb572.sk:25 (0)
+540= 485 & H__36 
+541= [540]$479, H__37, $
+542= 478{462->541}
+543= 542[526]
+544= 543 ^ H__27 
+545= 544 ! 
+546= 542[535]
+547= 546 ^ H__34 
+548= 547 ! 
+549= [H__25]$(!544), (!547), $
+550= 549 & 521 
+551= H__28 & 550 
+552= 527 & 551 
+553= 552 ! 
+554= ASSERT (!552) : Assert at miniTestb572.sk:26 (7)
+555= H__30 & 550 
+556= 527 & 555 
+557= 556 ! 
+558= ASSERT (!556) : Assert at miniTestb572.sk:27 (7)
+559= H__31 & 550 
+560= 183 & 559 
+561= 560 ! 
+562= ASSERT (!560) : miniTestb572.sk:28: Division by zero
+563= [H__30]$526, 535, $
+564= 563 == (-1) 
+565= 564 & 559 
+566= 565 ! 
+567= ASSERT (!565) : Assert at miniTestb572.sk:28 (7)
+568= 559 ! 
+569= 201[563]
+570= 569 + (1) 
+571= 570 % x_2_a_0 
+572= 571 < x_2_a_0 
+573= 571 < (0) 
+574= 573 ! 
+575= (!573) & 572 
+576= 575 | (!559) 
+577= ASSERT 576 : miniTestb572.sk:28: Array out of bounds
+578= H__33 | (!521) 
+579= 131[571]
+580= [H__31]$563, 579, $
+581= [549]$526, 580, $
+582= 581 == (-1) 
+583= 582 ! 
+584= (!582) | 578 
+585= ASSERT 584 : Assert at miniTestb572.sk:25 (7)
+586= H__33 & 521 
+587= 582 & 586 
+588= 587 ! 
+589= ASSERT (!587) : Assert at miniTestb572.sk:25 (7)
+590= 154[581]
+591= 590 == (-1) 
+592= 591 & 586 
+593= 592 ! 
+594= ASSERT (!592) : Assert at miniTestb572.sk:25 (0)
+595= 549 & H__28 
+596= [595]$543, H__29, $
+597= 542{526->596}
+598= 597[581]
+599= 598 ^ H__35 
+600= 599 ! 
+601= 597[590]
+602= 601 ^ H__42 
+603= 602 ! 
+604= [H__33]$(!599), (!602), $
+605= 604 & 521 
+606= H__36 & 605 
+607= 582 & 606 
+608= 607 ! 
+609= ASSERT (!607) : Assert at miniTestb572.sk:26 (7)
+610= H__38 & 605 
+611= 582 & 610 
+612= 611 ! 
+613= ASSERT (!611) : Assert at miniTestb572.sk:27 (7)
+614= H__39 & 605 
+615= 183 & 614 
+616= 615 ! 
+617= ASSERT (!615) : miniTestb572.sk:28: Division by zero
+618= [H__38]$581, 590, $
+619= 618 == (-1) 
+620= 619 & 614 
+621= 620 ! 
+622= ASSERT (!620) : Assert at miniTestb572.sk:28 (7)
+623= 614 ! 
+624= 201[618]
+625= 624 + (1) 
+626= 625 % x_2_a_0 
+627= 626 < x_2_a_0 
+628= 626 < (0) 
+629= 628 ! 
+630= (!628) & 627 
+631= 630 | (!614) 
+632= ASSERT 631 : miniTestb572.sk:28: Array out of bounds
+633= 604 & H__40 
+634= 549 & H__32 
+635= 519 + (1) 
+636= [634]$519, 635, $
+637= 636 + (1) 
+638= [633]$636, 637, $
+639= 638 < x_2_a_0 
+640= 639 & 521 
+641= 640 ! 
+642= H__25 | (!640) 
+643= 131[626]
+644= [H__39]$618, 643, $
+645= [604]$581, 644, $
+646= 645 == (-1) 
+647= 646 ! 
+648= (!646) | 642 
+649= ASSERT 648 : Assert at miniTestb572.sk:25 (9)
+650= H__25 & 640 
+651= 646 & 650 
+652= 651 ! 
+653= ASSERT (!651) : Assert at miniTestb572.sk:25 (9)
+654= 154[645]
+655= 654 == (-1) 
+656= 655 & 650 
+657= 656 ! 
+658= ASSERT (!656) : Assert at miniTestb572.sk:25 (0)
+659= 604 & H__36 
+660= [659]$598, H__37, $
+661= 597{581->660}
+662= 661[645]
+663= 662 ^ H__27 
+664= 663 ! 
+665= 661[654]
+666= 665 ^ H__34 
+667= 666 ! 
+668= [H__25]$(!663), (!666), $
+669= 668 & 640 
+670= H__28 & 669 
+671= 646 & 670 
+672= 671 ! 
+673= ASSERT (!671) : Assert at miniTestb572.sk:26 (9)
+674= H__30 & 669 
+675= 646 & 674 
+676= 675 ! 
+677= ASSERT (!675) : Assert at miniTestb572.sk:27 (9)
+678= H__31 & 669 
+679= 183 & 678 
+680= 679 ! 
+681= ASSERT (!679) : miniTestb572.sk:28: Division by zero
+682= [H__30]$645, 654, $
+683= 682 == (-1) 
+684= 683 & 678 
+685= 684 ! 
+686= ASSERT (!684) : Assert at miniTestb572.sk:28 (9)
+687= 678 ! 
+688= 201[682]
+689= 688 + (1) 
+690= 689 % x_2_a_0 
+691= 690 < x_2_a_0 
+692= 690 < (0) 
+693= 692 ! 
+694= (!692) & 691 
+695= 694 | (!678) 
+696= ASSERT 695 : miniTestb572.sk:28: Array out of bounds
+697= H__33 | (!640) 
+698= 131[690]
+699= [H__31]$682, 698, $
+700= [668]$645, 699, $
+701= 700 == (-1) 
+702= 701 ! 
+703= (!701) | 697 
+704= ASSERT 703 : Assert at miniTestb572.sk:25 (9)
+705= H__33 & 640 
+706= 701 & 705 
+707= 706 ! 
+708= ASSERT (!706) : Assert at miniTestb572.sk:25 (9)
+709= 154[700]
+710= 709 == (-1) 
+711= 710 & 705 
+712= 711 ! 
+713= ASSERT (!711) : Assert at miniTestb572.sk:25 (0)
+714= 668 & H__28 
+715= [714]$662, H__29, $
+716= 661{645->715}
+717= 716[700]
+718= 717 ^ H__35 
+719= 718 ! 
+720= 716[709]
+721= 720 ^ H__42 
+722= 721 ! 
+723= [H__33]$(!718), (!721), $
+724= 723 & 640 
+725= H__36 & 724 
+726= 701 & 725 
+727= 726 ! 
+728= ASSERT (!726) : Assert at miniTestb572.sk:26 (9)
+729= H__38 & 724 
+730= 701 & 729 
+731= 730 ! 
+732= ASSERT (!730) : Assert at miniTestb572.sk:27 (9)
+733= H__39 & 724 
+734= 183 & 733 
+735= 734 ! 
+736= ASSERT (!734) : miniTestb572.sk:28: Division by zero
+737= [H__38]$700, 709, $
+738= 737 == (-1) 
+739= 738 & 733 
+740= 739 ! 
+741= ASSERT (!739) : Assert at miniTestb572.sk:28 (9)
+742= 733 ! 
+743= 201[737]
+744= 743 + (1) 
+745= 744 % x_2_a_0 
+746= 745 < x_2_a_0 
+747= 745 < (0) 
+748= 747 ! 
+749= (!747) & 746 
+750= 749 | (!733) 
+751= ASSERT 750 : miniTestb572.sk:28: Array out of bounds
+752= 723 & H__40 
+753= 668 & H__32 
+754= 638 + (1) 
+755= [753]$638, 754, $
+756= 755 + (1) 
+757= [752]$755, 756, $
+758= 757 < x_2_a_0 
+759= 758 & 640 
+760= 759 ! 
+761= H__25 | (!759) 
+762= 131[745]
+763= [H__39]$737, 762, $
+764= [723]$700, 763, $
+765= 764 == (-1) 
+766= 765 ! 
+767= (!765) | 761 
+768= ASSERT 767 : Assert at miniTestb572.sk:25 (11)
+769= H__25 & 759 
+770= 765 & 769 
+771= 770 ! 
+772= ASSERT (!770) : Assert at miniTestb572.sk:25 (11)
+773= 154[764]
+774= 773 == (-1) 
+775= 774 & 769 
+776= 775 ! 
+777= ASSERT (!775) : Assert at miniTestb572.sk:25 (0)
+778= 723 & H__36 
+779= [778]$717, H__37, $
+780= 716{700->779}
+781= 780[764]
+782= 781 ^ H__27 
+783= 782 ! 
+784= 780[773]
+785= 784 ^ H__34 
+786= 785 ! 
+787= [H__25]$(!782), (!785), $
+788= 787 & 759 
+789= H__28 & 788 
+790= 765 & 789 
+791= 790 ! 
+792= ASSERT (!790) : Assert at miniTestb572.sk:26 (11)
+793= H__30 & 788 
+794= 765 & 793 
+795= 794 ! 
+796= ASSERT (!794) : Assert at miniTestb572.sk:27 (11)
+797= H__31 & 788 
+798= 183 & 797 
+799= 798 ! 
+800= ASSERT (!798) : miniTestb572.sk:28: Division by zero
+801= [H__30]$764, 773, $
+802= 801 == (-1) 
+803= 802 & 797 
+804= 803 ! 
+805= ASSERT (!803) : Assert at miniTestb572.sk:28 (11)
+806= 797 ! 
+807= 201[801]
+808= 807 + (1) 
+809= 808 % x_2_a_0 
+810= 809 < x_2_a_0 
+811= 809 < (0) 
+812= 811 ! 
+813= (!811) & 810 
+814= 813 | (!797) 
+815= ASSERT 814 : miniTestb572.sk:28: Array out of bounds
+816= H__33 | (!759) 
+817= 131[809]
+818= [H__31]$801, 817, $
+819= [787]$764, 818, $
+820= 819 == (-1) 
+821= 820 ! 
+822= (!820) | 816 
+823= ASSERT 822 : Assert at miniTestb572.sk:25 (11)
+824= H__33 & 759 
+825= 820 & 824 
+826= 825 ! 
+827= ASSERT (!825) : Assert at miniTestb572.sk:25 (11)
+828= 154[819]
+829= 828 == (-1) 
+830= 829 & 824 
+831= 830 ! 
+832= ASSERT (!830) : Assert at miniTestb572.sk:25 (0)
+833= 787 & H__28 
+834= [833]$781, H__29, $
+835= 780{764->834}
+836= 835[819]
+837= 836 ^ H__35 
+838= 837 ! 
+839= 835[828]
+840= 839 ^ H__42 
+841= 840 ! 
+842= [H__33]$(!837), (!840), $
+843= 842 & 759 
+844= H__36 & 843 
+845= 820 & 844 
+846= 845 ! 
+847= ASSERT (!845) : Assert at miniTestb572.sk:26 (11)
+848= H__38 & 843 
+849= 820 & 848 
+850= 849 ! 
+851= ASSERT (!849) : Assert at miniTestb572.sk:27 (11)
+852= H__39 & 843 
+853= 183 & 852 
+854= 853 ! 
+855= ASSERT (!853) : miniTestb572.sk:28: Division by zero
+856= [H__38]$819, 828, $
+857= 856 == (-1) 
+858= 857 & 852 
+859= 858 ! 
+860= ASSERT (!858) : Assert at miniTestb572.sk:28 (11)
+861= 852 ! 
+862= 201[856]
+863= 862 + (1) 
+864= 863 % x_2_a_0 
+865= 864 < x_2_a_0 
+866= 864 < (0) 
+867= 866 ! 
+868= (!866) & 865 
+869= 868 | (!852) 
+870= ASSERT 869 : miniTestb572.sk:28: Array out of bounds
+871= 842 & H__40 
+872= 787 & H__32 
+873= 757 + (1) 
+874= [872]$757, 873, $
+875= 874 + (1) 
+876= [871]$874, 875, $
+877= 876 < x_2_a_0 
+878= 877 & 759 
+879= 878 ! 
+880= ASSERT (!878) : miniTestb572.sk:23: This loop was unrolled 6 times, but apparently that was not enough. Use the --bnd-unroll-amnt flag for better results.
+881= 842 & H__36 
+882= [881]$836, H__37, $
+883= 835{819->882}
+884= [758]$780, 883, $
+885= [639]$661, 884, $
+886= [520]$542, 885, $
+887= [401]$423, 886, $
+888= [281]$304, 887, $
+889= [116]$165, 888, $
+890= 889[23]
+891= 890 | (!2) 
+892= ASSERT 891 : Assert at miniTestb572.sk:34 (1)
+893= 889[40]
+894= 893 | (!29) 
+895= ASSERT 894 : Assert at miniTestb572.sk:34 (1)
+896= 889[57]
+897= 896 | (!46) 
+898= ASSERT 897 : Assert at miniTestb572.sk:34 (1)
+899= 889[74]
+900= 899 | (!63) 
+901= ASSERT 900 : Assert at miniTestb572.sk:34 (1)
+902= 889[91]
+903= 902 | (!80) 
+904= ASSERT 903 : Assert at miniTestb572.sk:34 (1)
+905= 889[108]
+906= 905 | (!97) 
+907= ASSERT 906 : Assert at miniTestb572.sk:34 (1)
+}
+  # OF CONTROLS:    18
+ control_ints = 1 	 control_bits = 17
+inputSize = 14	ctrlSize = 22
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 88 was 908
+Assert at miniTestb572.sk:34 (1)
+END CHECK
+********  0	ftime= 0	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 157 was 908
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 0
+f# %assign: 0 clauses: 3074 learn: 100 restart: 2 decision: 788 propagated: 16981
+END FIND
+BEG CHECK
+ * After optims it became = 102 was 908
+miniTestb572.sk:23: This loop was unrolled 6 times, but apparently that was not enough. Use the --bnd-unroll-amnt flag for better results.
+END CHECK
+********  1	ftime= 0.004	ctime= 0.001
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 695 was 908
+* TIME TO ADD INPUT :  0.002 ms 
+DECISIONS START = 788
+f# %assign: 47 clauses: 3472 learn: 314 restart: 4 decision: 1252 propagated: 41542
+END FIND
+BEG CHECK
+ * After optims it became = 321 was 908
+c# %assign: 7 clauses: 151 learn: 0 restart: 0 decision: 0 propagated: 5
+ reduced size from 321 to 302
+After all optim
+DECISIONS START = 0
+c# %assign: 50 clauses: 1162 learn: 2 restart: 1 decision: 7 propagated: 692
+END CHECK
+********  2	ftime= 0.006	ctime= 0.003
+ *GOT THE CORRECT ANSWER IN 3 iterations.
+ *FIND TIME 0.01 CHECK TIME 0.005 TOTAL TIME 0.015
+VALUES H__0: 0, H__1: 0, H__25: 0, H__27: 0, H__28: 1, H__29: 1, H__30: 0, H__31: 1, H__32: 1, H__33: 0, H__34: 0, H__35: 0, H__36: 0, H__37: 0, H__38: 0, H__39: 0, H__40: 0, H__42: 1, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  0.019 ms 
+RNDDEG = -1
+return 0
+
+----- Statistics -----
+Total elapsed time (ms):  0.024
+Model building time (ms): 0.004
+Solution time (ms):       0.019
+Max virtual mem (bytes):  92758016
+Max resident mem (bytes): 1748992
+Max private mem (bytes):  91164672
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.063
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.0
+      max memory usage (MiB) ----------> 88.46094
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 6
+      number of nodes after opts ------> 908
+      number of controls --------------> 18
+      total number of control bits ----> 22
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382563.1410 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382563.1430 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382563.1630 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382563.1740 - NOTE] Wrote test harness to ./miniTestb572_test.cpp[0m
+[SKETCH] DONE
+Total time = 482

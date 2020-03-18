@@ -1,0 +1,283 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb566_angelic.sk
+    [0;32m[1584382587.9460 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382588.1030 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+miniTes..ngelic.sk:70: Making final T
+generators.skh:20: Making final N
+generators.skh:36: Making final N
+generators.skh:51: Making final T
+generators.skh:83: Making final T
+generators.skh:98: Making final T
+generators.skh:117: Making final T
+generators.skh:126: Making final T
+generators.skh:202: Making final T
+generators.skh:177: Making final T
+generators.skh:177: Making final T
+generators.skh:202: Making final T
+    [0;32m[1584382588.1750 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382588.1770 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382588.1780 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382588.1800 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382588.1810 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382588.1880 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 10
+[SATBackend] MAX FUNC INLINING  = 2
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382588.2510 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -simplifycex NOSIM -nativeints --bnd-inbits 2 --bnd-angelicbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 2 --bndwrand 30 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -simplifycex NOSIM -nativeints --bnd-inbits 2 --bnd-angelicbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 2 --bndwrand 30 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -simplifycex, NOSIM, -nativeints, --bnd-inbits, 2, --bnd-angelicbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 2, --bndwrand, 30, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/solution0-0, --minvarHole, /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/input0.tmp]
+simplifycex = NOSIM
+NATIVE INTS ONOverriding inputs with 2
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+BND W RAND = 30
+SOLVER RAND SEED = 1584382588
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb566_angelic.sk/input0.tmp
+* before  EVERYTHING: main__WrapperNospec::SPEC nodes = 4	 main__Wrapper::SKETCH nodes = 6
+ INBITS = 2
+ CBITS  = 5
+ input_ints = 4 	 input_bits = 0
+ Inlining amount = 2
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 526
+  # OF CONTROLS:    26
+ control_ints = 26 	 control_bits = 0
+inputSize = 20	ctrlSize = 81
+Random seeds = 1
+Number of minvar nodes = 1
+BEG CHECK
+ * After optims it became = 11 was 526
+Assert at miniTes..ngelic.sk:102 (1)
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.019 ms 
+DECISIONS START = 0
+f# %assign: 10 clauses: 79916 learn: 118 restart: 2 decision: 3348 propagated: 160671
+END FIND
+BEG CHECK
+ * After optims it became = 35 was 526
+Assert at miniTes..ngelic.sk:104 (2)
+END CHECK
+********  1	ftime= 0.032	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.017 ms 
+DECISIONS START = 3348
+f# %assign: 6 clauses: 147888 learn: 123 restart: 3 decision: 3553 propagated: 190469
+END FIND
+BEG CHECK
+ * After optims it became = 35 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 35 to 32
+After all optim
+DECISIONS START = 0
+c# %assign: 9 clauses: 823 learn: 0 restart: 1 decision: 80 propagated: 482
+END CHECK
+********  2	ftime= 0.021	ctime= 0.004
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.018 ms 
+DECISIONS START = 3553
+f# %assign: 5 clauses: 217448 learn: 155 restart: 4 decision: 3990 propagated: 413834
+END FIND
+BEG CHECK
+ * After optims it became = 48 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 48 to 45
+After all optim
+DECISIONS START = 0
+c# %assign: 23 clauses: 531 learn: 3 restart: 1 decision: 71 propagated: 522
+END CHECK
+********  3	ftime= 0.039	ctime= 0.004
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.016 ms 
+DECISIONS START = 3990
+f# %assign: 4 clauses: 275838 learn: 170 restart: 5 decision: 4079 propagated: 507445
+END FIND
+BEG CHECK
+ * After optims it became = 54 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 54 to 51
+After all optim
+DECISIONS START = 0
+c# %assign: 25 clauses: 568 learn: 3 restart: 1 decision: 64 propagated: 511
+END CHECK
+********  4	ftime= 0.032	ctime= 0.003
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.016 ms 
+DECISIONS START = 4079
+f# %assign: 4 clauses: 340987 learn: 1208 restart: 10 decision: 8089 propagated: 7185429
+END FIND
+BEG CHECK
+ * After optims it became = 54 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 54 to 51
+After all optim
+DECISIONS START = 0
+c# %assign: 44 clauses: 379 learn: 6 restart: 1 decision: 46 propagated: 290
+END CHECK
+********  5	ftime= 999.748	ctime= 0.004
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.02 ms 
+DECISIONS START = 8089
+f# %assign: 3 clauses: 406867 learn: 1221 restart: 11 decision: 8137 propagated: 7377467
+END FIND
+BEG CHECK
+ * After optims it became = 54 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 54 to 51
+After all optim
+DECISIONS START = 0
+c# %assign: 62 clauses: 68 learn: 0 restart: 1 decision: 11 propagated: 86
+END CHECK
+********  6	ftime= 0.052	ctime= 0.004
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.016 ms 
+DECISIONS START = 8137
+f# %assign: 3 clauses: 471370 learn: 1513 restart: 14 decision: 8887 propagated: 10322976
+END FIND
+BEG CHECK
+ * After optims it became = 50 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 50 to 47
+After all optim
+DECISIONS START = 0
+c# %assign: 14 clauses: 1035 learn: 18 restart: 1 decision: 97 propagated: 2426
+END CHECK
+********  7	ftime= 0.397	ctime= 0.005
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=8, 
+BEG FIND
+DECISIONS START = 8887
+f# %assign: 3 clauses: 471371 learn: 1517 restart: 15 decision: 8982 propagated: 10601295
+END FIND
+BEG CHECK
+ * After optims it became = 50 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 50 to 47
+After all optim
+DECISIONS START = 0
+c# %assign: 14 clauses: 1035 learn: 18 restart: 1 decision: 97 propagated: 2426
+END CHECK
+********  8	ftime= 0.048	ctime= 0.005
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=7, 
+BEG FIND
+DECISIONS START = 8982
+f# %assign: 3 clauses: 471371 learn: 1596 restart: 16 decision: 9179 propagated: 11468103
+END FIND
+BEG CHECK
+ * After optims it became = 47 was 526
+Assert at miniTes..ngelic.sk:104 (2)
+END CHECK
+********  9	ftime= 0.104	ctime= 0.002
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.018 ms 
+DECISIONS START = 9179
+f# %assign: 3 clauses: 536749 learn: 1596 restart: 17 decision: 9258 propagated: 11579752
+END FIND
+BEG CHECK
+ * After optims it became = 47 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 47 to 44
+After all optim
+DECISIONS START = 0
+c# %assign: 11 clauses: 768 learn: 16 restart: 1 decision: 106 propagated: 1257
+END CHECK
+********  10	ftime= 0.045	ctime= 0.004
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 504 was 526
+* TIME TO ADD INPUT :  0.019 ms 
+DECISIONS START = 9258
+f# %assign: 3 clauses: 605539 learn: 2109 restart: 21 decision: 10215 propagated: 18952474
+END FIND
+BEG CHECK
+ * After optims it became = 47 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 47 to 44
+After all optim
+DECISIONS START = 0
+c# %assign: 96 clauses: 162 learn: 4 restart: 1 decision: 143 propagated: 3319
+END CHECK
+********  11	ftime= 999.94	ctime= 0.005
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=6, 
+BEG FIND
+DECISIONS START = 10215
+f# %assign: 4 clauses: 599960 learn: 3132 restart: 26 decision: 11963 propagated: 28625117
+END FIND
+BEG CHECK
+ * After optims it became = 43 was 526
+c# %assign: 25 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 2
+ reduced size from 43 to 40
+After all optim
+DECISIONS START = 0
+c# %assign: 88 clauses: 1242 learn: 57 restart: 1 decision: 236 propagated: 5792
+END CHECK
+********  12	ftime= 1999.23	ctime= 0.004
+*********INSIDE minimizeHoleValue, mhsize=1 current value of H__BND0=5, 
+BEG FIND
+DECISIONS START = 11963
+f# %assign: 4 clauses: 599960 learn: 3170 restart: 27 decision: 12008 propagated: 29141485
+END FIND
+ *GOT THE CORRECT ANSWER IN 13 iterations.
+ *FIND TIME 3999.74 CHECK TIME 0.044 TOTAL TIME 3999.79
+VALUES H__24: 4, H__26_23: 0, H__27_23: 1, H__28_23: 2, H__31_23: 1, H__32_23: 4, H__33_23: 0, H__34_23: 2, H__35_23: 5, H__36_23: 3, H__37_23: 0, H__38_23: 6, H__39_23: 2, H__40_23: 0, H__41_23: 7, H__42_23: 5, H__43_23: 2, H__44_23: 8, H__45_23: 1, H__BND0: 5, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  3999.79 ms 
+RNDDEG = -1
+return 0
+POST-SUMMRY 
+TRAIL: 
+NOTOK
+Adding constraints to minimize
+ALLRESET
+
+----- Statistics -----
+Total elapsed time (ms):  3999.84
+Model building time (ms): 0.003
+Solution time (ms):       3999.84
+Max virtual mem (bytes):  150953984
+Max resident mem (bytes): 60755968
+Max private mem (bytes):  146481152
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 3.885
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 3.999
+      max memory usage (MiB) ----------> 143.96094
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 6
+      number of nodes after opts ------> 526
+      number of controls --------------> 26
+      total number of control bits ----> 81
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382592.1400 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382592.1420 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382592.1780 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382592.1910 - NOTE] Wrote test harness to ./miniTestb566_angelic_test.cpp[0m
+[SKETCH] DONE
+Total time = 4296

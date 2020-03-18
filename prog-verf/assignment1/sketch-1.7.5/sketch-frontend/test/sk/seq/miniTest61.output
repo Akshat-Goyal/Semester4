@@ -1,0 +1,99 @@
+SKETCH version 1.7.5
+Benchmark = miniTest61.sk
+    [0;32m[1584382000.4090 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382000.5160 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584382000.5650 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382000.5670 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382000.5680 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382000.5681 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382000.5690 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382000.5750 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 8
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382000.6130 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTest61.sk/solution0-0 /home/akshat/.sketch/tmp/miniTest61.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTest61.sk/solution0-0 /home/akshat/.sketch/tmp/miniTest61.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTest61.sk/solution0-0, /home/akshat/.sketch/tmp/miniTest61.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 5
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382000
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTest61.sk/input0.tmp
+* before  EVERYTHING: alwaysOne::SPEC nodes = 5	 test2::SKETCH nodes = 10
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 0 	 input_bits = 3
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 11
+  # OF CONTROLS:    2
+ control_ints = 0 	 control_bits = 2
+inputSize = 3	ctrlSize = 2
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 6 was 11
+The spec and sketch can not be made to be equal. _p_out_alwaysOne_ANONYMOUS
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 10 was 11
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 0
+f# %assign: 80 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 5
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 11
+c# %assign: 33 clauses: 0 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 3
+c# %assign: 33 clauses: 0 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 3
+c# %assign: 33 clauses: 0 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 3
+c# %assign: 33 clauses: 0 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 3
+END CHECK
+********  1	ftime= 0	ctime= 0
+ *GOT THE CORRECT ANSWER IN 2 iterations.
+ *FIND TIME 0 CHECK TIME 0 TOTAL TIME 0
+VALUES H__0: 1, H__1: 1, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  0 ms 
+RNDDEG = -1
+return 0
+
+----- Statistics -----
+Total elapsed time (ms):  0.003
+Model building time (ms): 0.001
+Solution time (ms):       0
+Max virtual mem (bytes):  92758016
+Max resident mem (bytes): 1671168
+Max private mem (bytes):  91238400
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.057
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.0
+      max memory usage (MiB) ----------> 88.46094
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 10
+      number of nodes after opts ------> 11
+      number of controls --------------> 2
+      total number of control bits ----> 2
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382000.6730 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382000.6740 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382000.6840 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382000.6970 - NOTE] Wrote test harness to ./miniTest61_test.cpp[0m
+[SKETCH] DONE
+Total time = 341

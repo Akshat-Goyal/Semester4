@@ -1,0 +1,295 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb575.sk
+    [0;32m[1584381994.6340 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584381994.7350 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584381994.7770 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584381994.7790 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584381994.7800 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584381994.7810 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584381994.7811 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584381994.7880 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 8
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584381994.8270 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb575.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb575.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 5 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -showDAG -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb575.sk/solution0-0 --minvarHole /home/akshat/.sketch/tmp/miniTestb575.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 5, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -showDAG, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb575.sk/solution0-0, --minvarHole, /home/akshat/.sketch/tmp/miniTestb575.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 5
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584381994
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb575.sk/input0.tmp
+* before  EVERYTHING: twox::SPEC nodes = 8	 expr2::SKETCH nodes = 12
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 3 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 15
+dagtwox{
+H__8
+y_5_5_0
+2= y_5_5_0 * H__8 
+H__7
+x_4_4_0
+5= x_4_4_0 * H__7 
+6= 5 + 2 
+7= x_4_4_0 + x_4_4_0 
+8= 7 == 6 
+9= ASSERT 8 : The spec and sketch can not be made to be equal. _p_out_twox_ANONYMOUS
+H__6
+11= (1)
+12= (1) == H__6 
+13= ASSERT 12 : The spec and sketch can not be made to be equal. _p_out_twox_ANONYMOUS
+count__ANONYMOUS_s4_7_7_0
+}
+  # OF CONTROLS:    3
+ control_ints = 3 	 control_bits = 0
+inputSize = 6	ctrlSize = 15
+Random seeds = 1
+Number of minvar nodes = 0
+BEG CHECK
+ * After optims it became = 10 was 15
+The spec and sketch can not be made to be equal. _p_out_twox_ANONYMOUS
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 10 was 15
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 0
+f# %assign: 66 clauses: 1 learn: 0 restart: 1 decision: 33 propagated: 113
+END FIND
+BEG CHECK
+ * After optims it became = 7 was 15
+The spec and sketch can not be made to be equal. _p_out_twox_ANONYMOUS
+END CHECK
+********  1	ftime= 0	ctime= 0.002
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 8 was 15
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 33
+f# %assign: 99 clauses: 1 learn: 0 restart: 2 decision: 35 propagated: 151
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 15
+DECISIONS START = 0
+c# %assign: 92 clauses: 23 learn: 0 restart: 1 decision: 2 propagated: 13
+ reduced size from 8 to 3
+DECISIONS START = 0
+c# %assign: 96 clauses: 147 learn: 0 restart: 1 decision: 20 propagated: 73
+ reduced size from 8 to 3
+DECISIONS START = 0
+c# %assign: 98 clauses: 683 learn: 0 restart: 1 decision: 117 propagated: 333
+ reduced size from 8 to 3
+DECISIONS START = 0
+c# %assign: 99 clauses: 2907 learn: 0 restart: 1 decision: 648 propagated: 1510
+ reduced size from 8 to 3
+END CHECK
+********  2	ftime= 0	ctime= 0.001
+ *GOT THE CORRECT ANSWER IN 3 iterations.
+ *FIND TIME 0 CHECK TIME 0.003 TOTAL TIME 0.003
+VALUES H__6: 1, H__7: 2, H__8: 0, 
+RESULT = 2  
+* before  EVERYTHING: foo__WrapperNospec::SPEC nodes = 0	 foo__Wrapper::SKETCH nodes = 4
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 0 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 12
+dagfoo__WrapperNospec{
+0= (24)
+1= (4)
+H__5
+3= (2)
+4= (2) * H__5 
+H__4
+6= (5)
+7= (5) * H__4 
+8= 7 + 4 
+9= 8 * (4) 
+10= 9 == (24) 
+11= ASSERT 10 : Assert at miniTestb575.sk:32 (0)
+}
+  # OF CONTROLS:    2
+ control_ints = 2 	 control_bits = 0
+inputSize = 15	ctrlSize = 25
+Random seeds = 1
+Number of minvar nodes = 0
+BEG CHECK
+ * After optims it became = 2 was 12
+Assert at miniTestb575.sk:32 (0)
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 12 was 12
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 35
+f# %assign: 99 clauses: 3466 learn: 0 restart: 3 decision: 37 propagated: 441
+END FIND
+BEG CHECK
+ * After optims it became = 0 was 12
+ * After optims it became = 8 was 15
+DECISIONS START = 0
+c# %assign: 99 clauses: 2907 learn: 0 restart: 1 decision: 648 propagated: 1510
+ reduced size from 8 to 3
+END CHECK
+********  1	ftime= 0.001	ctime= 0.001
+ *GOT THE CORRECT ANSWER IN 2 iterations.
+ *FIND TIME 0.001 CHECK TIME 0.001 TOTAL TIME 0.002
+VALUES H__4: 0, H__5: 3, H__6: 1, H__7: 2, H__8: 0, 
+RESULT = 2  
+* before  EVERYTHING: main__WrapperNospec::SPEC nodes = 2	 main__Wrapper::SKETCH nodes = 4
+ INBITS = 5
+ CBITS  = 5
+ input_ints = 2 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 28
+dagmain__WrapperNospec{
+j_c_e_0
+1= (3)
+2= (3) < j_c_e_0 
+i_b_d_0
+4= (3) < i_b_d_0 
+5= 4 & 2 
+6= 5 ! 
+H__2
+8= H__2 < j_c_e_0 
+H__3
+10= [8]$j_c_e_0, H__3, $
+H__0
+12= H__0 < i_b_d_0 
+H__1
+14= [12]$i_b_d_0, H__1, $
+15= (2)
+16= (2) * 14 
+17= 16 + 10 
+18= (6)
+19= (6) < 17 
+20= 19 | (!5) 
+21= ASSERT 20 : Assert at miniTestb575.sk:12 (2)
+H__BND0
+23= 14 < H__BND0 
+24= ASSERT 23 : Assert at miniTestb575.sk:13 (1)
+H__BND1
+26= 10 < H__BND1 
+27= ASSERT 26 : Assert at miniTestb575.sk:14 (1)
+}
+  # OF CONTROLS:    6
+ control_ints = 6 	 control_bits = 0
+inputSize = 19	ctrlSize = 55
+Random seeds = 1
+Number of minvar nodes = 2
+BEG CHECK
+ * After optims it became = 23 was 28
+Assert at miniTestb575.sk:13 (1)
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 15 was 28
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 37
+f# %assign: 64 clauses: 3472 learn: 0 restart: 4 decision: 211 propagated: 664
+END FIND
+BEG CHECK
+ * After optims it became = 24 was 28
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 24 to 12
+After all optim
+c# %assign: 6 clauses: 8 learn: 0 restart: 0 decision: 0 propagated: 1
+Assert at miniTestb575.sk:12 (2)
+END CHECK
+********  1	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 3
+ * After optims it became = 21 was 28
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 211
+f# %assign: 43 clauses: 7482 learn: 0 restart: 5 decision: 378 propagated: 1231
+END FIND
+BEG CHECK
+ * After optims it became = 26 was 28
+DECISIONS START = 0
+c# %assign: 51 clauses: 2 learn: 0 restart: 1 decision: 8 propagated: 31
+c# %assign: 5 clauses: 16 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 26 to 20
+After all optim
+DECISIONS START = 0
+c# %assign: 58 clauses: 61 learn: 0 restart: 1 decision: 2 propagated: 24
+c# %assign: 2 clauses: 40 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 26 to 20
+After all optim
+DECISIONS START = 0
+c# %assign: 60 clauses: 85 learn: 0 restart: 1 decision: 2 propagated: 32
+c# %assign: 1 clauses: 88 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 26 to 20
+After all optim
+DECISIONS START = 0
+c# %assign: 63 clauses: 133 learn: 0 restart: 1 decision: 2 propagated: 48
+ * After optims it became = 8 was 15
+DECISIONS START = 0
+c# %assign: 99 clauses: 2907 learn: 0 restart: 1 decision: 648 propagated: 1510
+ reduced size from 8 to 3
+ * After optims it became = 0 was 12
+END CHECK
+********  2	ftime= 0.001	ctime= 0.003
+*********INSIDE minimizeHoleValue, mhsize=2 current value of H__BND0=5, H__BND1=1, 
+BEG FIND
+DECISIONS START = 378
+f# %assign: 43 clauses: 3957 learn: 1 restart: 6 decision: 382 propagated: 1884
+END FIND
+ *GOT THE CORRECT ANSWER IN 3 iterations.
+ *FIND TIME 0.002 CHECK TIME 0.003 TOTAL TIME 0.005
+VALUES H__0: 0, H__1: 4, H__2: 0, H__3: 0, H__4: 0, H__5: 3, H__6: 1, H__7: 2, H__8: 0, H__BND0: 5, H__BND1: 1, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  0.021 ms 
+RNDDEG = -1
+return 0
+POST-SUMMRY 
+TRAIL: 
+NOTOK
+Adding constraints to minimize
+ALLRESET
+
+----- Statistics -----
+Total elapsed time (ms):  0.021
+Model building time (ms): 0
+Solution time (ms):       0.021
+Max virtual mem (bytes):  92762112
+Max resident mem (bytes): 1712128
+Max private mem (bytes):  91205632
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.06
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.0
+      max memory usage (MiB) ----------> 88.46484
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 12
+      number of nodes after opts ------> 15
+      number of controls --------------> 3
+      total number of control bits ----> 15
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584381994.8900 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584381994.8910 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584381994.9050 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584381994.9160 - NOTE] Wrote test harness to ./miniTestb575_test.cpp[0m
+[SKETCH] DONE
+Total time = 336

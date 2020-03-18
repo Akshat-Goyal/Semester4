@@ -1,0 +1,227 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb411.sk
+    [0;32m[1584382584.8250 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382584.9860 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+    [0;32m[1584382585.0200 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382585.0220 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382585.0221 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382585.0222 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382585.0230 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382585.0280 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 8
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382585.0590 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 8 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb411.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb411.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 8 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb411.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb411.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 8, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb411.sk/solution0-0, /home/akshat/.sketch/tmp/miniTestb411.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 8
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382585
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb411.sk/input0.tmp
+* before  EVERYTHING: foo::SPEC nodes = 7	 Sk::SKETCH nodes = 5
+ INBITS = 8
+ CBITS  = 5
+ input_ints = 1 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 8
+  # OF CONTROLS:    1
+ control_ints = 1 	 control_bits = 0
+inputSize = 2	ctrlSize = 8
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 8 was 8
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 7
+After all optim
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+c# %assign: 7 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 7
+After all optim
+c# %assign: 7 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+c# %assign: 4 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 7
+After all optim
+c# %assign: 4 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+The spec and sketch can not be made to be equal. _p_out_foo_ANONYMOUS
+END CHECK
+********  0	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 0
+f# %assign: 0 clauses: 1 learn: 0 restart: 1 decision: 257 propagated: 267
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+The spec and sketch can not be made to be equal. _p_out_foo_ANONYMOUS
+END CHECK
+********  1	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 6 was 8
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 257
+f# %assign: 1 clauses: 1 learn: 0 restart: 2 decision: 515 propagated: 791
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+The spec and sketch can not be made to be equal. _p_out_foo_ANONYMOUS
+END CHECK
+********  2	ftime= 0.001	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 515
+f# %assign: 2 clauses: 1 learn: 0 restart: 3 decision: 645 propagated: 1314
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+The spec and sketch can not be made to be equal. _p_out_foo_ANONYMOUS
+END CHECK
+********  3	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 645
+f# %assign: 2 clauses: 1 learn: 0 restart: 4 decision: 713 propagated: 1836
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+END CHECK
+********  4	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 713
+f# %assign: 3 clauses: 1 learn: 0 restart: 5 decision: 749 propagated: 2357
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+The spec and sketch can not be made to be equal. _p_out_foo_ANONYMOUS
+END CHECK
+********  5	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 749
+f# %assign: 4 clauses: 1 learn: 0 restart: 6 decision: 777 propagated: 2877
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+END CHECK
+********  6	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 777
+f# %assign: 5 clauses: 1 learn: 0 restart: 7 decision: 797 propagated: 3396
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+The spec and sketch can not be made to be equal. _p_out_foo_ANONYMOUS
+END CHECK
+********  7	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0.001 ms 
+DECISIONS START = 797
+f# %assign: 5 clauses: 1 learn: 0 restart: 8 decision: 817 propagated: 3914
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+DECISIONS START = 0
+c# %assign: 97 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 39
+END CHECK
+********  8	ftime= 0.001	ctime= 0
+BEG FIND
+Level 1  intsize = 5
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 817
+f# %assign: 6 clauses: 1 learn: 1 restart: 9 decision: 837 propagated: 4432
+END FIND
+BEG CHECK
+ * After optims it became = 8 was 8
+c# %assign: 2 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 7
+After all optim
+c# %assign: 2 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+c# %assign: 1 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 7
+After all optim
+c# %assign: 1 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+c# %assign: 0 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 8 to 7
+After all optim
+DECISIONS START = 0
+c# %assign: 99 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 137
+END CHECK
+********  9	ftime= 0	ctime= 0
+BEG FIND
+Level 1  intsize = 7
+ * After optims it became = 7 was 8
+* TIME TO ADD INPUT :  0 ms 
+DECISIONS START = 837
+f# %assign: 99 clauses: 0 learn: 0 restart: 10 decision: 839 propagated: 4690
+END FIND
+BEG CHECK
+ * After optims it became = 1 was 8
+END CHECK
+********  10	ftime= 0	ctime= 0
+ *GOT THE CORRECT ANSWER IN 11 iterations.
+ *FIND TIME 0.002 CHECK TIME 0 TOTAL TIME 0.002
+VALUES H__0: 120, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  0.004 ms 
+RNDDEG = -1
+return 0
+
+----- Statistics -----
+Total elapsed time (ms):  0.004
+Model building time (ms): 0
+Solution time (ms):       0.004
+Max virtual mem (bytes):  92758016
+Max resident mem (bytes): 1769472
+Max private mem (bytes):  91140096
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 0.056
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 0.0
+      max memory usage (MiB) ----------> 88.46094
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 5
+      number of nodes after opts ------> 8
+      number of controls --------------> 1
+      total number of control bits ----> 8
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382585.1190 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+Is CT
+    [0;32m[1584382585.1200 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382585.1280 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382585.1380 - NOTE] Wrote test harness to ./miniTestb411_test.cpp[0m
+[SKETCH] DONE
+Total time = 363

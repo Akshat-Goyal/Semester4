@@ -1,0 +1,492 @@
+SKETCH version 1.7.5
+Benchmark = miniTestb386.sk
+    [0;32m[1584382293.5180 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1584382293.7960 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+miniTestb386.sk:677: Making final lenRet
+miniTestb386.sk:678: Making final len1
+miniTestb386.sk:679: Making final len2
+miniTestb386.sk:667: Making final lenRet
+miniTestb386.sk:668: Making final len1
+miniTestb386.sk:669: Making final len2
+miniTestb386.sk:629: Making final lenRet
+miniTestb386.sk:630: Making final len1
+miniTestb386.sk:631: Making final len2
+miniTestb386.sk:660: Making final opLen
+miniTestb386.sk:43: Making final l1Len
+miniTestb386.sk:43: Making final l2Len
+miniTestb386.sk:546: Making final len1
+miniTestb386.sk:547: Making final len2
+miniTestb386.sk:559: Making final tmp1Sz
+miniTestb386.sk:563: Making final tmp2Sz
+miniTestb386.sk:578: Making final opSz
+miniTestb386.sk:587: Making final opSz
+miniTestb386.sk:137: Making final len2
+miniTestb386.sk:595: Making final len
+miniTestb386.sk:23: Making final N
+miniTestb386.sk:23: Making final T
+miniTestb386.sk:114: Making final len1
+miniTestb386.sk:114: Making final len2
+miniTestb386.sk:4: Making final N
+miniTestb386.sk:620: Making final lenRet
+miniTestb386.sk:621: Making final len1
+miniTestb386.sk:622: Making final len2
+miniTestb386.sk:482: Making final lenRet
+miniTestb386.sk:483: Making final len1
+miniTestb386.sk:484: Making final len2
+miniTestb386.sk:524: Making final op1Len
+miniTestb386.sk:533: Making final op2Len
+miniTestb386.sk:84: Making final len1
+miniTestb386.sk:85: Making final len2
+miniTestb386.sk:14: Making final N
+miniTestb386.sk:32: Making final l1Len
+miniTestb386.sk:32: Making final l2Len
+miniTestb386.sk:59: Making final len
+miniTestb386.sk:156: Making final lenRet
+miniTestb386.sk:157: Making final len1
+miniTestb386.sk:158: Making final len2
+miniTestb386.sk:180: Making final lenRight
+miniTestb386.sk:182: Making final ttt
+miniTestb386.sk:187: Making final lenRet
+miniTestb386.sk:188: Making final len1
+miniTestb386.sk:189: Making final len2
+miniTestb386.sk:260: Making final lenRet
+miniTestb386.sk:261: Making final len1
+miniTestb386.sk:262: Making final len2
+miniTestb386.sk:266: Making final lenLeft
+miniTestb386.sk:278: Making final lenRight
+miniTestb386.sk:286: Making final lenRet
+miniTestb386.sk:287: Making final len1
+miniTestb386.sk:288: Making final len2
+miniTestb386.sk:343: Making final sz1
+miniTestb386.sk:348: Making final sz2
+miniTestb386.sk:365: Making final sz1
+miniTestb386.sk:377: Making final sz1
+miniTestb386.sk:382: Making final sz2
+miniTestb386.sk:396: Making final lenRet
+miniTestb386.sk:397: Making final len1
+miniTestb386.sk:398: Making final len2
+miniTestb386.sk:455: Making final lenRet
+miniTestb386.sk:456: Making final len1
+miniTestb386.sk:457: Making final len2
+    [0;32m[1584382293.9070 - DEBUG] Running stage SpmdLowLevelCStage[0m
+    [0;32m[1584382293.9090 - DEBUG]    Running visitor FlattenStmtBlocks2[0m
+    [0;32m[1584382293.9100 - DEBUG]    Running visitor SplitAssignFromVarDef[0m
+    [0;32m[1584382293.9120 - DEBUG]    Running visitor EliminateComplexForLoops[0m
+    [0;32m[1584382293.9140 - DEBUG] Running stage 'lowering' -- Lower for SKETCH backend[0m
+    [0;32m[1584382293.9270 - DEBUG] Running stage 'sten' -- Stencil transformations[0m
+[SATBackend] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[SATBackend] MAX LOOP UNROLLING = 16
+[SATBackend] MAX FUNC INLINING  = 5
+[SATBackend] After prog.accept(partialEval)
+[SATBackend] OFILE = null
+resolved cegis to path /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis
+    [0;32m[1584382294.1640 - DEBUG] executing /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 2 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb386.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb386.sk/input0.tmp[0m
+[SATBackend] Launching: /home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis -nativeints --bnd-inbits 2 --boundmode CALLNAME --verbosity 5 --print-version -simiters 4 -synth MINI -verif MINI --assumebcheck --bnd-inline-amnt 5 -angelictupledepth 1 -srctupledepth 2 -sprandbias 1 -o /home/akshat/.sketch/tmp/miniTestb386.sk/solution0-0 /home/akshat/.sketch/tmp/miniTestb386.sk/input0.tmp 
+starting command line: [/home/akshat/Music/sketch-1.7.5/sketch-backend/src/SketchSolver/cegis, -nativeints, --bnd-inbits, 2, --boundmode, CALLNAME, --verbosity, 5, --print-version, -simiters, 4, -synth, MINI, -verif, MINI, --assumebcheck, --bnd-inline-amnt, 5, -angelictupledepth, 1, -srctupledepth, 2, -sprandbias, 1, -o, /home/akshat/.sketch/tmp/miniTestb386.sk/solution0-0, /home/akshat/.sketch/tmp/miniTestb386.sk/input0.tmp]
+NATIVE INTS ONOverriding inputs with 2
+boundmode = CALLNAME
+ synth = |MINI|
+ verif = |MINI|
+assuming  bounds checks
+SOLVER RAND SEED = 1584382294
+ optimization level = 6
+Reading SKETCH Program in File /home/akshat/.sketch/tmp/miniTestb386.sk/input0.tmp
+* before  EVERYTHING: sketch__WrapperNospec::SPEC nodes = 10	 sketch__Wrapper::SKETCH nodes = 13
+ INBITS = 2
+ CBITS  = 5
+ input_ints = 10 	 input_bits = 0
+ Inlining amount = 5
+ Inlining functions in the sketch.
+ Inlining functions in the spec.
+* Final Problem size: Problem nodes = 53400
+  # OF CONTROLS:    28
+ control_ints = 23 	 control_bits = 5
+inputSize = 268	ctrlSize = 108
+Random seeds = 1
+BEG CHECK
+ * After optims it became = 9268 was 53400
+Assert at miniTestb386.sk:7 (1)
+END CHECK
+********  0	ftime= 0	ctime= 0.055
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 511 was 53400
+* TIME TO ADD INPUT :  0.043 ms 
+DECISIONS START = 0
+f# %assign: 5 clauses: 739 learn: 10 restart: 1 decision: 793 propagated: 1939
+END FIND
+BEG CHECK
+ * After optims it became = 16467 was 53400
+Assert at miniTestb386.sk:714 (0)
+END CHECK
+********  1	ftime= 0.043	ctime= 0.062
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 312 was 53400
+* TIME TO ADD INPUT :  0.038 ms 
+DECISIONS START = 793
+f# %assign: 10 clauses: 1067 learn: 13 restart: 2 decision: 1085 propagated: 3285
+END FIND
+BEG CHECK
+ * After optims it became = 16467 was 53400
+Assert at miniTestb386.sk:7 (1)
+END CHECK
+********  2	ftime= 0.039	ctime= 0.057
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 2753 was 53400
+* TIME TO ADD INPUT :  0.04 ms 
+DECISIONS START = 1085
+f# %assign: 9 clauses: 2221 learn: 17 restart: 3 decision: 1367 propagated: 4880
+END FIND
+BEG CHECK
+ * After optims it became = 17071 was 53400
+Assert at miniTestb386.sk:7 (1)
+END CHECK
+********  3	ftime= 0.04	ctime= 0.056
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 190 was 53400
+* TIME TO ADD INPUT :  999.034 ms 
+DECISIONS START = 1367
+f# %assign: 11 clauses: 2289 learn: 17 restart: 4 decision: 1548 propagated: 6133
+END FIND
+BEG CHECK
+ * After optims it became = 14234 was 53400
+Assert at miniTestb386.sk:709 (0)
+END CHECK
+********  4	ftime= 999.034	ctime= 0.053
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 293 was 53400
+* TIME TO ADD INPUT :  0.035 ms 
+DECISIONS START = 1548
+f# %assign: 13 clauses: 2562 learn: 17 restart: 5 decision: 1741 propagated: 8171
+END FIND
+BEG CHECK
+ * After optims it became = 17070 was 53400
+Assert at miniTestb386.sk:7 (1)
+END CHECK
+********  5	ftime= 0.035	ctime= 0.058
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 275 was 53400
+* TIME TO ADD INPUT :  0.039 ms 
+DECISIONS START = 1741
+f# %assign: 13 clauses: 2939 learn: 19 restart: 6 decision: 1902 propagated: 9692
+END FIND
+BEG CHECK
+ * After optims it became = 17075 was 53400
+Assert at miniTestb386.sk:709 (0)
+END CHECK
+********  6	ftime= 0.04	ctime= 0.063
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 380 was 53400
+* TIME TO ADD INPUT :  0.055 ms 
+DECISIONS START = 1902
+f# %assign: 13 clauses: 2972 learn: 18 restart: 7 decision: 2066 propagated: 11201
+END FIND
+BEG CHECK
+ * After optims it became = 9670 was 53400
+Assert at miniTestb386.sk:704 (0)
+END CHECK
+********  7	ftime= 0.056	ctime= 0.064
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 5433 was 53400
+* TIME TO ADD INPUT :  0.047 ms 
+DECISIONS START = 2066
+f# %assign: 11 clauses: 5521 learn: 24 restart: 8 decision: 2269 propagated: 13624
+END FIND
+BEG CHECK
+ * After optims it became = 11421 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 11421 to 11268
+Assert at miniTestb386.sk:704 (0)
+END CHECK
+********  8	ftime= 0.047	ctime= 0.067
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 269 was 53400
+* TIME TO ADD INPUT :  0.038 ms 
+DECISIONS START = 2269
+f# %assign: 14 clauses: 5613 learn: 24 restart: 9 decision: 2412 propagated: 16010
+END FIND
+BEG CHECK
+ * After optims it became = 20099 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 20099 to 19832
+Assert at miniTestb386.sk:709 (0)
+END CHECK
+********  9	ftime= 0.038	ctime= 0.12
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 656 was 53400
+* TIME TO ADD INPUT :  0.041 ms 
+DECISIONS START = 2412
+f# %assign: 14 clauses: 6098 learn: 25 restart: 10 decision: 2575 propagated: 19552
+END FIND
+BEG CHECK
+ * After optims it became = 20096 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 20096 to 19829
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19829 to 19560
+DECISIONS START = 0
+c# %assign: 88 clauses: 0 learn: 0 restart: 1 decision: 2 propagated: 9
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19560 to 19289
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19289 to 19016
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 112994 learn: 192 restart: 3 decision: 10656 propagated: 805124
+END CHECK
+********  10	ftime= 0.041	ctime= 999.584
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 5112 was 53400
+* TIME TO ADD INPUT :  0.053 ms 
+DECISIONS START = 2575
+f# %assign: 13 clauses: 7718 learn: 26 restart: 11 decision: 2691 propagated: 22258
+END FIND
+BEG CHECK
+ * After optims it became = 19558 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19558 to 19149
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19149 to 18736
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 18736 to 18319
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 18319 to 17898
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 112760 learn: 141 restart: 2 decision: 7702 propagated: 533777
+END CHECK
+********  11	ftime= 0.053	ctime= 0.333
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 3911 was 53400
+* TIME TO ADD INPUT :  0.053 ms 
+DECISIONS START = 2691
+f# %assign: 11 clauses: 11609 learn: 27 restart: 12 decision: 2845 propagated: 26395
+END FIND
+BEG CHECK
+ * After optims it became = 17901 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 17901 to 17279
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 17279 to 16653
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 16653 to 16023
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 16023 to 15389
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 49975 learn: 120 restart: 2 decision: 7445 propagated: 75655
+END CHECK
+********  12	ftime= 0.053	ctime= 0.251
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 2727 was 53400
+* TIME TO ADD INPUT :  999.045 ms 
+DECISIONS START = 2845
+f# %assign: 11 clauses: 12079 learn: 27 restart: 13 decision: 2971 propagated: 30809
+END FIND
+BEG CHECK
+ * After optims it became = 20310 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 20310 to 20031
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 20031 to 19748
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19748 to 19461
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 19461 to 19170
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 79810 learn: 122 restart: 2 decision: 7531 propagated: 204347
+END CHECK
+********  13	ftime= 999.047	ctime= 0.301
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 3520 was 53400
+* TIME TO ADD INPUT :  0.052 ms 
+DECISIONS START = 2971
+f# %assign: 11 clauses: 13610 learn: 29 restart: 14 decision: 3178 propagated: 37412
+END FIND
+BEG CHECK
+ * After optims it became = 24030 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 24030 to 23639
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23639 to 23244
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23244 to 22845
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22845 to 22442
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 88868 learn: 112 restart: 2 decision: 7041 propagated: 152799
+END CHECK
+********  14	ftime= 0.054	ctime= 0.382
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 2680 was 53400
+* TIME TO ADD INPUT :  0.05 ms 
+DECISIONS START = 3178
+f# %assign: 10 clauses: 16230 learn: 29 restart: 15 decision: 3338 propagated: 43570
+END FIND
+BEG CHECK
+ * After optims it became = 24063 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 24063 to 23809
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23809 to 23553
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23553 to 23295
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23295 to 23035
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 90134 learn: 108 restart: 2 decision: 5544 propagated: 216126
+END CHECK
+********  15	ftime= 0.051	ctime= 999.409
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 3892 was 53400
+* TIME TO ADD INPUT :  0.05 ms 
+DECISIONS START = 3338
+f# %assign: 10 clauses: 17679 learn: 35 restart: 16 decision: 3488 propagated: 53596
+END FIND
+BEG CHECK
+ * After optims it became = 23418 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23418 to 23166
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23166 to 22912
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22912 to 22656
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22656 to 22398
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 69942 learn: 134 restart: 2 decision: 7021 propagated: 178562
+END CHECK
+********  16	ftime= 0.051	ctime= 0.441
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 249 was 53400
+* TIME TO ADD INPUT :  0.045 ms 
+DECISIONS START = 3488
+f# %assign: 10 clauses: 17803 learn: 41 restart: 17 decision: 3675 propagated: 65860
+END FIND
+BEG CHECK
+ * After optims it became = 23155 was 53400
+Assert at miniTestb386.sk:7 (1)
+END CHECK
+********  17	ftime= 0.047	ctime= 0.096
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 277 was 53400
+* TIME TO ADD INPUT :  0.046 ms 
+DECISIONS START = 3675
+f# %assign: 10 clauses: 17950 learn: 41 restart: 18 decision: 3806 propagated: 71412
+END FIND
+BEG CHECK
+ * After optims it became = 23154 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 23154 to 22789
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22789 to 22422
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22422 to 22053
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22053 to 21682
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 70231 learn: 113 restart: 2 decision: 6144 propagated: 124197
+END CHECK
+********  18	ftime= 0.047	ctime= 999.377
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 5438 was 53400
+* TIME TO ADD INPUT :  0.052 ms 
+DECISIONS START = 3806
+f# %assign: 9 clauses: 19636 learn: 42 restart: 19 decision: 3932 propagated: 78366
+END FIND
+BEG CHECK
+ * After optims it became = 28234 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 28234 to 27742
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 27742 to 27248
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 27248 to 26752
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 26752 to 26254
+After all optim
+DECISIONS START = 0
+c# %assign: 0 clauses: 132851 learn: 210 restart: 3 decision: 11293 propagated: 1456002
+END CHECK
+********  19	ftime= 0.054	ctime= 999.764
+BEG FIND
+Level 1  intsize = 2
+ * After optims it became = 220 was 53400
+* TIME TO ADD INPUT :  0.075 ms 
+DECISIONS START = 3932
+f# %assign: 10 clauses: 19679 learn: 42 restart: 20 decision: 4035 propagated: 84490
+END FIND
+BEG CHECK
+ * After optims it became = 22465 was 53400
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 22465 to 21973
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 21973 to 21479
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 21479 to 20983
+c# %assign: 12 clauses: 1 learn: 0 restart: 0 decision: 0 propagated: 1
+ reduced size from 20983 to 20485
+After all optim
+DECISIONS START = 0
+c# %assign: 96 clauses: 101590 learn: 272 restart: 3 decision: 3404 propagated: 1048077
+END CHECK
+********  20	ftime= 0.076	ctime= 0.694
+ *GOT THE CORRECT ANSWER IN 21 iterations.
+ *FIND TIME 1998.95 CHECK TIME 4001.29 TOTAL TIME 6000.23
+VALUES H__10_33_20: 1, H__10_33_21: 1, H__10_36_34: 1, H__11_33_20_24: 1, H__11_33_20_25: 0, H__11_33_20_27: 4, H__11_33_20_29: 2, H__11_33_21_24: 0, H__11_33_21_25: 9, H__11_33_21_27: 1, H__11_33_21_29: 2, H__11_36_34_24: 1, H__11_36_34_25: 0, H__11_36_34_27: 16, H__11_36_34_29: 1, H__12_36: 1, H__13_36: 0, H__16_33: 0, H__19_33: 0, H__20_33: 0, H__21_33: 2, H__22_33: 1, H__23_33: 1, H__24_33: 1, H__7_33: 2, H__9_33_20: 0, H__9_33_21: 16, H__9_36_34: 0, 
+RESULT = 2  
+**ROUND 0 : 0 Round time:  6000.49 ms 
+RNDDEG = -1
+return 0
+
+----- Statistics -----
+Total elapsed time (ms):  6000.69
+Model building time (ms): 0.193
+Solution time (ms):       6000.49
+Max virtual mem (bytes):  178069504
+Max resident mem (bytes): 90107904
+Max private mem (bytes):  173432832
+ALL CORRECT
+[SATBackend] Stats for last run:
+      [solution stats]
+      successful? ---------------------> true
+      elapsed time (s) ----------------> 6.734
+      model building time (s) ---------> 0.0
+      solution time (s) ---------------> 6.0
+      max memory usage (MiB) ----------> 169.82031
+      [SAT-specific solution stats]
+      initial number of nodes ---------> 13
+      number of nodes after opts ------> 53400
+      number of controls --------------> 28
+      total number of control bits ----> 108
+
+[SATBackend] Solver exit value: 0
+    [0;32m[1584382300.9020 - DEBUG] Running stage 'subst' -- Substitute a solution (assignment to ??'s) into the sketch[0m
+    [0;32m[1584382300.9040 - DEBUG] Running stage 'cleanup' -- Clean up sketch after substitutions for readability[0m
+    [0;32m[1584382300.9370 - DEBUG] Running stage 'outputc' -- Output C code (to console or file)[0m
+    [0;33m[1584382300.9520 - NOTE] Wrote test harness to ./miniTestb386_test.cpp[0m
+[SKETCH] DONE
+Total time = 7484

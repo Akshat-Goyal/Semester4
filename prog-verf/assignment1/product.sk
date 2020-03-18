@@ -1,0 +1,74 @@
+/*
+Problem Number: 1
+=================
+
+Task: Implement the productSK(M, N, P, Q, a, b) function.  This
+functions returns cross product of given matricies 'a' and 'b', just
+as the function product(M, N, P, Q, a, b).
+
+This function should be a partial implementation - meaning that you
+need to use generators to implement this function.
+
+To test your function, run the following command in your shell.
+
+-------------------------------------------------
+$ python3 run.py 1 product.sk                  
+-------------------------------------------------
+
+If the compilation succeeds, you can see the resulting C++ code in the
+file 'product.cpp'.
+*/
+
+
+/* The product(M, N, P, Q, a, b) function performs cross product of
+   the matricies 'a' and 'b' and returns a matrix of dimensions M x Q.
+   This is a complete implementation in sketch, which does not use any
+   generators.
+*/
+int[M, Q] product(int M, int N, int P, int Q, int[M, N] a, int[P, Q] b) {
+	   assert P == N;
+	   int sum = 0;
+	   int[M][N] prod;
+	   for (int i = 0; i < M; i++) {
+	   	   for (int j = 0; j < Q; j++) {
+		   sum = 0;
+		   for (int k = 0; k < P; k++) {
+		   sum += a[i, k] * b[k, j];
+		   }
+		   prod[i][j] = sum;
+	   }
+	   }
+	   return prod;
+}
+
+
+int[M, Q] productSK(int M, int N, int P, int Q, int[M, N] a, int[P, Q] b){
+  // your code here
+  	assert P == N;
+	int sum, tmp;
+	int[M][N] prod;
+	for (int i = 0; i < M; i++) {
+	   	for (int j = 0; j < Q; j++) {
+
+			// sum can be initialized with 1 or 0
+			sum = ??;
+
+			for (int k = 0; k < P; k++) {
+				tmp = a[i, k] * b[k, j];
+
+				// sum or tmp can be used here
+				// tmp can be added to sum or multiplied to sum or assigned to sum
+				{| tmp | sum |} = {| tmp | (sum*tmp) | (sum+tmp) |};
+				
+			}
+			prod[i][j] = sum;
+		}
+	}
+	return prod;
+}
+
+
+harness void multTest(){
+	assert product(3, 2, 2, 3, {{1,2}, {1, 5}, {3, 4}}, {{1,2,3}, {0, 2, 1}}) == {{1, 6, 5}, {1, 12, 8}, {3, 14, 13}};
+	assert productSK(3, 2, 2, 3, {{1,2}, {1, 5}, {3, 4}}, {{1,2,3}, {0, 2, 1}}) == {{1, 6, 5}, {1, 12, 8}, {3, 14, 13}};
+}
