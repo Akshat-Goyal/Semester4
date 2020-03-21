@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Technology - BBC News</title>
+		<style type="text/css">
+			#topbar{
+				width:1005px;
+				margin:0 auto;
+				height:40px;
+			}
+			body{
+				margin=0;
+				padding=0;
+				font-family:Helvetica,Arial,sans-serif;
+			}
+			#logo{
+				margin-top:8px;
+				width:100px;
+				float:left;
+				margin-right:8px;
+			}
+			.topbar-section{
+				float:left;
+				border-left: 1px #CCCCCC solid;
+				height:100%;
+			}
+			#signin-image{
+				width:25px;
+				margin:10px 15px;
+				float:left;
+			}
+			#signin-text{
+				font-weight:bold;
+				font-size:90%;
+				position:relative;
+			    top:14px;
+				padding-right:50px;
+			}
+			#wigglyline{
+				float:left;
+				height:40px;
+			}
+			#bell{
+				height:25px;
+				margin:9px 8px;
+			}
+			#bell-div{
+				float:left;
+			}
+			.topbar-menu{
+				font-weight:bold;
+				font-size:90%;
+				padding: 13px 15px 0px 15px;
+				height:27px;
+			}
+			#more-arrow{
+				width:16px;
+				margin-left:15px;
+			}
+			#search-box{
+				background-color:#E4E4E4;
+				border:none;
+				font-weight:bold;
+				font-size:14px;
+				padding:5px;
+				margin:5px 0 5px 5px;
+				float:left;
+			}
+			#magnifying-glass{
+				height:29px;
+				margin-top:5px;
+			}
+			.clear{
+				clear:both;
+			}
+			#menu-bar-container{
+				background-color:#BB1919;
+				width:100%;
+				height:70px;
+			}
+			#menu-bar{
+				width:1005px;
+				margin:0 auto;
+			}
+			h1{
+				padding:0;
+				margin:0;
+				color:white;
+				font-size:40px;
+				font-weight:normal;
+				padding-top:10px;
+				float:left;
+			}
+			#local-news{
+				border:1px #BB4545 solid;
+				float:right;
+				width:250px;
+				padding:5px 5px 0 10px;
+				margin:5pz 10px 0 0;
+			}
+			#local-news a{
+				color:white;
+				text-decoration:none;
+				font-size:30px;
+				position:relative;
+				top:10px;
+			}
+			#local-news a:hover{
+				text-decoration:underline;
+			}
+			#local-news img{
+				height:40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<img id="logo" src="bbc-logo.png" >
+			<div id="signin-div" class="topbar-section">
+				<img id="signin-image" src="signin.png" >
+				<span id="signin-text">Sign In<span>
+			</div>
+			<div id="bell-div">
+				<img id="wigglyline" src="wigglyline.png">
+				<img id="bell" src="bell.png" >
+			</div>
+			<div class="topbar-section topbar-menu">
+				News
+			</div>
+			<div class="topbar-section topbar-menu">
+				Sport
+			</div>
+			<div class="topbar-section topbar-menu">
+				Weather
+			</div>
+			<div class="topbar-section topbar-menu">
+				IPlayer
+			</div>
+			<div class="topbar-section topbar-menu">
+				TV
+			</div>
+			<div class="topbar-section topbar-menu">
+				More
+				<img id="more-arrow" src="more-arrow.png">
+			</div>
+			<div class="topbar-section">
+				<input id="search-box" type="text" value="search">
+				<input type="image" id="magnifying-glass" src="magnifying-glass.png">
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="menu-bar-container">
+			<div id="menu-bar">
+				<h1>NEWS</h1>
+				<div id="local-news">
+					<a href="">Find local news</a>
+					<img src="pointer.png">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
