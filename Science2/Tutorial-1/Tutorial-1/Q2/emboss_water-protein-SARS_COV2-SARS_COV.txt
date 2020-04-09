@@ -1,0 +1,139 @@
+########################################
+# Program: water
+# Rundate: Sat  4 Apr 2020 16:33:18
+# Commandline: water
+#    -auto
+#    -stdout
+#    -asequence emboss_water-I20200404-163315-0971-45840951-p2m.aupfile
+#    -bsequence emboss_water-I20200404-163315-0971-45840951-p2m.bupfile
+#    -datafile EBLOSUM62
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -aformat3 pair
+#    -sprotein1
+#    -sprotein2
+# Align_format: pair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: 6VYBA
+# 2: AAP41037.1
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 1213
+# Identity:     908/1213 (74.9%)
+# Similarity:  1043/1213 (86.0%)
+# Gaps:          25/1213 ( 2.1%)
+# Score: 4839.0
+# 
+#
+#=======================================
+
+6VYBA             21 VLLMGCVAETGTQCVNLTTRTQL-PPAYT--NSFTRGVYYPDKVFRSSVL     67
+                     :.|:.....:|:.....||...: .|.||  .|..|||||||::|||..|
+AAP41037.1         3 IFLLFLTLTSGSDLDRCTTFDDVQAPNYTQHTSSMRGVYYPDEIFRSDTL     52
+
+6VYBA             68 HSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKS    117
+                     :.||||||||:||||.||.|     |.|  |.|||:||.||:|||:||||
+AAP41037.1        53 YLTQDLFLPFYSNVTGFHTI-----NHT--FGNPVIPFKDGIYFAATEKS     95
+
+6VYBA            118 NIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKN    167
+                     |::|||:||:|:::|:||::|:||:|||||:.|.|:.|::||..|    :
+AAP41037.1        96 NVVRGWVFGSTMNNKSQSVIIINNSTNVVIRACNFELCDNPFFAV----S    141
+
+6VYBA            168 NKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNID    217
+                     .....::...::.:|.||||||:|..|.:|:..|.||||:||||||||.|
+AAP41037.1       142 KPMGTQTHTMIFDNAFNCTFEYISDAFSLDVSEKSGNFKHLREFVFKNKD    191
+
+6VYBA            218 GYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSY    267
+                     |:..:|..:.||::|||||.||:.|:|:..||:|||||.|:.:|    :.
+AAP41037.1       192 GFLYVYKGYQPIDVVRDLPSGFNTLKPIFKLPLGINITNFRAIL----TA    237
+
+6VYBA            268 LTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSE    317
+                     .:|....  |...||||:||||:|.||:|||:|||||||||||:.:||:|
+AAP41037.1       238 FSPAQDI--WGTSAAAYFVGYLKPTTFMLKYDENGTITDAVDCSQNPLAE    285
+
+6VYBA            318 TKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFA    367
+                     .||::|||.::|||||||||||.|:..:|||||||||||||||||||:|.
+AAP41037.1       286 LKCSVKSFEIDKGIYQTSNFRVVPSGDVVRFPNITNLCPFGEVFNATKFP    335
+
+6VYBA            368 SVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYAD    417
+                     |||||.||:||||||||||||||..||||||||||.||||||||:|||||
+AAP41037.1       336 SVYAWERKKISNCVADYSVLYNSTFFSTFKCYGVSATKLNDLCFSNVYAD    385
+
+6VYBA            418 SFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGN    467
+                     |||::||:||||||||||.||||||||||||.|||:|||:.|:|:...||
+AAP41037.1       386 SFVVKGDDVRQIAPGQTGVIADYNYKLPDDFMGCVLAWNTRNIDATSTGN    435
+
+6VYBA            468 YNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQ    517
+                     |||.||..|...|:|||||||...:.....||. ....|||:||..|||.
+AAP41037.1       436 YNYKYRYLRHGKLRPFERDISNVPFSPDGKPCT-PPALNCYWPLNDYGFY    484
+
+6VYBA            518 PTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTG    567
+                     .|.|:|||||||||||||||:|||||||||.||:|:||:|||||||||||
+AAP41037.1       485 TTTGIGYQPYRVVVLSFELLNAPATVCGPKLSTDLIKNQCVNFNFNGLTG    534
+
+6VYBA            568 TGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVI    617
+                     |||||.|:|:|.||||||||::|.||:||||:|.|||||:||:|||||||
+AAP41037.1       535 TGVLTPSSKRFQPFQQFGRDVSDFTDSVRDPKTSEILDISPCAFGGVSVI    584
+
+6VYBA            618 TPGTNTSNEVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAG    667
+                     |||||.|:||||||||||||:|..|||||||||.||:||||:|||||:||
+AAP41037.1       585 TPGTNASSEVAVLYQDVNCTDVSTAIHADQLTPAWRIYSTGNNVFQTQAG    634
+
+6VYBA            668 CLIGAEHVNNSYECDIPIGAGICASYQTQTNSPSGAGSVASQSIIAYTMS    717
+                     ||||||||:.||||||||||||||||.|    .|...|.:.:||:|||||
+AAP41037.1       635 CLIGAEHVDTSYECDIPIGAGICASYHT----VSLLRSTSQKSIVAYTMS    680
+
+6VYBA            718 LGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTE    767
+                     |||::|:|||||:|||||||:||:|||::||||.||||||.|||||||||
+AAP41037.1       681 LGADSSIAYSNNTIAIPTNFSISITTEVMPVSMAKTSVDCNMYICGDSTE    730
+
+6VYBA            768 CSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFG    817
+                     |:|||||||||||||||||:|||.|||:||:||||||||:||||.:|.||
+AAP41037.1       731 CANLLLQYGSFCTQLNRALSGIAAEQDRNTREVFAQVKQMYKTPTLKYFG    780
+
+6VYBA            818 GFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARD    867
+                     |||||||||||.||:||||||||||||||||||||:||||:|||||.|||
+AAP41037.1       781 GFNFSQILPDPLKPTKRSFIEDLLFNKVTLADAGFMKQYGECLGDINARD    830
+
+6VYBA            868 LICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPF    917
+                     |||||||||||||||||||:|||.||:||::||.|:||||||||||||||
+AAP41037.1       831 LICAQKFNGLTVLPPLLTDDMIAAYTAALVSGTATAGWTFGAGAALQIPF    880
+
+6VYBA            918 AMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKL    967
+                     |||||||||||||||||||||||.||||||.||.:||:||::|::|||||
+AAP41037.1       881 AMQMAYRFNGIGVTQNVLYENQKQIANQFNKAISQIQESLTTTSTALGKL    930
+
+6VYBA            968 QDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDPPEAEVQIDRLIT   1017
+                     |||||||||||||||||||||||||||||||||||||..|||||||||||
+AAP41037.1       931 QDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLIT    980
+
+6VYBA           1018 GRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYH   1067
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+AAP41037.1       981 GRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYH   1030
+
+6VYBA           1068 LMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSN   1117
+                     ||||||:||||||||||||||:||:||||||||||:|||:||||||||.|
+AAP41037.1      1031 LMSFPQAAPHGVVFLHVTYVPSQERNFTTAPAICHEGKAYFPREGVFVFN   1080
+
+6VYBA           1118 GTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSF   1167
+                     ||.||:|||||:.|||||||||||||||||||||:|||||||||||||||
+AAP41037.1      1081 GTSWFITQRNFFSPQIITTDNTFVSGNCDVVIGIINNTVYDPLQPELDSF   1130
+
+6VYBA           1168 KEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLI   1217
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+AAP41037.1      1131 KEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLI   1180
+
+6VYBA           1218 DLQELGKYEQYIK   1230
+                     |||||||||||||
+AAP41037.1      1181 DLQELGKYEQYIK   1193
+
+
+#---------------------------------------
+#---------------------------------------

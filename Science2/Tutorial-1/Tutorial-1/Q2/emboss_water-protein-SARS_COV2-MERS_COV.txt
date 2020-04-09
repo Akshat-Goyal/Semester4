@@ -1,0 +1,147 @@
+########################################
+# Program: water
+# Rundate: Sat  4 Apr 2020 17:39:38
+# Commandline: water
+#    -auto
+#    -stdout
+#    -asequence emboss_water-I20200404-173936-0585-80722540-p2m.aupfile
+#    -bsequence emboss_water-I20200404-173936-0585-80722540-p2m.bupfile
+#    -datafile EBLOSUM62
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -aformat3 pair
+#    -sprotein1
+#    -sprotein2
+# Align_format: pair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: 6VYBA
+# 2: YP_009047204.1
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 1337
+# Identity:     397/1337 (29.7%)
+# Similarity:   605/1337 (45.3%)
+# Gaps:         257/1337 (19.2%)
+# Score: 1392.5
+# 
+#
+#=======================================
+
+6VYBA             54 GVYYPDKVFRSSVLHSTQDLFLPF---FSNVTWFHAIHVSGTNGTKRF--     98
+                     |:.||.....|::..:.|.|| |:   ..::..:.|.|.:||...|.|  
+YP_009047204.     55 GIIYPQGRTYSNITITYQGLF-PYQGDHGDMYVYSAGHATGTTPQKLFVA    103
+
+6VYBA             99 --DNPVLPF-------------NDGVYFASTEKSNIIR--------GWIF    125
+                       ...|..|             :.|....|...|..||        |...
+YP_009047204.    104 NYSQDVKQFANGFVVRIGAAANSTGTVIISPSTSATIRKIYPAFMLGSSV    153
+
+6VYBA            126 GTTLDSK-----TQSLLIVNNATNVVIKVCEFQFCNDPFLGVY-------    163
+                     |...|.|     ..:|:::.:....:::.  |....:|..|.:       
+YP_009047204.    154 GNFSDGKMGRFFNHTLVLLPDGCGTLLRA--FYCILEPRSGNHCPAGNSY    201
+
+6VYBA            164 -----YH---------KNNKSWMESEFRVYSSANNCTFEY---VSQPFLM    196
+                          ||         ..|::...:.|:.|.:..||||.|   :::..::
+YP_009047204.    202 TSFATYHTPATDCSDGNYNRNASLNSFKEYFNLRNCTFMYTYNITEDEIL    251
+
+6VYBA            197 DLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLV    246
+                     :..|.....:.:..|..:.:|.|                           
+YP_009047204.    252 EWFGITQTAQGVHLFSSRYVDLY---------------------------    274
+
+6VYBA            247 DLPIGINITRFQTL---------LALHRSYLTPGDSSSGWTAGAAAYYVG    287
+                         |.|:.:|.||         ..:..|..:.......|    ||:||.
+YP_009047204.    275 ----GGNMFQFATLPVYDTIKYYSIIPHSIRSIQSDRKAW----AAFYVY    316
+
+6VYBA            288 YLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNF    337
+                     .|||.||||.::.:|.|..|:||..:.||:..|:.:||.||.|:|..|:|
+YP_009047204.    317 KLQPLTFLLDFSVDGYIRRAIDCGFNDLSQLHCSYESFDVESGVYSVSSF    366
+
+6VYBA            338 RVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVL    387
+                     ..:|:.|:|....... |.|..:.:.|. ..||.:.|...:||..:.:.|
+YP_009047204.    367 EAKPSGSVVEQAEGVE-CDFSPLLSGTP-PQVYNFKRLVFTNCNYNLTKL    414
+
+6VYBA            388 YNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKI    437
+                     .:..|.:.|.|..:||..:...|::::..|.|.........::....|.|
+YP_009047204.    415 LSLFSVNDFTCSQISPAAIASNCYSSLILDYFSYPLSMKSDLSVSSAGPI    464
+
+6VYBA            438 ADYNYKLPDDFTGC-VIAWNSNNLDSKVGG-NYNYLYRLFRKSNLKPFER    485
+                     :.:|||.......| ::|...:||.:.... .|:|:.:..|..:      
+YP_009047204.    465 SQFNYKQSFSNPTCLILATVPHNLTTITKPLKYSYINKCSRLLS------    508
+
+6VYBA            486 DISTEIYQAGS----TPCNGV------EGFNCY----FPLQSYGFQPTNG    521
+                     |..||:.|..:    :||..:      |..:.|    .||:..|:...:|
+YP_009047204.    509 DDRTEVPQLVNANQYSPCVSIVPSTVWEDGDYYRKQLSPLEGGGWLVASG    558
+
+6VYBA            522 VGYQPYRVVVLSFELLHAPAT----VCGPKKSTNLVK-----NKCVNFNF    562
+                     ........:.:.|.:.....|    ||...:..|..|     ..||.::.
+YP_009047204.    559 STVAMTEQLQMGFGITVQYGTDTNSVCPKLEFANDTKIASQLGNCVEYSL    608
+
+6VYBA            563 NGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFG    612
+                     .|::|.||........:..|:|      ..||.:                
+YP_009047204.    609 YGVSGRGVFQNCTAVGVRQQRF------VYDAYQ----------------    636
+
+6VYBA            613 GVSVITPGTNTSNEVAVLYQDVN------CTEVPVAI--------HA---    645
+                                 |.|.....|.|      |..|||::        ||   
+YP_009047204.    637 ------------NLVGYYSDDGNYYCLRACVSVPVSVIYDKETKTHATLF    674
+
+6VYBA            646 -----DQLTPTWRVYSTGS-----------NVFQTRAGCLIGAEHVNNSY    679
+                          :.::.|...||..:           ...||..||::|.  ||:|.
+YP_009047204.    675 GSVACEHISSTMSQYSRSTRSMLKRRDSTYGPLQTPVGCVLGL--VNSSL    722
+
+6VYBA            680 ---ECDIPIGAGICASYQT-QTNSPSGAGSVASQSIIAYTMSLGAENSVA    725
+                        :|.:|:|..:||...| .|.:|....||..:..:|         |:|
+YP_009047204.    723 FVEDCKLPLGQSLCALPDTPSTLTPRSVRSVPGEMRLA---------SIA    763
+
+6VYBA            726 YS--------NNS---IAIPTNFTISVTTEILPVSMTKTSVDCTMYICGD    764
+                     ::        |:|   ::|||||:..||.|.:..::.|.:|||..|:|..
+YP_009047204.    764 FNHPIQVDQLNSSYFKLSIPTNFSFGVTQEYIQTTIQKVTVDCKQYVCNG    813
+
+6VYBA            765 STECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIK    814
+                     ..:|..||.:||.||:::|:||.|..:.||.:.:.:||.||....:|.|.
+YP_009047204.    814 FQKCEQLLREYGQFCSKINQALHGANLRQDDSVRNLFASVKSSQSSPIIP    863
+
+6VYBA            815 DFGG-FNFSQILP---DPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCL    860
+                     .||| ||.:.:.|   .....|.||.||||||:|||:||.|:::.|.||:
+YP_009047204.    864 GFGGDFNLTLLEPVSISTGSRSARSAIEDLLFDKVTIADPGYMQGYDDCM    913
+
+6VYBA            861 --GDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFG    908
+                       |..:||||||||...|..|||||:...|.|.|||:||......|||.|
+YP_009047204.    914 QQGPASARDLICAQYVAGYKVLPPLMDVNMEAAYTSSLLGSIAGVGWTAG    963
+
+6VYBA            909 AGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLS    958
+                     ..:...||||..:.||.||:|:||.||.||||||||:||.|:|.:|...:
+YP_009047204.    964 LSSFAAIPFAQSIFYRLNGVGITQQVLSENQKLIANKFNQALGAMQTGFT   1013
+
+6VYBA            959 STASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDPPEA   1008
+                     :|..|..|:||.||.|||||:.|..:||:.|||||:.:.||:.|||..|.
+YP_009047204.   1014 TTNEAFQKVQDAVNNNAQALSKLASELSNTFGAISASIGDIIQRLDVLEQ   1063
+
+6VYBA           1009 EVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKR   1058
+                     :.||||||.|||.:|..:|.|||:|:.....||.||..|::|||..||||
+YP_009047204.   1064 DAQIDRLINGRLTTLNAFVAQQLVRSESAALSAQLAKDKVNECVKAQSKR   1113
+
+6VYBA           1059 VDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAIC---HDGK   1105
+                     ..|||:|.|::||..:||:|:.|:||.|.|:......:|..:|   :...
+YP_009047204.   1114 SGFCGQGTHIVSFVVNAPNGLYFMHVGYYPSNHIEVVSAYGLCDAANPTN   1163
+
+6VYBA           1106 AHFPREGVFV-SNGT----HWFVTQRNFYEPQIITTDNT-FVSGNCDVVI   1149
+                     ...|..|.|: :|.|    .|..|..:||.|:.||:.|| :|:..     
+YP_009047204.   1164 CIAPVNGYFIKTNNTRIVDEWSYTGSSFYAPEPITSLNTKYVAPQ-----   1208
+
+6VYBA           1150 GIVNNTVYDPLQPEL------DSFKEELDKYFKNHTSPDVDLGDISGINA   1193
+                      :....:...|.|.|      ..|::|||::|||.::...:.|.::.||.
+YP_009047204.   1209 -VTYQNISTNLPPPLLGNSTGIDFQDELDEFFKNVSTSIPNFGSLTQINT   1257
+
+6VYBA           1194 SVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIK   1230
+                     :::::..|:..|.:|.|.||||.|||:|||.|..|.|
+YP_009047204.   1258 TLLDLTYEMLSLQQVVKALNESYIDLKELGNYTYYNK   1294
+
+
+#---------------------------------------
+#---------------------------------------

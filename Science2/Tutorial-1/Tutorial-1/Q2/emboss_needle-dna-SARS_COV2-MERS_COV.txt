@@ -1,0 +1,433 @@
+########################################
+# Program: needle
+# Rundate: Sat  4 Apr 2020 17:41:06
+# Commandline: needle
+#    -auto
+#    -stdout
+#    -asequence emboss_needle-I20200404-174102-0896-98605714-p2m.aupfile
+#    -bsequence emboss_needle-I20200404-174102-0896-98605714-p2m.bupfile
+#    -datafile EDNAFULL
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -endopen 10.0
+#    -endextend 0.5
+#    -aformat3 pair
+#    -snucleotide1
+#    -snucleotide2
+# Align_format: pair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: 21563-25384
+# 2: 21456-25517
+# Matrix: EDNAFULL
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 4876
+# Identity:    2327/4876 (47.7%)
+# Similarity:  2327/4876 (47.7%)
+# Gaps:        1868/4876 (38.3%)
+# Score: 4414.5
+# 
+#
+#=======================================
+
+21563-25384        1 ATGTT--------TGTTT---------TTCTTGTT---------------     18
+                     |||.|        |||||         ||||||||               
+21456-25517        1 ATGATACACTCAGTGTTTCTACTGATGTTCTTGTTAACACCTACAGAAAG     50
+
+21563-25384       19 TTA--TT--------GCCACTAGTCTCT--AGTCAG--TGT------GTT     48
+                     |||  ||        |||| .|.|||.|  ||||.|  |||      |||
+21456-25517       51 TTACGTTGATGTAGGGCCA-GATTCTGTTAAGTCTGCTTGTATTGAGGTT     99
+
+21563-25384       49 AATCTTACAACCAGAACTCAATTACCCCCTGCATACACTAATTCTTTCA-     97
+                     .|| .||||||                       |.|||  ||||||.| 
+21456-25517      100 GAT-ATACAAC-----------------------AGACT--TTCTTTGAT    123
+
+21563-25384       98 ----------------CACGTGGTGTTTATTACCCTGACAAAGTTTTCAG    131
+                                     ||..||.|||||.|.|..||||            
+21456-25517      124 AAAACTTGGCCTAGGCCAATTGATGTTTCTAAGGCTGA------------    161
+
+21563-25384      132 ATCCTCAGTTTTACAT----TCAACTCAGGACTTGTTCTTAC--------    169
+                          |.||.|||.||    ||||..|.|.||.|.||||.||        
+21456-25517      162 -----CGGTATTATATACCCTCAAGGCCGTACATATTCTAACATAACTAT    206
+
+21563-25384      170 --CTT-------TCTTTTCCAATGTTA-------CTTGGTTCCATGCTAT    203
+                       |||       ||||||.|..|.|.|       |.|||     ||.|||
+21456-25517      207 CACTTATCAAGGTCTTTTTCCCTATCAGGGAGACCATGG-----TGATAT    251
+
+21563-25384      204 ACATGT---CTCTG--GGACCAATGGTACTAAGAGGTTTGATAACCCTGT    248
+                     ..||||   |||||  ||||  |||.|||    |||   .|.|||    |
+21456-25517      252 GTATGTTTACTCTGCAGGAC--ATGCTAC----AGG---CACAAC----T    288
+
+21563-25384      249 CCTACCATTTAATGATGGTGTT----------TATTTTGCTTCCACTGA-    287
+                     || ||.|       |.|.||||          ||||         ||.| 
+21456-25517      289 CC-ACAA-------AAGTTGTTTGTAGCTAACTATT---------CTCAG    321
+
+21563-25384      288 GAAGTCTAACA------TAATAAGAGGCTGGATTTTTGGTAC-TACTTTA    330
+                     ||.|||.||||      |||        |||.|||.|.||.| ||   ||
+21456-25517      322 GACGTCAAACAGTTTGCTAA--------TGGGTTTGTCGTCCGTA---TA    360
+
+21563-25384      331 GATTCGAAGA-------CCCAGTCC-CT---AC--TTATTGTTA----AT    363
+                     |       ||       ||.|.||| ||   ||  |||||.|||    ||
+21456-25517      361 G-------GAGCAGCTGCCAATTCCACTGGCACTGTTATTATTAGCCCAT    403
+
+21563-25384      364 -----AACGCTACTAATGTTGTTATTAAAGTCTGTGAATTTCAA------    402
+                          |.||||||||       ||..|||       |||||  |      
+21456-25517      404 CTACCAGCGCTACTA-------TACGAAA-------AATTT--ACCCTGC    437
+
+21563-25384      403 TTTTGTAATGATCCATT-TTTGGGTGTTTATTAC-CACA----AAAA---    443
+                     ||||   |||.|...|| ||..|.||.|.|||.| ||.|    ||||   
+21456-25517      438 TTTT---ATGCTGGGTTCTTCAGTTGGTAATTTCTCAGATGGTAAAATGG    484
+
+21563-25384      444 ----------CAA-CAAA----AGTT--------GGATGGAAAGTG----    466
+                               ||| ||.|    ||||        .||||| |.|||    
+21456-25517      485 GCCGCTTCTTCAATCATACTCTAGTTCTTTTGCCCGATGG-ATGTGGCAC    533
+
+21563-25384      467 ---AGTTCAGAG--------TTTATTCTAG----------TGCGAATAAT    495
+                        |.|| ||||        |.||||||||          ||..|||.||
+21456-25517      534 TTTACTT-AGAGCTTTTTATTGTATTCTAGAGCCTCGCTCTGGAAATCAT    582
+
+21563-25384      496 T---------GCA------------CTTTTG---AATATGTCTCT-----    516
+                     |         |||            ||||||   ..|||..|.||     
+21456-25517      583 TGTCCTGCTGGCAATTCCTATACTTCTTTTGCCACTTATCACACTCCTGC    632
+
+21563-25384      517 --CAGCCTTTTCTTATGG----------------------------ACCT    536
+                       |||..|.||||.||||                            .|.|
+21456-25517      633 AACAGATTGTTCTGATGGCAATTACAATCGTAATGCCAGTCTGAACTCTT    682
+
+21563-25384      537 TGAAGGAAAACAGGGTAATTTCAAAAATCTTAGGGAA-------TTTGTG    579
+                     |.|||||       |||.|||    ||| |||.|.||       |||.||
+21456-25517      683 TTAAGGA-------GTATTTT----AAT-TTACGTAACTGCACCTTTATG    720
+
+21563-25384      580 T----TTAAGAATATT------GATG-GTTATTTTAAAATATATTCTAAG    618
+                     |    || |.||.|||      |||| |  ||||||.|.|...||...|.
+21456-25517      721 TACACTT-ATAACATTACCGAAGATGAG--ATTTTAGAGTGGTTTGGCAT    767
+
+21563-25384      619 CACACGCCTATTAATTTAGTGC-----GTGATCTCC----CTCAGGGTTT    659
+                     .||||       ||   |.|||     |||.||.||    ||||     |
+21456-25517      768 TACAC-------AA---ACTGCTCAAGGTGTTCACCTCTTCTCA-----T    802
+
+21563-25384      660 TTCGGCTTTAGAACCATTGGTAGATTTGCCAATA-GGTATTAACATCACT    708
+                     .||||           |..||.||||||    || ||      |..||.|
+21456-25517      803 CTCGG-----------TATGTTGATTTG----TACGG------CGGCAAT    831
+
+21563-25384      709 AGGTTTCAAACTTT----ACTTGC---TTTA-CATA----GAAG--TTAT    744
+                     |.|||||||  |||    .|||||   |||| .|||    .|||  ||||
+21456-25517      832 ATGTTTCAA--TTTGCCACCTTGCCTGTTTATGATACTATTAAGTATTAT    879
+
+21563-25384      745 T---TGACTCCT---GGTGATTC-TTCT-TC-----AGGTTGGACAGCTG    781
+                     |   |.|.||||   .|| |||| |||| ||     .|.|.|.|.||||.
+21456-25517      880 TCTATCATTCCTCACAGT-ATTCGTTCTATCCAAAGTGATAGAAAAGCTT    928
+
+21563-25384      782 GTGCTGCAGCTTATTATGTGGGTTATCTTCAACC--TAGGACTTTTCTAT    829
+                     |.|||||  ||| .||.||...|.|.||||||||  ||  |||||.||.|
+21456-25517      929 GGGCTGC--CTT-CTACGTATATAAACTTCAACCGTTA--ACTTTCCTGT    973
+
+21563-25384      830 TAAAATATAATGAAAATGGAACCATTA------CAGATGCTGTAGACTGT    873
+                     |..|.|.|..||...||||     |||      |||| |||.||||||||
+21456-25517      974 TGGATTTTTCTGTTGATGG-----TTATATACGCAGA-GCTATAGACTGT   1017
+
+21563-25384      874 G--------CACTTGAC------CCTCT-CTCAGAAACAAAGTGTACGTT    908
+                     |        .|.|||.|      ||.|| ||||.|       ||      
+21456-25517     1018 GGTTTTAATGATTTGTCACAACTCCACTGCTCATA-------TG------   1054
+
+21563-25384      909 GAAATCCTTCACTGTAGAAAAAGGAATCTATCAAACTTC-TAACTTTAGA    957
+                       ||||||||..|||.|||...|||.|.|||..|..||| |  |||    
+21456-25517     1055 --AATCCTTCGATGTTGAATCTGGAGTTTATTCAGTTTCGT--CTT----   1096
+
+21563-25384      958 GTCCAACCAACAGAATCTATTGTTAGATTTCCTAATATTACAAACTTGTG   1007
+                      ||.||.|||.|                                      
+21456-25517     1097 -TCGAAGCAAAA--------------------------------------   1107
+
+21563-25384     1008 CCCTTTTGGTGAAGTTTTTAACGCCAC-CAGATTTGCATCTGTTTATGCT   1056
+                      ||||.|||                 | |||  |||              
+21456-25517     1108 -CCTTCTGG-----------------CTCAG--TTG--------------   1123
+
+21563-25384     1057 TGGAACAG---GAAGAGAATCAGCAACTGTGTTG---CTGAT--------   1092
+                     ||||||||   ||||             ||||||   .||||        
+21456-25517     1124 TGGAACAGGCTGAAG-------------GTGTTGAATGTGATTTTTCACC   1160
+
+21563-25384     1093 TATTCTGTC----------------CTATATAATTCCGCATCA-------   1119
+                     |.|||||||                .|.|||||||     |||       
+21456-25517     1161 TCTTCTGTCTGGCACACCTCCTCAGGTTTATAATT-----TCAAGCGTTT   1205
+
+21563-25384     1120 ----TTTTCCACTTTTAAGTGTTATGGAGTGTCTCCTACTAAATTAAATG   1165
+                         |||.|||.||..||.|.|.|         ||.|||.||||      
+21456-25517     1206 GGTTTTTACCAATTGCAATTATAA---------TCTTACCAAAT------   1240
+
+21563-25384     1166 ATCTCTGCTTT-ACTAATGTCTATGCAGATTCATTTGTAATTAGAGGTGA   1214
+                          |||||| |||..|.|||.|   ||.|.|||| ||.||    ||  
+21456-25517     1241 -----TGCTTTCACTTTTTTCTGT---GAATGATTT-TACTT----GT--   1275
+
+21563-25384     1215 TGAAGTCAGACAAATCGCTCCAG-GGCAA--ACTGGAAAGATTGCTGATT   1261
+                            ||.|||||..|||||| .||||  .||.|.||     ||| ||
+21456-25517     1276 -------AGTCAAATATCTCCAGCAGCAATTGCTAGCAA-----CTG-TT   1312
+
+21563-25384     1262 A--------TAATTATAAATTACCAGATGATTTTACAGGCTGCGTTA---   1300
+                     |        |.|||.|..|||||        |||.||        ||   
+21456-25517     1313 ATTCTTCACTGATTTTGGATTAC--------TTTTCA--------TACCC   1346
+
+21563-25384     1301 ---TAGCTTGGAAT----TCTAACAATCTTGATTCTAAGGTTGGT-----   1338
+                        |||..||.|||    |||  ||.|.||..||||   |.||||     
+21456-25517     1347 ACTTAGTATGAAATCCGATCT--CAGTGTTAGTTCT---GCTGGTCCAAT   1391
+
+21563-25384     1339 -------GGTAATTATAA-------TT----------ACCTGTATAGATT   1364
+                            ..|||||||||       ||          ||.||| |.||| 
+21456-25517     1392 ATCCCAGTTTAATTATAAACAGTCCTTTTCTAATCCCACATGT-TTGAT-   1439
+
+21563-25384     1365 GTTTAG-GAAGTCTAAT-CTCA-AACCTT-------------------TT   1392
+                      ||||| ||   ||..| |||| ||||||                   ||
+21456-25517     1440 -TTTAGCGA---CTGTTCCTCATAACCTTACTACTATTACTAAGCCTCTT   1485
+
+21563-25384     1393 GAG-AGAGATATTTCAACTGAAAT-CTATCAGGCCGGTAGCACACCTT--   1438
+                     .|| |.||.|||.|.|||  ||.| ||.||      ||       |||  
+21456-25517     1486 AAGTACAGCTATATTAAC--AAGTGCTCTC------GT-------CTTCT   1520
+
+21563-25384     1439 -----GTAATGGTGTTGAAG-------GTT--------TTAATTGTTACT   1468
+                          .|.||.||..|||||       |||        .||||...||||
+21456-25517     1521 TTCTGATGATCGTACTGAAGTACCTCAGTTAGTGAACGCTAATCAATACT   1570
+
+21563-25384     1469 -TTCCTTTACAATCATATGGTTTCCAACCCACTAATGGTGT---------   1508
+                      ..|||.|..|..|||    |.|||.|.|||||    ||||         
+21456-25517     1571 CACCCTGTGTATCCAT----TGTCCCATCCACT----GTGTGGGAAGACG   1612
+
+21563-25384     1509 -TGGTTACCA-ACCATACAGAGTAGTAGTACTTTCT---TTTGAA-----   1548
+                      ||.|||..| |..|.|||          |||.|||   .|||||     
+21456-25517     1613 GTGATTATTATAGGAAACA----------ACTATCTCCACTTGAAGGTGG   1652
+
+21563-25384     1549 -------CTTCTACATGCACCAG-----CAACTGTT--------TGTGGA   1578
+                            |||.|   ||  |.||     ||||||||        ||.|.|
+21456-25517     1653 TGGCTGGCTTGT---TG--CTAGTGGCTCAACTGTTGCCATGACTGAGCA   1697
+
+21563-25384     1579 CCTAAAAA--GTCTACTAATTTGGTTAAAAACAAATGTGTCAATTTCAAC   1626
+                     ..||.|.|  |.|      ||||||  |..|||   || |||||      
+21456-25517     1698 ATTACAGATGGGC------TTTGGT--ATTACA---GT-TCAAT------   1729
+
+21563-25384     1627 TTCAATGGTTTAACAGGCAC----AGGTGTT---------CTTACTGAGT   1663
+                         |||||   ||||.|||    | |||||         ||   |||.|
+21456-25517     1730 ----ATGGT---ACAGACACCAATA-GTGTTTGCCCCAAGCT---TGAAT   1768
+
+21563-25384     1664 ---CTA-----ACAAAAAGTTTCTGCCTTTCCAACAATTTGGCAGAGACA   1705
+                        |||     |||||||    .|||||.|    |||||.||||     |
+21456-25517     1769 TTGCTAATGACACAAAAA----TTGCCTCT----CAATTAGGCA-----A   1805
+
+21563-25384     1706 TTGC-TGACACTA------CTGATGCTGT------CCGTG----------   1732
+                     |||| || .|.||      || |||.|||      |||||          
+21456-25517     1806 TTGCGTG-GAATATTCCCTCT-ATGGTGTTTCGGGCCGTGGTGTTTTTCA   1853
+
+21563-25384     1733 ---ATCCACAGACACTTGAGATTCTTGACA------------TTA-----   1762
+                        .|.|||||   ||..||.|..|.||||            |||     
+21456-25517     1854 GAATTGCACAG---CTGTAGGTGTTCGACAGCAGCGCTTTGTTTATGATG   1900
+
+21563-25384     1763 --CACCA----------------TGTTCT--------------------T   1774
+                       .||||                |.||||                    |
+21456-25517     1901 CGTACCAGAATTTAGTTGGCTATTATTCTGATGATGGCAACTACTACTGT   1950
+
+21563-25384     1775 TTG-GTG---GTGTCAGTGTT-------------------ATAACACCAG   1801
+                     ||| |||   ||||.||||||                   ||||    ||
+21456-25517     1951 TTGCGTGCTTGTGTTAGTGTTCCTGTTTCTGTCATCTATGATAA----AG   1996
+
+21563-25384     1802 GAACAAA---------TACTTCTAACCAG----GTTGC-TG---------   1828
+                     .|||.||         ||| ||||....|    ||||| ||         
+21456-25517     1997 AAACTAAAACCCACGCTAC-TCTATTTGGTAGTGTTGCATGTGAACACAT   2045
+
+21563-25384     1829 TTCTT-TATCAGGATGTTAACTGCACAGAAGTCCCTGTTGCTATTCATGC   1877
+                     ||||| ||.|   ||||      |.||..|.|||| ||| |||..|    
+21456-25517     2046 TTCTTCTACC---ATGT------CTCAATACTCCC-GTT-CTACGC----   2080
+
+21563-25384     1878 AGATCAA--CTTACTCCTACTTGGCGTGTTTATTCTACAGGTTCTAATGT   1925
+                      ||||||  ||||..|      ||||.|   ||||||||          |
+21456-25517     2081 -GATCAATGCTTAAAC------GGCGAG---ATTCTACA----------T   2110
+
+21563-25384     1926 TT-------TTCAAACACGTGCAGGCTGTTTAATAGGGGCTGAACATGTC   1968
+                     .|       ||||.||||.||..||.|||.|..||||      ||.|||.
+21456-25517     2111 ATGGCCCCCTTCAGACACCTGTTGGTTGTGTCCTAGG------ACTTGTT   2154
+
+21563-25384     1969 AACAACTC---------ATATGAGTGTGACATACCCATTGGTGCAGGTAT   2009
+                     ||...|||         |.|.||.||..|..|.||..|||||..|..|.|
+21456-25517     2155 AATTCCTCTTTGTTCGTAGAGGACTGCAAGTTGCCTCTTGGTCAATCTCT   2204
+
+21563-25384     2010 ATGCGCTAGTTATCAGACTCAGACTAATTCT------CCTCG--GCGGGC   2051
+                     .||.|||..|..|.|.||.|   |||.|.||      |||||  |.|.||
+21456-25517     2205 CTGTGCTCTTCCTGACACAC---CTAGTACTCTCACACCTCGCAGTGTGC   2251
+
+21563-25384     2052 AC---GT----AGTGTA----GCTAGTCAATCCATCATTGCCT------A   2084
+                     .|   ||    .|||.|    |||.|.| |||   ||||||.|      |
+21456-25517     2252 GCTCTGTTCCAGGTGAAATGCGCTTGGC-ATC---CATTGCTTTTAATCA   2297
+
+21563-25384     2085 CACTATGTCACTTGGTGCAGAAAATT--CAGTTGCTTACTCTAA--TAAC   2130
+                     ..|||| |||   |||..|..||.||  .|||.| |||.|.|||  |||.
+21456-25517     2298 TCCTAT-TCA---GGTTGATCAACTTAATAGTAG-TTATTTTAAATTAAG   2342
+
+21563-25384     2131 TCTATTGCCATACCCACAAATTTTACTATTAGTGTTACCACAG----AAA   2176
+                     |        ||||||||.||||||.|..||.||||.| |.|||    |.|
+21456-25517     2343 T--------ATACCCACTAATTTTTCCTTTGGTGTGA-CTCAGGAGTACA   2383
+
+21563-25384     2177 TTCTACCAGTGTCTATGACCA---AGACA---TCAGTAGATTGTACAATG   2220
+                     |||...||         ||||   |||.|   .|.||.|||||||.|..|
+21456-25517     2384 TTCAGACA---------ACCATTCAGAAAGTTACTGTTGATTGTAAACAG   2424
+
+21563-25384     2221 TACATTTG---TGGTGATTCAACTGAA---TGCAGCAATCTTTTGTTGC-   2263
+                     |||.||||   ||||  |||  |.|||   || |||||    ||..||| 
+21456-25517     2425 TACGTTTGCAATGGT--TTC--CAGAAGTGTG-AGCAA----TTACTGCG   2465
+
+21563-25384     2264 --AATATGG-CAGTTTTTGTACACAATTAAACCGTGCTTTAACTGG----   2306
+                       |.||||| ||| ||||||.|..||.||||||..|||.|...|||    
+21456-25517     2466 CGAGTATGGCCAG-TTTTGTTCCAAAATAAACCAGGCTCTCCATGGTGCC   2514
+
+21563-25384     2307 AATAGCTGTTGAACAAGACAAAAACAC-CCAAGAAGTTTTTGCACAAGTC   2355
+                     |||     ||               || |||.||.|.||.||.||  || 
+21456-25517     2515 AAT-----TT---------------ACGCCAGGATGATTCTGTAC--GT-   2541
+
+21563-25384     2356 AAACAAATTT-------------ACA-------AAACACCACCAATTA--   2383
+                          |||||             |.|       ||.||.|.||.||.|  
+21456-25517     2542 -----AATTTGTTTGCGAGCGTGAAAAGCTCTCAATCATCTCCTATCATA   2586
+
+21563-25384     2384 -AAGATTTTGGTGGT---TTTAATTTTTCACAAATATTACCAGATCC---   2426
+                      .||.||||||.|||   ||||||||..|||...||..|||.|.|.|   
+21456-25517     2587 CCAGGTTTTGGAGGTGACTTTAATTTGACACTTCTAGAACCTGTTTCTAT   2636
+
+21563-25384     2427 ATCAAAACCAAGCAAGAGGTCAT-------------TTATTGAAGATCTA   2463
+                     |||.|   |..|||    |||.|             .||||||.|||.|.
+21456-25517     2637 ATCTA---CTGGCA----GTCGTAGTGCACGTAGTGCTATTGAGGATTTG   2679
+
+21563-25384     2464 CTTTTCAACAAAGTGACACTTGCAGATGCTGGCTTCATCAAACAATATGG   2513
+                     ||.||..|||||||.||..|.||.|||.||||.|..||..||...||.|.
+21456-25517     2680 CTATTTGACAAAGTCACTATAGCTGATCCTGGTTATATGCAAGGTTACGA   2729
+
+21563-25384     2514 TGATTGC------CTTGGT----GATATTGCTGCTAGAGACCTCATTTGT   2553
+                     |||||||      |..|||    .||    |.|||.|.||.||.||||||
+21456-25517     2730 TGATTGCATGCAGCAAGGTCCAGCAT----CAGCTCGTGATCTTATTTGT   2775
+
+21563-25384     2554 GCACAA-AAGTTTAACGGC--CTTAC--TGTTTTGCCACCTTTGCTCACA   2598
+                     ||.||| |.||     |||  .||||  .||.||.||.|||   ||.|..
+21456-25517     2776 GCTCAATATGT-----GGCTGGTTACAAAGTATTACCTCCT---CTTATG   2817
+
+21563-25384     2599 GATG-AAATGATTGCTCAA------TACACTT-------------CTGCA   2628
+                     |||| .||| ||.|   ||      ||.||||             |.|||
+21456-25517     2818 GATGTTAAT-ATGG---AAGCCGCGTATACTTCATCTTTGCTTGGCAGCA   2863
+
+21563-25384     2629 CTGTTAGCGGGTACAATCACTTCTGGTTGGACCTTTGGTGCAGG------   2672
+                         ||||.||         |..|||.|||||      |||.||      
+21456-25517     2864 ----TAGCAGG---------TGTTGGCTGGAC------TGCTGGCTTATC   2894
+
+21563-25384     2673 ------TGCTGC-ATTACAAATACCATTTGC------TATGCAAATGGC-   2708
+                           |||||| |||       ||||||||      |||        | 
+21456-25517     2895 CTCCTTTGCTGCTATT-------CCATTTGCACAGAGTAT--------CT   2929
+
+21563-25384     2709 -TTATAGGTTTAATGGTATTGGAGTTACACAGAATGTTCTCTATGAGAAC   2757
+                      |||||||||.||.|||.||||..||||.||..|.|||||.|..||||||
+21456-25517     2930 TTTATAGGTTAAACGGTGTTGGCATTACTCAACAGGTTCTTTCAGAGAAC   2979
+
+21563-25384     2758 CAAAAATTGATTGCCAACCAATTTAAT---------AGTGCTATTGGCAA   2798
+                     |||||..|.||||||||..|.||||||         .|.|||||  ||||
+21456-25517     2980 CAAAAGCTTATTGCCAATAAGTTTAATCAGGCTCTGGGAGCTAT--GCAA   3027
+
+21563-25384     2799 AATTCAAGACTCACTTTCTTCCACAGCAAGTGCA-CTT----GGAAAACT   2843
+                     |   ||.|..|||||       |||.|.|.||.| |||    |  ||..|
+21456-25517     3028 A---CAGGCTTCACT-------ACAACTAATGAAGCTTTTCAG--AAGGT   3065
+
+21563-25384     2844 TCAAGATGTGGTCAACCAAAATGCACAAGCTTTAAACACGCTTGTTAAAC   2893
+                     |||.||||..||.|||.|.||||||||.|||             .||..|
+21456-25517     3066 TCAGGATGCTGTGAACAACAATGCACAGGCT-------------CTATCC   3102
+
+21563-25384     2894 AACTTAGC----------TCCAA---TTTTGGTGCAATTTCAAG--TGTT   2928
+                     ||.|||||          ||.||   |||||||||.||||| .|  |.|.
+21456-25517     3103 AAATTAGCTAGCGAGCTATCTAATACTTTTGGTGCTATTTC-CGCCTCTA   3151
+
+21563-25384     2929 TTAAATGATATCCTTTCACGTCTTGACAAAGTTGAGGCT-------GAAG   2971
+                     ||..| ||.|||.|...||||||||   |.|||    ||       ||.|
+21456-25517     3152 TTGGA-GACATCATACAACGTCTTG---ATGTT----CTCGAACAGGACG   3193
+
+21563-25384     2972 TGCAAATTGATAGGTTGATCACAGGCAGACTTCAAAGT--TTGCAGACAT   3019
+                     ..|||||               ||.|||||||   |.|  |.||.|    
+21456-25517     3194 CCCAAAT---------------AGACAGACTT---ATTAATGGCCG----   3221
+
+21563-25384     3020 ATGTGACTCAACAATTAATTAGAGC------TGCAGAAATCAG-AGCT--   3060
+                      |.|||  |||||.|.|||    ||      ||||     ||| ||||  
+21456-25517     3222 -TTTGA--CAACACTAAAT----GCTTTTGTTGCA-----CAGCAGCTTG   3259
+
+21563-25384     3061 -----------TCTGCTAATCTTGCTGCT------ACTAA----AATGTC   3089
+                                ||.|||..||||.|.|||      .||||    ||.|||
+21456-25517     3260 TTCGTTCCGAATCAGCTGCTCTTTCCGCTCAATTGGCTAAAGATAAAGTC   3309
+
+21563-25384     3090 A--GAGTGTGTACTTGG-ACAATCAAAAAGAGTT---GATTTTTGTGGAA   3133
+                     |  |||||||| |..|| ||||||  .|||.|||   || |||||.||..
+21456-25517     3310 AATGAGTGTGT-CAAGGCACAATC--CAAGCGTTCTGGA-TTTTGCGGTC   3355
+
+21563-25384     3134 AGGGCTATCATCTTATGTCCTTCCCTCAGTCA--GCACCTCATGG--TGT   3179
+                     |.|||...|||.|..|||||||...|  ||.|  ||.|||.||||  |.|
+21456-25517     3356 AAGGCACACATATAGTGTCCTTTGTT--GTAAATGCCCCTAATGGCCTTT   3403
+
+21563-25384     3180 AGTCTTCTTGCATGTGACTTATGTCCCTGCACAAGAAAAG-AACTTCACA   3228
+                     |  ||||.|||||||...||||..||||          || |||  ||||
+21456-25517     3404 A--CTTCATGCATGTTGGTTATTACCCT----------AGCAAC--CACA   3439
+
+21563-25384     3229 -----------ACTGCTCCTGCCATTTGTCATG---------------AT   3252
+                                .|||||..||...||||..|||               ||
+21456-25517     3440 TTGAGGTTGTTTCTGCTTATGGTCTTTGCGATGCAGCTAACCCTACTAAT   3489
+
+21563-25384     3253 GGAAAAGCACACTTTCCTCGTGAA-GGTGTCTTTGTTTCAAATGGCAC--   3299
+                     .|.|.|||       ||..||.|| ||...||||.||  |||    ||  
+21456-25517     3490 TGTATAGC-------CCCTGTTAATGGCTACTTTATT--AAA----ACTA   3526
+
+21563-25384     3300 ---ACACT-GGTTTGTAACACAAAGGAAT--------------------T   3325
+                        ||||| ||.||||     ..|.||.|                    |
+21456-25517     3527 ATAACACTAGGATTGT-----TGATGAGTGGTCATATACTGGCTCGTCCT   3571
+
+21563-25384     3326 TTTATGAACCACAAATCATTACTACAGACAACACATTTGTGTCTGGTAAC   3375
+                     |.||||.|||..|...||||||..|....||.||            |||.
+21456-25517     3572 TCTATGCACCTGAGCCCATTACCTCCCTTAATAC------------TAAG   3609
+
+21563-25384     3376 TGTGATGTTGTA--ATAGGAATTGTC--AACAACACAGTT-TA-------   3413
+                     |   ||||||.|  |.|||   ||.|  |.|||.|||.|| ||       
+21456-25517     3610 T---ATGTTGCACCACAGG---TGACATACCAAAACATTTCTACTAACCT   3653
+
+21563-25384     3414 ---TGATCCTTT-----GCA-----ACCTGAATTAGACTCATTCAAGGAG   3450
+                        |..||||.|     |||     |||.|.||| |||   |||.|.||.
+21456-25517     3654 CCCTCCTCCTCTTCTCGGCAATTCCACCGGGATT-GAC---TTCCAAGAT   3699
+
+21563-25384     3451 GAGTTAGATAAATATTTTAAGAATCATACATCACCAGATGT---TGATTT   3497
+                     |||||.|||.|.|.|||.||.|||..|  |.|||||| |.|   |.||||
+21456-25517     3700 GAGTTGGATGAGTTTTTCAAAAATGTT--AGCACCAG-TATACCTAATTT   3746
+
+21563-25384     3498 AGGTGACATCTCTGGC----ATTAATGCTTCAGTTGTAAACATT------   3537
+                     .|||    ||.||..|    ||||||.||          |||||      
+21456-25517     3747 TGGT----TCCCTAACACAGATTAATACT----------ACATTACTCGA   3782
+
+21563-25384     3538 ------CAAAAAGAAATTGACCGCCTCAATGAGGTTGCCAAGAATTTA--   3579
+                           |.|..|||..||| .|.|.||||         ||||...|||  
+21456-25517     3783 TCTTACCTACGAGATGTTG-TCTCTTCAA---------CAAGTTGTTAAA   3822
+
+21563-25384     3580 ------AATGAATCTCTCATCGATCTCCAAGAACTTGGAAAGTATGAGCA   3623
+                           |||||.|||..|||.||.||..||||.|||||.||.|||....|
+21456-25517     3823 GCCCTTAATGAGTCTTACATAGACCTTAAAGAGCTTGGCAATTATACTTA   3872
+
+21563-25384     3624 GTATATAAAATGGCCATGGTACATTTGGCTAGGTTTTATAGCT-GGCTTG   3672
+                     .||.|..||||||||.||||||||||||||.|||||.||.||| ||||||
+21456-25517     3873 TTACAACAAATGGCCGTGGTACATTTGGCTTGGTTTCATTGCTGGGCTTG   3922
+
+21563-25384     3673 ATTGCCATAG---TAATG-GTGACAATT----ATGCTTTGCTGTA-TGAC   3713
+                      |||||.|||   | ||| ||    .||    ||.||.|||||.| ||  
+21456-25517     3923 -TTGCCTTAGCTCT-ATGCGT----CTTCTTCATACTGTGCTGCACTG--   3964
+
+21563-25384     3714 CAGTTG---------CTGTAGTTG-----TCTCAAGGGCTGTTGTTCTTG   3749
+                       ||||         |||||  ||     .||.|||.|...|.|||.|||
+21456-25517     3965 --GTTGTGGCACAAACTGTA--TGGGAAAACTTAAGTGTAATCGTTGTTG   4010
+
+21563-25384     3750 TGGATCCTGCTGCAAATTTGATGAAGACGACTCT-GAGCCAGTGCTCA-A   3797
+                     | |||        |.||..||.|||.||||| || ||||     |.|| |
+21456-25517     4011 T-GAT--------AGATACGAGGAATACGAC-CTCGAGC-----CGCATA   4045
+
+21563-25384     3798 AGGAGTCAAATTACAT-TACACATAA   3822
+                     |||        |.||| |.||| |||
+21456-25517     4046 AGG--------TTCATGTTCAC-TAA   4062
+
+
+#---------------------------------------
+#---------------------------------------
