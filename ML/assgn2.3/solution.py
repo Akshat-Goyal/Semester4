@@ -115,10 +115,11 @@ def MDPSolver():
     objective = cp.Maximize(cp.matmul(R, X))
     problem = cp.Problem(objective, constraints)
     problem.solve()
-    X = X.value
+    X = np.array(X.value)
+    objectiveValue = float(np.matmul(R, X))
     policy = getPolicy(X, V)
     mdp = {'a': A.tolist(), 'r': R.tolist(), 'alpha': alpha.tolist(),
-           'x': X.tolist(), 'policy': policy}
+           'x': X.tolist(), 'policy': policy, 'objective': objectiveValue}
     return mdp
 
 
