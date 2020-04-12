@@ -38,39 +38,66 @@ def validActions():
     return np.array(actions)
 
 
+def shoot(s1, s2):
+    i, j, k = s2[0], s2[1], s2[2]
+    if s1 == (i + 1, j + 1, k + 1):
+        return 0.5
+    elif s1 == (i, j + 1, k + 1):
+        return 0.5
+    return 0
+
+
+def dodge(s1, s2):
+    i, j, k = s2[0], s2[1], s2[2]
+    if s1[2] == 1:
+        if s1[1] == arrow - 1:
+            if s1 == (i, j, k + 1):
+                return 1
+        elif s1 == (i, j - 1, k + 1):
+            return 0.8
+        elif s1 == (i, j, k + 1):
+            return 0.2
+    elif s1[2] == 2:
+        if s1[1] == arrow - 1:
+            if s1 == (i, j, k + 1):
+                return 0.8
+            elif s1 == (i, j, k + 2):
+                return 0.2
+        elif s1 == (i, j - 1, k + 1):
+            return 0.64
+        elif s1 == (i, j, k + 1):
+            return 0.16
+        elif s1 == (i, j - 1, k + 2):
+            return 0.16
+        elif s1 == (i, j, k + 2):
+            return 0.04
+    return 0
+
+
+def recharge(s1, s2):
+    i, j, k = s2[0], s2[1], s2[2]
+    if s1 == (i, j, k - 1):
+        return 0.8
+    elif s1 == (i, j, k):
+        return 0.2
+    return 0
+
+
 def getProb(V):
     prob = np.zeros((health * arrow * stamina, V.shape[0]), dtype=float)
     for i in range(health):
         for j in range(arrow):
             for k in range(stamina):
                 for l in range(V.shape[0]):
-                    if not V[l][1] and V[l][0] == (i, j, k):
-                        prob[getState(i, j, k)][l] = 1
+                    if not V[l][1]:
+                        continue
                     elif V[l][1] == 1:
-                        if V[l][0] == (i + 1, j + 1, k + 1):
-                            prob[getState(i, j, k)][l] = 0.5
-                        elif V[l][0] == (i, j + 1, k + 1):
-                            prob[getState(i, j, k)][l] = 0.5
+                        prob[getState(i, j, k)][l] = shoot(V[l][0], (i, j, k))
                     elif V[l][1] == 2:
-                        if V[l][0][2] == 1:
-                            if V[l][0] == (i, j - 1, k + 1):
-                                prob[getState(i, j, k)][l] = 0.8
-                            elif V[l][0] == (i, j, k + 1):
-                                prob[getState(i, j, k)][l] = 0.2
-                        elif V[l][0][2] == 2:
-                            if V[l][0] == (i, j - 1, k + 1):
-                                prob[getState(i, j, k)][l] = 0.64
-                            elif V[l][0] == (i, j, k + 1):
-                                prob[getState(i, j, k)][l] = 0.16
-                            elif V[l][0] == (i, j - 1, k + 2):
-                                prob[getState(i, j, k)][l] = 0.16
-                            elif V[l][0] == (i, j, k + 2):
-                                prob[getState(i, j, k)][l] = 0.04
+                        prob[getState(i, j, k)][l] = dodge(V[l][0], (i, j, k))
                     else:
-                        if V[l][0] == (i, j, k - 1):
-                            prob[getState(i, j, k)][l] = 0.8
-                        elif V[l][0] == (i, j, k):
-                            prob[getState(i, j, k)][l] = 0.2
+                        prob[getState(i, j, k)][l] = recharge(
+                            V[l][0], (i, j, k))
     return prob
 
 
@@ -151,5 +178,3 @@ if __name__ == "__main__":
     with open("./outputs/output.json", "a") as f:
         mdp = MDPSolver()
         json.dump(mdp, f, indent=4)
-    # with open("./outputs/task_1_trace.txt", "r") as f:
-        # print(json.load(f))
