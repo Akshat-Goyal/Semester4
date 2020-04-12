@@ -17,7 +17,7 @@ penalty = -10 / Y
 
 
 def getState(i, j, k):
-    state = i + j * health + k * health * arrow
+    state = k + j * stamina + i * stamina * arrow
     return state
 
 
@@ -150,6 +150,6 @@ if __name__ == "__main__":
 
     with open("./outputs/output.json", "a") as f:
         mdp = MDPSolver()
-        json.dump(mdp, f)
+        json.dump(mdp, f, indent=4)
     # with open("./outputs/task_1_trace.txt", "r") as f:
         # print(json.load(f))
