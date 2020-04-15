@@ -1,39 +1,48 @@
 
-   6 Populations
+Consensus tree program, version 3.697
 
-Neighbor-Joining/UPGMA method version 3.697
+Species in order: 
 
-
- Neighbor-joining method
-
- Negative branch lengths allowed
-
-
-    +-----PCoV      
-  +-3 
-  ! !   +BatCoVRaTG
-  ! +---2 
-  !     +SARSCoV2  
-  ! 
-  !                                        +----BatCoV    
-  4----------------------------------------1 
-  !                                        +----MERSCoV   
-  ! 
-  +-------SARSCoV   
+  1. PCoV
+  2. BatCoVRaTG
+  3. SARSCoV2
+  4. MERSCoV
+  5. BatCoV
+  6. SARSCoV
 
 
-remember: this is an unrooted tree!
+Sets included in the consensus tree
 
-Between        And            Length
--------        ---            ------
-   4             3            0.04071
-   3          PCoV            0.08578
-   3             2            0.06178
-   2          BatCoVRaTG      0.02149
-   2          SARSCoV2        0.01790
-   4             1            0.67532
-   1          BatCoV          0.09308
-   1          MERSCoV         0.09733
-   4          SARSCoV         0.12880
+Set (species in order)     How many times out of  100.00
 
+...***                     100.00
+.**...                     100.00
+...**.                     100.00
+
+
+Sets NOT included in consensus tree: NONE
+
+
+Extended majority rule consensus tree
+
+CONSENSUS TREE:
+the numbers on the branches indicate the number
+of times the partition of the species into the two sets
+which are separated by that branch occurred
+among the trees, out of 100.00 trees
+
+                          +-------BatCoVRaTG
+          +---------100.0-|
+          |               +-------SARSCoV2
+  +-------|
+  |       |       +---------------SARSCoV
+  |       +-100.0-|
+  |               |       +-------BatCoV
+  |               +-100.0-|
+  |                       +-------MERSCoV
+  |
+  +-------------------------------PCoV
+
+
+  remember: this is an unrooted tree!
 
