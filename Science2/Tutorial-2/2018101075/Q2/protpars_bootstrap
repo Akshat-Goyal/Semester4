@@ -1,0 +1,48 @@
+
+Consensus tree program, version 3.697
+
+Species in order: 
+
+  1. MERSCoV
+  2. BatCoV
+  3. SARSCoV2
+  4. BatCoVRaTG
+  5. PCoV
+  6. SARSCoV
+
+
+Sets included in the consensus tree
+
+Set (species in order)     How many times out of  100.00
+
+..****                     100.00
+..***.                     100.00
+..**..                     100.00
+
+
+Sets NOT included in consensus tree: NONE
+
+
+Extended majority rule consensus tree
+
+CONSENSUS TREE:
+the numbers on the branches indicate the number
+of times the partition of the species into the two sets
+which are separated by that branch occurred
+among the trees, out of 100.00 trees
+
+                                  +-------SARSCoV2
+                          +-100.0-|
+                  +-100.0-|       +-------BatCoVRaTG
+                  |       |
+          +-100.0-|       +---------------PCoV
+          |       |
+  +-------|       +-----------------------SARSCoV
+  |       |
+  |       +-------------------------------BatCoV
+  |
+  +---------------------------------------MERSCoV
+
+
+  remember: this is an unrooted tree!
+
