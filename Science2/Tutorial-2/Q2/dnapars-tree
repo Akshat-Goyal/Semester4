@@ -1,0 +1,34 @@
+
+DNA parsimony algorithm, version 3.697
+
+
+One most parsimonious tree found:
+
+
+                          +-----MERSCoV   
+  +-----------------------4  
+  |                       +-----BatCoV    
+  |  
+  |       +SARSCoV2  
+  |   +---3  
+  1---2   +BatCoVRaTG
+  |   |  
+  |   +---PCoV      
+  |  
+  +-----SARSCoV   
+
+
+requires a total of  30033.000
+
+  between      and       length
+  -------      ---       ------
+     1           4       0.399940
+     4      MERSCoV      0.094547
+     4      BatCoV       0.095977
+     1           2       0.068413
+     2           3       0.057586
+     3      SARSCoV2     0.018316
+     3      BatCoVRaTG   0.019077
+     2      PCoV         0.068910
+     1      SARSCoV      0.098660
+

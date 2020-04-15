@@ -1,0 +1,2603 @@
+
+Protein parsimony algorithm, version 3.697
+
+
+Data set # 1:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2828.000
+
+
+Data set # 2:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2730.000
+
+
+Data set # 3:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2758.000
+
+
+Data set # 4:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2809.000
+
+
+Data set # 5:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2732.000
+
+
+Data set # 6:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2752.000
+
+
+Data set # 7:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2828.000
+
+
+Data set # 8:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2788.000
+
+
+Data set # 9:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2832.000
+
+
+Data set # 10:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2809.000
+
+
+Data set # 11:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2768.000
+
+
+Data set # 12:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2654.000
+
+
+Data set # 13:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2736.000
+
+
+Data set # 14:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2659.000
+
+
+Data set # 15:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2774.000
+
+
+Data set # 16:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2715.000
+
+
+Data set # 17:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2764.000
+
+
+Data set # 18:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2825.000
+
+
+Data set # 19:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2644.000
+
+
+Data set # 20:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2742.000
+
+
+Data set # 21:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2813.000
+
+
+Data set # 22:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2746.000
+
+
+Data set # 23:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2789.000
+
+
+Data set # 24:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2599.000
+
+
+Data set # 25:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2896.000
+
+
+Data set # 26:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2752.000
+
+
+Data set # 27:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2810.000
+
+
+Data set # 28:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2846.000
+
+
+Data set # 29:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2779.000
+
+
+Data set # 30:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2773.000
+
+
+Data set # 31:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2765.000
+
+
+Data set # 32:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2876.000
+
+
+Data set # 33:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2673.000
+
+
+Data set # 34:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2803.000
+
+
+Data set # 35:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2828.000
+
+
+Data set # 36:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2787.000
+
+
+Data set # 37:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2788.000
+
+
+Data set # 38:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2764.000
+
+
+Data set # 39:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2806.000
+
+
+Data set # 40:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2920.000
+
+
+Data set # 41:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2786.000
+
+
+Data set # 42:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2800.000
+
+
+Data set # 43:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2800.000
+
+
+Data set # 44:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2680.000
+
+
+Data set # 45:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2727.000
+
+
+Data set # 46:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2860.000
+
+
+Data set # 47:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2807.000
+
+
+Data set # 48:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2878.000
+
+
+Data set # 49:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2765.000
+
+
+Data set # 50:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2719.000
+
+
+Data set # 51:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2761.000
+
+
+Data set # 52:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2827.000
+
+
+Data set # 53:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2723.000
+
+
+Data set # 54:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2781.000
+
+
+Data set # 55:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2763.000
+
+
+Data set # 56:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2756.000
+
+
+Data set # 57:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2723.000
+
+
+Data set # 58:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2796.000
+
+
+Data set # 59:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2861.000
+
+
+Data set # 60:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2806.000
+
+
+Data set # 61:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2745.000
+
+
+Data set # 62:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2863.000
+
+
+Data set # 63:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2807.000
+
+
+Data set # 64:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2744.000
+
+
+Data set # 65:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2796.000
+
+
+Data set # 66:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2770.000
+
+
+Data set # 67:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2823.000
+
+
+Data set # 68:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2763.000
+
+
+Data set # 69:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2638.000
+
+
+Data set # 70:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2777.000
+
+
+Data set # 71:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2696.000
+
+
+Data set # 72:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2735.000
+
+
+Data set # 73:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2732.000
+
+
+Data set # 74:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2754.000
+
+
+Data set # 75:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2805.000
+
+
+Data set # 76:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2876.000
+
+
+Data set # 77:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2785.000
+
+
+Data set # 78:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2779.000
+
+
+Data set # 79:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2608.000
+
+
+Data set # 80:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2859.000
+
+
+Data set # 81:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2820.000
+
+
+Data set # 82:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2840.000
+
+
+Data set # 83:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2700.000
+
+
+Data set # 84:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2836.000
+
+
+Data set # 85:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2781.000
+
+
+Data set # 86:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2802.000
+
+
+Data set # 87:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2821.000
+
+
+Data set # 88:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2752.000
+
+
+Data set # 89:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2794.000
+
+
+Data set # 90:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2775.000
+
+
+Data set # 91:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2792.000
+
+
+Data set # 92:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2859.000
+
+
+Data set # 93:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2639.000
+
+
+Data set # 94:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2694.000
+
+
+Data set # 95:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2719.000
+
+
+Data set # 96:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2780.000
+
+
+Data set # 97:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2751.000
+
+
+Data set # 98:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2828.000
+
+
+Data set # 99:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2724.000
+
+
+Data set # 100:
+
+
+One most parsimonious tree found:
+
+
+
+
+              +--MERSCoV   
+     +--------5  
+     !        +--BatCoV    
+  +--4  
+  !  !        +--SARSCoV2  
+  !  !     +--3  
+  1  +-----2  +--BatCoVRaTG
+  !        !  
+  !        +-----PCoV      
+  !  
+  +--------------SARSCoV   
+
+  remember: this is an unrooted tree!
+
+
+requires a total of   2754.000
+
