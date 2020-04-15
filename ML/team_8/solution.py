@@ -145,8 +145,8 @@ def MDPSolver():
     X = np.array(X.value)
     objectiveValue = float(np.matmul(R, X))
     policy = getPolicy(X, V)
-    mdp = {'a': A.tolist(), 'r': R.tolist(), 'alpha': alpha.tolist(),
-           'x': X.tolist(), 'policy': policy, 'objective': objectiveValue}
+    mdp = {'a': A.tolist(), 'r': R.flatten().tolist(), 'alpha': alpha.flatten().tolist(),
+           'x': X.flatten().tolist(), 'policy': policy, 'objective': objectiveValue}
     return mdp
 
 
@@ -177,4 +177,4 @@ if __name__ == "__main__":
 
     with open("./outputs/output.json", "a") as f:
         mdp = MDPSolver()
-        json.dump(mdp, f, indent=4)
+        json.dump(mdp, f)
