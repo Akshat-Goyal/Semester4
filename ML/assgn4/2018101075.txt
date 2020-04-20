@@ -1,8 +1,6 @@
 6
-f[1] == 'High' and f[0] == 'Irregular Sleep', Yes
-f[1] == 'High' and f[0] == 'Good Sleep', Yes
+f[1] == 'High' and f[0] != 'Long Sleep', Yes
 f[1] == 'High' and f[0] == 'Long Sleep', No
-f[1] == 'Normal' and f[0] == 'Irregular Sleep', No
-f[1] == 'Normal' and f[0] == 'Good Sleep', No
+f[1] == 'Normal' and f[0] != 'Long Sleep', No
 f[1] == 'Normal' and f[0] == 'Long Sleep', Yes
 f[1] == 'Low', Yes
