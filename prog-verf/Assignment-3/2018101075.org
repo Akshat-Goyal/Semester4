@@ -1,0 +1,249 @@
+#+TITLE: Assignment 3 - Program Verification Using Dafny
+
+* Assignment Problems
+** Question 1
+Write a program for insertion sort which takes input 
+as an integer array and produces a sorted array 
+using insertion sort algorithm.
+
+*** Problem Definition
+1. We define the problem as a function $Insertion Sort: array<\mathbb{z}> \rightarrow array<\mathbb{Z}>, where array<\mathbb{Z}>$ is the ordered and finie set of integers.
+2. Input Space as well as Output Space is array<$\mathbb{Z}$>.
+
+*** Transition System Definition
+1. $S_{sort} = <X, X^{o}, U, \rightarrow, Y, h>$
+2. The state space of the system $X = array<\mathbb{Z}> \times \mathbb{Z} \times \mathbb{Z}$
+3. We define a function $\rho:array<\mathbb{Z}> \rightarrow X$, which converts the input space of the problem of the state space of the system.
+4. $\rho(arr) = (arr, 1, 0)$, such that $arr \in array<\mathbb{Z}>$ is the case for the initial state. Hence, $X^o = \rho(arr) = (arr, 1, 0)$.
+5. U = {next}
+6. Transition Relation:
+   if b == -1 $\lor$ arr[b] <= arr[b+1]:
+       (arr, a, b) $\xrightarrow[next]{sort}$ (arr, a + 1, a)
+   else
+       (arr, a, b) $\xrightarrow[next]{sort}$ (arr', a, b - 1)
+       where arr'[i] == arr[i] for i $\in$ [0, arr.Length) - {b, b + 1} $\land$ 
+       arr'[b] == arr[b + 1], arr'[b + 1] == arr[b], for a $\in$ [1, arr.Length)
+7. Let X_f be the final state of the system, defined as X_f = (arr, a_f, b_f) iff a_f = arr.Length and b_f == a_f - 1
+8. Y = array<$\mathbb{Z}$>, as the view space of the system is equal to the output space of the problem.
+9. h: X $\rightarrow$ Y, where h: X $\rightarrow$ array<$\mathbb{Z}$>
+10. h(X) = x[0], where x $\in$ X and x[0] is the 1^{st} element from the 3 tuple state vector.
+
+*** Insertion Sort Program
+ #+BEGIN_SRC :tangle insertionSort.dfy
+// Input Space
+datatype InputSpace = InputSpace(arr: array<int>)
+
+// State Space
+datatype StateSpace = StateSpace(arr: array<int>, i: int, j: int)
+
+// rho function
+function method rho(tup: InputSpace): StateSpace
+{
+	StateSpace(tup.arr, 1, 0)
+}
+
+// view function h
+function method pi(trip: StateSpace): array<int>
+{
+	(trip.arr)
+}
+
+predicate sorted(a:array<int>, min:int, max:int)
+requires 0<= min <= max <= a.Length;
+reads a;
+{
+  forall j, k :: min <= j < k < max ==> a[j] <= a[k]
+}
+
+predicate sortedSeq(a:seq<int>)
+{
+  forall j, k :: 0 <= j < k < |a| ==> a[j] <= a[k]
+}
+
+lemma sortedSeqSubsequenceSorted(a:seq<int>, min:int, max:int)
+requires 0<= min <= max <= |a|
+requires sortedSeq(a)
+ensures sortedSeq(a[min .. max])
+{ }
+
+method swap(a: array<int>, i:int, j:int)
+modifies a;
+requires 0 <= i < j < a.Length
+requires i + 1 == j
+ensures a[..i] == old(a[..i])
+ensures a[j+1..] == old(a[j+1..])
+ensures a[j] == old(a[i])
+ensures a[i] == old(a[j])
+ensures multiset(a[..]) == multiset(old(a[..]))
+{
+   var tmp := a[i];
+   a[i] := a[j];
+   a[j] := tmp;  
+} 
+
+// Transition System
+method TransitionSystem(initState: StateSpace) returns (terminalState: StateSpace)
+modifies initState.arr;
+// pre conditions
+requires initState.arr.Length > 0;
+requires initState.i == 1
+requires initState.j == 0
+// post conditions
+ensures sorted(terminalState.arr, 0, terminalState.arr.Length);
+ensures multiset(terminalState.arr[..]) == multiset(initState.arr[..]); 
+{
+	var arr := initState.arr;
+	var i := initState.i;
+	var j := initState.j;
+
+	while(i < arr.Length)
+	// loop invariance
+	invariant 0 <= i <= arr.Length
+	invariant j == i - 1
+	invariant sorted(arr, 0, i) 
+	invariant multiset(old(arr[..])) == multiset(arr[..])
+	decreases arr.Length - i
+  	{
+		var key := arr[i];
+
+		ghost var arr' := arr[..];
+		assert sortedSeq(arr'[0..i]);
+		while(j >= 0 && key < arr[j])
+		// loop invariance
+		invariant -1 <= j <= i - 1
+		invariant arr[0 .. j+1] == arr'[0 .. j+1]
+		invariant sorted(arr, 0, j+1);
+		invariant arr[j+1] == key == arr'[i];
+		invariant arr[j+2 .. i+1] == arr'[j+1 .. i]
+		invariant sorted(arr, j+2, i+1); 
+		invariant multiset(old(arr[..])) == multiset(arr[..])
+		invariant forall k :: j+1 < k <= i ==> key < arr[k]  
+		decreases j                                   
+		{
+			ghost var arr'' := arr[..];
+			swap(arr, j, j+1);
+			assert arr[0..j] == arr''[0..j];
+			assert arr[0..j] == arr'[0..j];
+			assert arr[j] == arr''[j+1] == arr'[i] == key;
+			assert arr[j+2..] == arr''[j+2..];
+			assert arr[j+2..i+1] == arr''[j+2..i+1] == arr'[j+1..i];
+
+			j := j - 1;
+
+			sortedSeqSubsequenceSorted(arr'[0..i], j+1, i);
+			assert sortedSeq(arr'[j+1..i]);
+			assert arr[j+2 .. i+1] == arr'[j+1 .. i];
+			assert sortedSeq(arr[j+2..i+1]);
+		}
+		i := i + 1;
+		j := i - 1; 
+  	}
+  	terminalState := StateSpace(arr, i, j);
+}
+
+// Orchestrator
+method Main()
+{
+	var n: int := 4;
+	var arr := new int[n];
+	arr[0] := 2;
+	arr[1] := 3;
+	arr[2] := 4;
+	arr[3] := 1;
+
+	var input := InputSpace(arr);
+	var initState := rho(input);
+	var terminalState := TransitionSystem(initState);
+	var output := pi(terminalState);
+
+	n := output.Length;
+	assert multiset(arr[..]) == multiset(output[..]);
+	assert sorted(output, 0, output.Length);
+	var i: int := 0;
+	while i < n
+	decreases n - i
+	{
+		print output[i], " ";
+		i := i + 1;
+	}
+	print "\n";
+}
+ #+END_SRC
+
+*** Pre Conditions
+
++ requires input space array length greater than 0 
+#+BEGIN_SRC
+requires initState.arr.Length > 0
+#+END_SRC
+
++ requires input space i equal to 1 where i represent outer loop
+#+BEGIN_SRC
+requires initState.i == 1
+#+END_SRC
+
++ requires input space j equal to 0 where j represent inner loop
+#+BEGIN_SRC
+requires initState.j == 0
+#+END_SRC
+
+*** Post Conditions
+
++ ensures that the output array is sorted 
+#+BEGIN_SRC
+ensures sorted(terminalState.arr, 0, terminalState.arr.Length
+#+END_SRC
+
++ ensures that input and output array set is same which ensures that the sorted array is the correct array
+#+BEGIN_SRC
+ensures multiset(terminalState.arr[..]) == multiset(initState.arr[..])
+#+END_SRC
+
+*** Hoare Logic Predicates
+  
+**** Outer Loop
+
+#+BEGIN_SRC
+invariant 0 <= i <= arr.Length
+invariant j == i - 1
+invariant sorted(arr, 0, i) 
+invariant multiset(old(arr[..])) == multiset(arr[..])
+#+END_SRC
+
+***** Partial Correctness
++ Invariants satisfy pre conditions clearly and assuming loop terminates at i = arr.Length as i increases by 1 after every iteration.
++ Loop satisfies that after every iteration, arr is sorted till i and arr is the same as original arr. Therefore, when loop terminates at i = arr.Length, arr is fully sorted and same as original array therefore satisfying post conditions.
+
+***** Total Correctness
+
+#+BEGIN_SRC
+decreases arr.Length - i
+#+END_SRC
+
++ decreases arr.Length - i ensures that loop will terminate at i = arr.Length
+
+**** Inner Loop
+
+#+BEGIN_SRC
+invariant -1 <= j <= i - 1
+invariant arr[0 .. j+1] == arr'[0 .. j+1]
+invariant sorted(arr, 0, j+1);
+invariant arr[j+1] == key == arr'[i];
+invariant arr[j+2 .. i+1] == arr'[j+1 .. i]
+invariant sorted(arr, j+2, i+1); 
+invariant multiset(old(arr[..])) == multiset(arr[..])
+invariant forall k :: j+1 < k <= i ==> key < arr[k]  
+#+END_SRC
+
+where arr' is the arr before starting the inner loop
+
+***** Partial Correctness
++ Assuming loop terminates when j < 0 or key > arr[j], arr satisfy that arr[0, j+1] is sorted and as key > arr[j], arr[0, j+2] is sorted and arr[j+2, i+1] is sorted, therefore arr[0, i+1] is sorted after loop terminates.
+
+***** Total Correctness
+
+#+BEGIN_SRC
+decreases j
+#+END_SRC
+
++ decreases j ensures that j decreases and therefore terminates.
