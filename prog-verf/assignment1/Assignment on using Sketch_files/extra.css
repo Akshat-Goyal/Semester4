@@ -1,0 +1,38 @@
+.table-my-responsive {
+	max-height: 450px;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: auto;
+} 
+
+div.table-my-responsive {
+	border-top:0px none;
+	border-bottom:0px none;
+}
+
+div.table-my-responsive thead th {
+	background-color: #a3a6a6;
+	border-top:0px none;
+	border-bottom:0px none;
+
+}
+
+div.table-my-responsive  tbody:nth-child(even) td{
+	background-color: #f3f6f6;
+	border-top:0px none;
+	border-bottom:0px none;
+
+}
+
+
+div.table-my-responsive  tbody:nth-child(odd) td{
+	background-color: white;
+	border-top:0px none;
+	border-bottom:0px none;
+
+}
+
+
+						  
+	
+	
